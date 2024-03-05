@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class Bullet : MonoBehaviour
 {
     public GameObject bullet;
+    public float BulletDamage = 1f;
     float clear = 3;
     // Start is called before the first frame update
     void Start()
@@ -29,10 +31,10 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Slime")
+        if (collision.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
         {
+            enemyComponent.TakeDamage(BulletDamage);
             Destroy(gameObject);
-
         }
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall")
         {

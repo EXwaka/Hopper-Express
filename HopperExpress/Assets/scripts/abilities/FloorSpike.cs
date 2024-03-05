@@ -5,7 +5,7 @@ using UnityEngine;
 public class FloorSpike : MonoBehaviour
 {
     public GameObject floorspike;
-    
+
 
     // Start is called before the first frame update
     void Start()

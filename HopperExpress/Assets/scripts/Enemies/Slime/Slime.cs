@@ -9,7 +9,6 @@ public class Slime : MonoBehaviour
     float JumpTime;
     float JumpForce = 12f;
     public GameObject player;
-    //public int HP_slime = 5;
 
     private void Start()
     {
@@ -36,14 +35,6 @@ public class Slime : MonoBehaviour
 
         }
 
-        //if (HP_slime <= 0)
-        //{
-        //    Destroy(this.gameObject);
-        //}
-        //if (HP_slime > 0)
-        //{
-        //    Debug.Log("Slime HP: " + HP_slime);
-        //}
     }
     void FixedUpdate()
     {
@@ -76,14 +67,6 @@ public class Slime : MonoBehaviour
 
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if(collision.gameObject.tag == "Bullet")
-    //    {
-    //        HP_slime--;
-
-    //    }
-    //}
 
 
 }

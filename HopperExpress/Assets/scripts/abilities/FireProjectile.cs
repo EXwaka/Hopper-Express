@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FireProjectile : MonoBehaviour
 {
     public float jumpForce = 0.1f;
+    public GameObject FireArea;
+    public Transform SpawnPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +21,20 @@ public class FireProjectile : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Ground")
+    //    {
+    //        Instantiate(FireArea, SpawnPoint.position, Quaternion.identity);
+    //        Destroy(this.gameObject);
+    //    }
+    //}
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Ground")
+        if(other.gameObject.tag == "Ground")
         {
+            Instantiate(FireArea, SpawnPoint.position, Quaternion.identity);
             Destroy(this.gameObject);
-        }    
+        }
     }
 }

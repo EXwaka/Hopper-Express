@@ -6,10 +6,9 @@ public class ForceField : MonoBehaviour
 {
     public GameObject forcefield;
 
-    public static float cooldown = 0.3f;
-    public float Timer;
-    //public static bool Damaging = true;
-
+    public float ForceDamage = 1f;
+    public float cooldown = 0.5f;
+    public float Timer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,30 +29,18 @@ public class ForceField : MonoBehaviour
 
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("enemy"))
-    //    {
-    //        if (!Damaging)
-    //        {
-    //            StartCoroutine(DamageOverTime(other.gameObject));
-    //        }
-    //    }
-    //}
-    //void OnTriggerExit(Collider other)
-    //{
-    //    if (other.CompareTag("enemy"))
-    //    {
-    //        Damaging = false;
-    //    }
-    //}
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
+        {
+            Timer += Time.deltaTime;
+            if (Timer >= cooldown)
+            {
+                enemyComponent.TakeDamage(ForceDamage);
+                Timer = 0;
+            }
+        }
 
-    //IEnumerator DamageOverTime(GameObject enemy)
-    //{
-    //    Damaging = true;
-    //    while (Damaging)
-    //    {
-    //        yield return new WaitForSeconds(cooldown);
-    //    }
-    //}
+    }
+
 }

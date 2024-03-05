@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8393630453406854311}
   - component: {fileID: 5331485187489270633}
   - component: {fileID: 173543179816781969}
-  - component: {fileID: 6019726124354423140}
+  - component: {fileID: 7179648327133775092}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Slime
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
   player: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
---- !u!114 &6019726124354423140
+--- !u!114 &7179648327133775092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,11 +158,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4373350818202400889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb83be629b7970a4bb18bbbfcd3b9d19, type: 3}
+  m_Script: {fileID: 11500000, guid: 122e3dcfc72be1a4faeadfed60f249e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 4373350818202400889}
   m_HP: 5
-  cooldown: 0.3
-  Timer: 0
-  Damaging: 1
