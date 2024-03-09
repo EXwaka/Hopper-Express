@@ -33,11 +33,13 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
         {
+            //play animation
             enemyComponent.TakeDamage(BulletDamage);
             Destroy(gameObject);
         }
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall")
+        if (collision.gameObject)
         {
+            //playanimation
             Destroy(gameObject);
 
         }

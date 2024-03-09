@@ -23,6 +23,7 @@ public class MonsterManager : MonoBehaviour
         m_HP -= damageAmount;
         if (m_HP <= 0)
         {
+            MonsterSpawn.monsCount--;
             Destroy(gameObject);
             //play animation
         }

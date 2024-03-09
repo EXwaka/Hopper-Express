@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 {
     public Text TimeCounter;
     public float TimeLeft =5f;
-    public bool EndCount = false;
+    public static bool EndCount = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +27,8 @@ public class Timer : MonoBehaviour
         {
             TimeCounter.color = Color.green;
 
-            TimeCounter.text="任務完成";
+            TimeCounter.text="任務完成 殺死剩餘敵人後前往撤離";
+            EndCount = true;
 
         }
 

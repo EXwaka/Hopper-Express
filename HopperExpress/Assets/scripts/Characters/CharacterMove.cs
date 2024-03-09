@@ -11,6 +11,7 @@ public class CharacterMove : MonoBehaviour
     private bool isGrounded;
 
     public static bool moveRight = true;
+    public static bool LevelComplete = false;
 
 
     // Update is called once per frame
@@ -86,6 +87,7 @@ public class CharacterMove : MonoBehaviour
         {
             isGrounded = true;
         }
+
     }
 
     private void OnCollisionExit(Collision collision)
@@ -93,6 +95,13 @@ public class CharacterMove : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = false;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "NextLevel")
+        {
+            LevelComplete = true;
         }
     }
 }
