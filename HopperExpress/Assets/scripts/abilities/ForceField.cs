@@ -12,6 +12,12 @@ public class ForceField : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //copy the code in void update to here once the game complete
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Skills.skill_forcefield == true)
         {
             forcefield.SetActive(true);
@@ -20,12 +26,6 @@ public class ForceField : MonoBehaviour
         {
             forcefield.SetActive(false);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
 
     }
 
