@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Skills : MonoBehaviour
 {
-    static public bool skill_floorspike;
-    static public bool skill_forcefield;
-    static public bool skill_throwfire;
+    public static bool skill_floorspike;
+    public static bool skill_forcefield;
+    public static bool skill_throwfire;
 
     // Start is called before the first frame update
     void Start()

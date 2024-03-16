@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
         TimeLeft-=Time.deltaTime;
         int min= Mathf.FloorToInt(TimeLeft/60);
         int sec= Mathf.FloorToInt(TimeLeft%60);
-        TimeCounter.text = string.Format("{0:00}:{1:00}", min, sec);
+        TimeCounter.text = string.Format("在時間內保護核心! {0:00}:{1:00}", min, sec);
         if (TimeLeft <= 1)
         {
             TimeCounter.color = Color.green;

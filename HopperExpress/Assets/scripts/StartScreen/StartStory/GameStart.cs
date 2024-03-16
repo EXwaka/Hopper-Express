@@ -11,7 +11,7 @@ public class GameStart : MonoBehaviour
     public void Playgame()
     {
         Fade.SetTrigger("Start");
-        SceneManager.LoadSceneAsync("SampleScene");
+        SceneManager.LoadSceneAsync("FirstScene");
     }
     public void NextStory()
     {

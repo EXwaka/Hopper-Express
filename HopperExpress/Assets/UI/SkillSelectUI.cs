@@ -29,6 +29,7 @@ public class SkillSelectUI : MonoBehaviour
             SlideIn();
             Time.timeScale = 0f;
         }
+
     }
 
     public void SlideIn()
@@ -52,6 +53,7 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_forcefield = true;
         Skills.skill_throwfire = false;
         Skills.skill_floorspike = false;
+        //Debug.Log(Skills.skill_forcefield);
 
     }
     public void ChooseSkill2()
