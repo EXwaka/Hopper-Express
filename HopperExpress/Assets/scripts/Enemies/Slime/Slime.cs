@@ -55,7 +55,10 @@ public class Slime : MonoBehaviour
         {
             moveSpeed /= 2;
         }
-
+        if (other.gameObject.tag == "MonsterAttackRange")
+        {
+            moveSpeed = 0;
+        }
 
     }
     private void OnTriggerExit(Collider other)
@@ -64,7 +67,10 @@ public class Slime : MonoBehaviour
         {
             moveSpeed *= 2;
         }
-
+        if (other.gameObject.tag == "MonsterAttackRange")
+        {
+            moveSpeed = 1.5f;
+        }
     }
 
 

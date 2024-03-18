@@ -33,13 +33,14 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
         {
-            //play animation
+            //play "explode" animation
             enemyComponent.TakeDamage(BulletDamage);
             Destroy(gameObject);
         }
         if (collision.gameObject)
         {
-            //playanimation
+            //play "explode" animation
+
             Destroy(gameObject);
 
         }

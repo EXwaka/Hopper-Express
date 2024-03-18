@@ -5,7 +5,7 @@ using UnityEngine;
 public class Core : MonoBehaviour
 {
     public GameObject core;
-    public static int HP_core=3;
+    public static float HP_core=10;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,7 @@ public class Core : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("coreHP: " + HP_core);
         if (HP_core <= 0)
         {
             Destroy(this.gameObject);

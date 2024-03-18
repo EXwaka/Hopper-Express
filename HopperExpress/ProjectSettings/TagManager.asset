@@ -13,14 +13,15 @@ TagManager:
   - forcefield
   - NextLevel
   - Character
+  - MonsterAttackRange
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - core
   - Water
   - UI
-  - 
+  - enemy
   - 
   - 
   - 
