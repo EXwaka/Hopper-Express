@@ -7,7 +7,7 @@ public class Slime : MonoBehaviour
 {
     public float moveSpeed = 1.5f;
     float JumpTime;
-    float JumpForce = 12f;
+    public float JumpForce = 12f;
     public GameObject player;
 
     private void Start()
