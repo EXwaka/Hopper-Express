@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MonsterSpawn : MonoBehaviour
 {
-    public GameObject slime;
+    public List<GameObject> monsters;
     float TimeCounter = 0;
     public static int monsCount = 0;
     // Start is called before the first frame update
@@ -19,11 +19,12 @@ public class MonsterSpawn : MonoBehaviour
     {
         TimeCounter += Time.deltaTime;
 
-        if (TimeCounter >= 1 && Timer.EndCount==false)//Spawn mons per 1 sec
+        if (TimeCounter >= 1.5f && Timer.EndCount==false)//Spawn mons per 1 sec
         {
-            float randomX = Random.Range(0, 2) == 0 ? -8f : 15f;
- 
-            Instantiate(slime, new Vector3(randomX, 0f, -1f), transform.rotation);
+            float randomX = Random.Range(0, 2) == 0 ? 13f : 18f;
+            int randomMonster = Random.Range(0, monsters.Count);
+
+            Instantiate(monsters[randomMonster], new Vector3(randomX, 5f, -1f), transform.rotation);
             TimeCounter = 0;
             monsCount++;
             //Debug.Log("Generating slime");

@@ -29,15 +29,31 @@ public class Bullet : MonoBehaviour
 
 
     }
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
+    //    {
+    //        //play "explode" animation
+    //        enemyComponent.TakeDamage(BulletDamage);
+    //        Destroy(gameObject);
+    //    }
+    //    if (collision.gameObject)
+    //    {
+    //        //play "explode" animation
+
+    //        Destroy(gameObject);
+
+    //    }
+    //}
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
+        if (other.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
         {
             //play "explode" animation
             enemyComponent.TakeDamage(BulletDamage);
             Destroy(gameObject);
         }
-        if (collision.gameObject)
+        if (other.gameObject)
         {
             //play "explode" animation
 
