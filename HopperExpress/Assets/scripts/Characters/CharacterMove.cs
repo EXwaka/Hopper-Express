@@ -22,10 +22,10 @@ public class CharacterMove : MonoBehaviour
             Jump();
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Shoot();
+        //}
     }
 
     void FixedUpdate()
@@ -60,25 +60,21 @@ public class CharacterMove : MonoBehaviour
         isGrounded = false;
     }
 
-    void Shoot()
+    public static void Shoot(GameObject bulletPrefab, Transform bulletSpawnPoint)
     {
+        if (bulletPrefab != null && bulletSpawnPoint != null)
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = bulletSpawnPoint.position.z - Camera.main.transform.position.z;
 
-            if (bulletPrefab != null && bulletSpawnPoint != null)
-            {
-                Vector3 mousePosition = Input.mousePosition;
-                mousePosition.z = bulletSpawnPoint.position.z - Camera.main.transform.position.z;
+            Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-                Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector3 shootDirection = (worldMousePosition - bulletSpawnPoint.position).normalized;
 
-                Vector3 shootDirection = (worldMousePosition - bulletSpawnPoint.position).normalized;
-
-                GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
-
+            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
 
             bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
-            }
-
-
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

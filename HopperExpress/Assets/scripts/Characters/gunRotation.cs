@@ -5,8 +5,8 @@ using UnityEngine;
 public class MouseRotation : MonoBehaviour
 {
     [SerializeField] private Camera mainCam;
-    private SpriteRenderer spriteRenderer; 
-
+    private SpriteRenderer spriteRenderer;
+    //public GameObject gun; 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -28,17 +28,20 @@ public class MouseRotation : MonoBehaviour
             // 使用 Quaternion.Euler 創建 Z 軸上的旋轉
             Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
-            // 將物體的旋轉設置為計算的旋轉
+            // rotate
             transform.rotation = rotation;
 
-            // 鏡面反轉物件的圖片
+            // reflect image
             if (directionToMouse.x < 0)
             {
                 spriteRenderer.flipY = true;
+                //gun.transform.localPosition = new Vector3(-0.3f, 0, 0);
             }
             else
             {
                 spriteRenderer.flipY = false;
+                //gun.transform.localPosition = new Vector3(+0.3f, 0, 0);
+
             }
         }
     }

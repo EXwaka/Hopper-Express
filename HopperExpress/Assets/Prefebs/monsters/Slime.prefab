@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
-  JumpForce: 20
+  JumpForce: 10
   player: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
 --- !u!114 &7179648327133775092
 MonoBehaviour:
