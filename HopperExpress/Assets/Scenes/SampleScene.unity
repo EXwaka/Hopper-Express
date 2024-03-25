@@ -571,6 +571,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.331
       objectReference: {fileID: 0}
+    - target: {fileID: 2129499183773156321, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1057468883123677035, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
     - target: {fileID: 5895761515121895015, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.45
@@ -612,8 +616,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7421504022869820266, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+      propertyPath: m_text
+      value: "\u6838\u5FC3 HP:10"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421504022869820266, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: m_margin.z
       value: -10.288171
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421504022869820266, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
+    - target: {fileID: 7421504022869820266, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1057468883123677035, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
+    - target: {fileID: 7421504022869820266, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421504022869820266, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: m_Name
@@ -2573,7 +2597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1533028308
 MonoBehaviour:
   m_ObjectHideFlags: 0
