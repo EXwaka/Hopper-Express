@@ -41,7 +41,7 @@ public class SkillSelectUI : MonoBehaviour
     public void SlideOut()
     {
         okButton = true;
-
+        //Application.Quit();
         rectTransform.DOAnchorPosY(topPosY, tweenDuration).SetUpdate(true);
         Time.timeScale = 1f;
 

@@ -16,7 +16,7 @@ public class ScrollBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float newPosition = Mathf.Repeat(Time.time*speed,repeatWhen);
+        float newPosition = Mathf.Repeat(Time.time*-speed,repeatWhen);
 
         transform.position = startPosition + Vector3.right * newPosition;
     }
