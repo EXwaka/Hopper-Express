@@ -19,18 +19,19 @@ public class Core : MonoBehaviour
         Debug.Log("coreHP: " + HP_core);
         if (HP_core <= 0)
         {
+
             Destroy(this.gameObject);
         
         }
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Slime")
-        {
-            HP_core--;
-            Destroy(other.gameObject);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Slime")
+    //    {
+    //        HP_core--;
+    //        Destroy(other.gameObject);
+    //    }
+    //}
 }

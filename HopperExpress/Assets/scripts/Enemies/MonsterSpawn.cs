@@ -18,16 +18,16 @@ public class MonsterSpawn : MonoBehaviour
     void Update()
     {
         TimeCounter += Time.deltaTime;
+        Debug.Log("Monster remine:" + monsCount);
 
         if (TimeCounter >= 2f && Timer.EndCount==false)//Spawn mons per 1 sec
         {
-            float randomX = Random.Range(0, 2) == 0 ? 18f : 18f;
+            float randomX = Random.Range(0, 2) == 0 ? 30f : 30f;
             int randomMonster = Random.Range(0, monsters.Count);
 
             Instantiate(monsters[randomMonster], new Vector3(randomX, 5f, -1f), transform.rotation);
             TimeCounter = 0;
             monsCount++;
-            //Debug.Log("Generating slime");
         }
 
     }

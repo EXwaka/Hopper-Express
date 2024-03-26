@@ -33,7 +33,6 @@ public class MonsterManager : MonoBehaviour
                 //play "MonsterAttack" animation
                 MonsterAttack(MonsDamage);
                 Counter = 0;
-
             }
 
         }
@@ -62,8 +61,9 @@ public class MonsterManager : MonoBehaviour
 
             foreach (Collider enemy in HitAny)
             {
-                Debug.Log("Target gets hit:" + enemy.name);
+                //Debug.Log("Target gets hit:" + enemy.name);
                 Core.HP_core -= damageAmount;
+
             }
 
             isAttacking = false; 

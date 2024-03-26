@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Crow : MonoBehaviour
+public class WalkingMonster : MonoBehaviour
 {
-    public float moveSpeed = 2f;
-    public GameObject player;
+    public float moveSpeed = 2.5f;
+    public GameObject target;
 
     private void Start()
     {
@@ -15,27 +14,30 @@ public class Crow : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (target != null)
         {
             Vector3 currentPosition = transform.position;
 
-            Vector3 targetPosition = new Vector3(player.transform.position.x, 0f+3, 0f);
+            Vector3 targetPosition = new Vector3(target.transform.position.x, 0f, 0f);
 
             transform.position = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
         }
 
+    }
+    void FixedUpdate()
+    {
 
-
+        GetComponent<Rigidbody>().AddForce(Vector3.down * 30f);
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag ( "floorspike"))
+        if (other.CompareTag("floorspike"))
         {
             moveSpeed /= 2;
         }
-        if (other.CompareTag ( "MonsterAttackRange"))
+        if (other.CompareTag("MonsterAttackRange"))
         {
             moveSpeed = 0;
         }
@@ -47,12 +49,9 @@ public class Crow : MonoBehaviour
         {
             moveSpeed *= 2;
         }
-        if (other.CompareTag(  "MonsterAttackRange"))
+        if (other.CompareTag("MonsterAttackRange"))
         {
-            moveSpeed = 1.5f;
+            moveSpeed = 2.5f;
         }
     }
-
-
-
 }

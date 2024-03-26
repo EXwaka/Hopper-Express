@@ -8,7 +8,7 @@ public class Slime : MonoBehaviour
     public float moveSpeed = 1.5f;
     float JumpTime;
     public float JumpForce = 8f;
-    public GameObject player;
+    public GameObject target;
 
     private void Start()
     {
@@ -17,11 +17,11 @@ public class Slime : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (target != null)
         {
             Vector3 currentPosition = transform.position;
 
-            Vector3 targetPosition = new Vector3(player.transform.position.x, 0f, 0f);
+            Vector3 targetPosition = new Vector3(target.transform.position.x, 0f, 0f);
 
             transform.position = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
         }
