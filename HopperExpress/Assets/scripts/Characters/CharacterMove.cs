@@ -17,15 +17,11 @@ public class CharacterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded==true)
         {
             Jump();
         }
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Shoot();
-        //}
+        Debug.Log("isGrounded:" + isGrounded);
     }
 
     void FixedUpdate()
@@ -86,13 +82,13 @@ public class CharacterMove : MonoBehaviour
 
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            isGrounded = false;
-        }
-    }
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Ground")
+    //    {
+    //        isGrounded = false;
+    //    }
+    //}
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "NextLevel")
