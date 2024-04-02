@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Skills : MonoBehaviour
 {
-    public static bool skill_floorspike;
-    public static bool skill_forcefield;
-    public static bool skill_throwfire;
+    public static bool skill_floorspike=false;
+    public static bool skill_forcefield=false;
+    public static bool skill_throwfire=false;
 
     // Start is called before the first frame update
     void Start()
     {
-        skill_floorspike = false;
-        skill_forcefield = false;
-        skill_throwfire = false;
+        //skill_floorspike = false;
+        //skill_forcefield = false;
+        //skill_throwfire = false;
 
     }
 

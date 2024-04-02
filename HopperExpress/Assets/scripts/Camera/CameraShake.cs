@@ -32,11 +32,15 @@ public class CameraShake : MonoBehaviour
     }
     void Update()
     {
-        ShakeCamera();
-        if(CharacterMove.LevelComplete==true) 
+        //ShakeCamera();
+        if(FinishPoint.LevelComplete==true) 
         {
             StopShake();
         
+        }
+        else
+        {
+            ShakeCamera();
         }
     }
 }

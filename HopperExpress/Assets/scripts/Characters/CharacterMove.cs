@@ -11,7 +11,7 @@ public class CharacterMove : MonoBehaviour
     private bool isGrounded;
 
     public static bool moveRight = true;
-    public static bool LevelComplete = false;
+    //public static bool LevelComplete = false;
 
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class CharacterMove : MonoBehaviour
         {
             Jump();
         }
-        Debug.Log("isGrounded:" + isGrounded);
+        Debug.Log("CanThrowFire:" + Skills.skill_throwfire);
     }
 
     void FixedUpdate()
@@ -89,11 +89,11 @@ public class CharacterMove : MonoBehaviour
     //        isGrounded = false;
     //    }
     //}
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "NextLevel")
-        {
-            LevelComplete = true;
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == "LevelComplete")
+    //    {
+    //        LevelComplete = true;
+    //    }
+    //}
 }

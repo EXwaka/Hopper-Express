@@ -19,32 +19,15 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         clear += Time.deltaTime;
-        if (clear >=3) 
+        if (clear >= 3)
         {
             Destroy(this.gameObject);
             clear = 0;
-        
+
         }
 
-
-
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
-    //    {
-    //        //play "explode" animation
-    //        enemyComponent.TakeDamage(BulletDamage);
-    //        Destroy(gameObject);
-    //    }
-    //    if (collision.gameObject)
-    //    {
-    //        //play "explode" animation
 
-    //        Destroy(gameObject);
-
-    //    }
-    //}
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
@@ -53,7 +36,7 @@ public class Bullet : MonoBehaviour
             enemyComponent.TakeDamage(BulletDamage);
             Destroy(gameObject);
         }
-        if (other.gameObject)
+        else if (other.gameObject)
         {
             //play "explode" animation
 
