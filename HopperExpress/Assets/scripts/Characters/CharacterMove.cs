@@ -21,7 +21,7 @@ public class CharacterMove : MonoBehaviour
         {
             Jump();
         }
-        Debug.Log("CanThrowFire:" + Skills.skill_throwfire);
+        //Debug.Log("CanThrowFire:" + Skills.skill_throwfire);
     }
 
     void FixedUpdate()

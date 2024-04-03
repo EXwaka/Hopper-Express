@@ -9,10 +9,10 @@ public class CoreUI : MonoBehaviour
     void Start()
     {
         CoreHPText = GetComponent<TMP_Text>();
-        if (CoreHPText == null)
-        {
-            Debug.LogError("CoreHPText not found!");
-        }
+        //if (CoreHPText == null)
+        //{
+        //    Debug.LogError("CoreHPText not found!");
+        //}
     }
 
     // Update is called once per frame

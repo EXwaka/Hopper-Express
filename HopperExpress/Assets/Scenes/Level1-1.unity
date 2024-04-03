@@ -2479,7 +2479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeCounter: {fileID: 687285796}
-  TimeLeft: 5
+  TimeLeft: 40
 --- !u!114 &741883388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2582,7 +2582,7 @@ MonoBehaviour:
   middlePosY: 0
   tweenDuration: 0.5
   okButton: 0
-  NextButton: {fileID: 0}
+  NextButton: {fileID: 1875546290}
 --- !u!4 &769055363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4893397790245464575, guid: 095a2e2922e59574183decfa2814ce07, type: 3}

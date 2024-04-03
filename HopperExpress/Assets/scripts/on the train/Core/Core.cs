@@ -16,7 +16,7 @@ public class Core : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("coreHP: " + HP_core);
+        //Debug.Log("coreHP: " + HP_core);
         if (HP_core <= 0)
         {
 
