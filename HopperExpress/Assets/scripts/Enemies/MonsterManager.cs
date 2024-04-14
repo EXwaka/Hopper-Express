@@ -13,6 +13,7 @@ public class MonsterManager : MonoBehaviour
     public float atkCooldown = 1;
     public float Counter = 0;
     private bool isAttacking = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,7 @@ public class MonsterManager : MonoBehaviour
             //play "dead" animation
             MonsterSpawn.monsCount--;
             Destroy(gameObject);
+
         }
 
     }

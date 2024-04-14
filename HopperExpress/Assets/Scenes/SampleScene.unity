@@ -180,10 +180,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "skill 3\ncreate 2 spike floors around the \ntrain core"
+  m_text: "\u6280\u80FD3\n\u5728\u6838\u5FC3\u524D\u65B9\u653E\u7F6E2\u584A\u5730\u523A"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
+  m_sharedMaterial: {fileID: 1057468883123677035, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -362,15 +362,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mons1: {fileID: 448649531093429630, guid: 8973181297980bd40bef7ea2b6ef9dcb, type: 3}
-  Mons2: {fileID: 5070964644595726317, guid: ed9079eb4a08aab4299e1556d3fc0773, type: 3}
-  Mons3: {fileID: 4373350818202400889, guid: b4a0687e98df2bb4ab0018a672b0c8c9, type: 3}
-  Wave1: 0
-  Wave2: 0
-  Wave3: 0
-  wave1EndsIn: 15
-  wave2EndsIn: 25
-  wave3EndsIn: 30
-  monsLeft: 3
+  Mons2: {fileID: 4373350818202400889, guid: b4a0687e98df2bb4ab0018a672b0c8c9, type: 3}
+  Mons3: {fileID: 5070964644595726317, guid: ed9079eb4a08aab4299e1556d3fc0773, type: 3}
+  CurrentWave: 0
+  monsLeft: 0
+  MonsSpawnRate: 0.5
+  spawnPoint: {fileID: 791184794}
+  nextWaveRate: 5
 --- !u!4 &73820137
 Transform:
   m_ObjectHideFlags: 0
@@ -1014,12 +1012,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'skill 2
-
-    Your character can throw fire grenade now'
+  m_text: "\u6280\u80FD2\n\u4F60\u7684\u89D2\u8272\u73FE\u5728\u53EF\u4EE5\u6295\u64F2\u5E0C\u81D8\u706B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
+  m_sharedMaterial: {fileID: 1057468883123677035, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2278,10 +2274,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next Level
+  m_text: "\u4E0B\u4E00\u95DC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
+  m_sharedMaterial: {fileID: 1057468883123677035, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2483,7 +2479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeCounter: {fileID: 687285796}
-  TimeLeft: 40
+  TimeLeft: 30
 --- !u!114 &741883388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2732,6 +2728,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 16.010002, y: 9.41, z: 0.2}
   m_Center: {x: 0, y: -1.61, z: 0.09}
+--- !u!1 &791184794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791184795}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &791184795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791184794}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 34.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &795452608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3886,10 +3913,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "skill 1 \ncreate a force field around your character"
+  m_text: "\u6280\u80FD1\n\u5728\u4F60\u7684\u89D2\u8272\u5468\u570D\u5275\u9020\u4E00\u500B\u5C0F\u7BC4\u570D\u7684\u529B\u5834"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
+  m_sharedMaterial: {fileID: 1057468883123677035, guid: 62cdcbe7c489d8c49a10506704389008, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7601,3 +7628,4 @@ SceneRoots:
   - {fileID: 2028563724}
   - {fileID: 1251088848}
   - {fileID: 2031764006}
+  - {fileID: 791184795}
