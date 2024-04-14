@@ -3,116 +3,90 @@ using UnityEngine;
 
 public class MonsterSpawn2 : MonoBehaviour
 {
-    public GameObject Mons1;
-    public GameObject Mons2;
-    public GameObject Mons3;
-
-    public static int monsCount = 0;
-    public int CurrentWave = 0;
-    public int monsLeft = 0;
-    public float MonsSpawnRate = 0.5f;
-    public GameObject spawnPoint;
-    public float nextWaveRate = 5f; 
+    public enum SpawnStage { SPAWNING, WAITING, COUNTING};
+    [System.Serializable]
+    public class Wave
+    {
+        public string name;
+        public Transform enemy;
+        public int count;
+        public float rate;
+    }
+    public Wave[] waves;
+    public int nextWave=0;
+    public float timeBetweenWaves = 5f;
+    public float waveCountdown;
+    public float spawnRate = 0.5f;
+    public GameObject SpawnPoint;
+    private SpawnStage stage= SpawnStage.COUNTING;
+    private bool EnemiesIsNotAlive = true;
 
     void Start()
     {
-        StartCoroutine(TimeToNextWave());
+        waveCountdown = timeBetweenWaves;
     }
 
-    IEnumerator TimeToNextWave()
+    void Update()
     {
-        while (true) 
+        Debug.Log("Wave countdown"+waveCountdown);
+
+        if (stage== SpawnStage.WAITING)
         {
-            yield return new WaitForSeconds(nextWaveRate);
-            CurrentWave++;
-            StartCoroutine(MonsSpawn());
+            if(EnemiesIsNotAlive)
+            {
+                WaveComplete();
+            }
+            else
+            {
+                return;
+            }
+
+        }
+        if (waveCountdown <= 0)
+        {
+            if(stage!=SpawnStage.SPAWNING)
+            {
+                StartCoroutine(SpawnWave(waves[nextWave]));
+            }
+        }
+        else
+        {
+            waveCountdown -= Time.deltaTime;
+
         }
     }
-
-    IEnumerator MonsSpawn()
+    void WaveComplete()
     {
-        if (CurrentWave == 1)
+        Debug.Log("Level complete");
+        stage = SpawnStage.COUNTING;
+        waveCountdown = timeBetweenWaves;
+        if (nextWave + 1 > waves.Length - 1)
         {
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
+            Destroy(gameObject);
         }
-        else if (CurrentWave == 2)
+        else
         {
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-        }
-        else if (CurrentWave == 3)
-        {
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons2();
-        }
-        else if (CurrentWave == 4)
-        {
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons2();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons2();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-        }
-        else if (CurrentWave == 5)
-        {
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-        }
-        else if (CurrentWave == 6)
-        {
-            SpawnMons2();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons2();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons2();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
-            yield return new WaitForSeconds(MonsSpawnRate);
-            SpawnMons1();
+            nextWave++;
+
         }
 
     }
 
-    void SpawnMons1()
+    IEnumerator SpawnWave(Wave _wave)
     {
-        Instantiate(Mons1, spawnPoint.transform.position, Quaternion.identity);
-        monsCount++;
+        Debug.Log("Starting Wave:"+_wave.name);
+        stage = SpawnStage.SPAWNING;
+        for (int i = 0; i < _wave.count; i++)
+        {
+            SpawnMons(_wave.enemy);
+            yield return new WaitForSeconds(spawnRate);
+        }
+        stage = SpawnStage.WAITING;
     }
 
-    void SpawnMons2()
+    void SpawnMons(Transform _enemy)
     {
-        Instantiate(Mons2, spawnPoint.transform.position, Quaternion.identity);
-        monsCount++;
-    }
-
-    void SpawnMons3()
-    {
-        Instantiate(Mons3, spawnPoint.transform.position, Quaternion.identity);
-        monsCount++;
+        Debug.Log("Spawning enemy:"+_enemy.name);
+        Instantiate(_enemy,SpawnPoint.transform.position,transform.rotation);
     }
 }

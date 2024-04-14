@@ -19,7 +19,7 @@ public class MouseRotation : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit raycastHit))
         {
             Vector3 directionToMouse = raycastHit.point - transform.position;
-            directionToMouse.z = 0f; 
+            directionToMouse.z = 0f;
 
             float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
 

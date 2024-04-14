@@ -20,7 +20,6 @@ public class Electric : MonoBehaviour
     void Update()
     {
         float elapsedTime = Time.time - startTime; 
-        Debug.Log("Elapsed Time:" + elapsedTime);
 
         if (elapsedTime >= cooldown)
         {
