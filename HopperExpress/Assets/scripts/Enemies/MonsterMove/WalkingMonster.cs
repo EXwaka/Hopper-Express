@@ -9,7 +9,6 @@ public class WalkingMonster : MonoBehaviour
 
     private void Start()
     {
-
     }
 
     void Update()

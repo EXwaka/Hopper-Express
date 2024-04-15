@@ -14,10 +14,15 @@ public class MonsterManager : MonoBehaviour
     public float Counter = 0;
     private bool isAttacking = false;
 
+    private Wavespawner waveSpawner;
+
     // Start is called before the first frame update
     void Start()
     {
         MonsInRange = false;
+
+        waveSpawner = GetComponentInParent<Wavespawner>();
+
     }
 
     // Update is called once per frame
@@ -48,7 +53,7 @@ public class MonsterManager : MonoBehaviour
             //play "dead" animation
             MonsterSpawn.monsCount--;
             Destroy(gameObject);
-
+            //waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
         }
 
     }
