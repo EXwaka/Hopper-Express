@@ -6,8 +6,8 @@ public class ForceField : MonoBehaviour
 {
     public GameObject forcefield;
 
-    public float ForceDamage = 1f;
-    public float cooldown = 0.5f;
+    public float ForceDamage = 2f;
+    public float cooldown = 0.3f;
     public float Timer = 0;
     // Start is called before the first frame update
     void Start()
@@ -36,6 +36,7 @@ public class ForceField : MonoBehaviour
             Timer += Time.deltaTime;
             if (Timer >= cooldown)
             {
+                Debug.Log("attacking");
                 enemyComponent.TakeDamage(ForceDamage);
                 Timer = 0;
             }
