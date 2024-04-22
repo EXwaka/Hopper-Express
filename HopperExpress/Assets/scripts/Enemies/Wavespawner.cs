@@ -6,10 +6,16 @@ public class Wavespawner : MonoBehaviour
     [SerializeField] public float timeBetweenWaves;
     [SerializeField] private GameObject spawnPoint;
 
+    public static int monsCount = 0;
     public Wave[] waves;
     public int currentWaveIndex = 0;
 
     private bool spawningWave = false;
+
+    //public void Update()
+    //{
+    //    Debug.Log("MonsCount:" + monsCount);
+    //}
 
     private void Start()
     {
@@ -34,6 +40,8 @@ public class Wavespawner : MonoBehaviour
         for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
         {
             MonsterManager enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform);
+            monsCount++;
+
             enemy.transform.SetParent(spawnPoint.transform);
             yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
         }

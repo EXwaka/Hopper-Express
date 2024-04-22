@@ -7,7 +7,7 @@ public class CharacterMove : MonoBehaviour
     public float moveSpeed = 10f;
     public float jumpForce = 20f;
     public GameObject bulletPrefab; 
-    public Transform bulletSpawnPoint; 
+    public Transform bulletSpawnPoint;
     private bool isGrounded;
 
     public static bool moveRight = true;
@@ -56,22 +56,22 @@ public class CharacterMove : MonoBehaviour
         isGrounded = false;
     }
 
-    public static void Shoot(GameObject bulletPrefab, Transform bulletSpawnPoint)
-    {
-        if (bulletPrefab != null && bulletSpawnPoint != null)
-        {
-            Vector3 mousePosition = Input.mousePosition;
-            mousePosition.z = bulletSpawnPoint.position.z - Camera.main.transform.position.z;
+    //public static void Shoot(GameObject bulletPrefab, Transform bulletSpawnPoint)
+    //{
+    //    if (bulletPrefab != null && bulletSpawnPoint != null)
+    //    {
+    //        Vector3 mousePosition = Input.mousePosition;
+    //        mousePosition.z = bulletSpawnPoint.position.z - Camera.main.transform.position.z;
 
-            Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+    //        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-            Vector3 shootDirection = (worldMousePosition - bulletSpawnPoint.position).normalized;
+    //        Vector3 shootDirection = (worldMousePosition - bulletSpawnPoint.position).normalized;
 
-            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+    //        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
 
-            bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
-        }
-    }
+    //        bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
+    //    }
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {

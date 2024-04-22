@@ -53,7 +53,7 @@ public class MonsterManager : MonoBehaviour
             //play "dead" animation
             MonsterSpawn.monsCount--;
             Destroy(gameObject);
-            //waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
+            Wavespawner.monsCount--;
         }
 
     }

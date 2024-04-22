@@ -27,33 +27,43 @@ public class SkillSelectUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(FinishPoint.LevelComplete==true && okButton==false)
+        Debug.Log("TimeScale" + Time.timeScale);
+        if (Timer.timeLeft <= 1 && Wavespawner.monsCount <= 0)
         {
             SkillMenu.SetActive(true);
-            SlideIn();
-            Time.timeScale = 0f;
+            StartCoroutine(SlideIn());
+            StartCoroutine(Wait());
         }
-        else
+        //if (FinishPoint.LevelComplete==true && okButton==false)
+        //{
+        //    SkillMenu.SetActive(true);
+        //    SlideIn();
+        //    Time.timeScale = 0f;
+        //}
+        else if (okButton == false)
         {
-            Time.timeScale = 1f;
+            Time.timeScale = 1f; 
         }
-        if(okButton==true)
-        {
 
-        }
     }
 
-    public void SlideIn()
+    IEnumerator SlideIn()
     {
-        rectTransform.DOAnchorPosY(middlePosY, tweenDuration).SetUpdate(true);
-
-
+        Time.timeScale = 0.2f;
+        yield return new WaitForSeconds(0.3f);
+        rectTransform.DOAnchorPosY(middlePosY, tweenDuration)
+            .OnComplete(() => Time.timeScale = 0f);
     }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(tweenDuration); 
+        Time.timeScale = 0f; 
+    }
+
     public void SlideOut()
     {
-        //okButton = true;
-        //rectTransform.DOAnchorPosY(topPosY, tweenDuration).SetUpdate(true);
-        //Time.timeScale = 1f;
+
         SceneController.instance.NextLevel();
         FinishPoint.LevelComplete = false;
 

@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a549d7fe2afb0534db013d14e919a623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 30
   startPosition: {x: 0, y: 0, z: 0}
   repeatWhen: 180
 --- !u!1 &432317936
@@ -1628,7 +1628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a549d7fe2afb0534db013d14e919a623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 30
   startPosition: {x: 0, y: 0, z: 0}
   repeatWhen: 180
 --- !u!212 &530569482
@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a549d7fe2afb0534db013d14e919a623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 60
   startPosition: {x: 0, y: 0, z: 0}
   repeatWhen: 180
 --- !u!212 &669849802
@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeCounter: {fileID: 687285796}
-  TimeLeft: 40
+  TimeLeft: 3
 --- !u!114 &741883388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3531,6 +3531,7 @@ GameObject:
   - component: {fileID: 1085125202}
   - component: {fileID: 1085125201}
   - component: {fileID: 1085125204}
+  - component: {fileID: 1085125205}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3598,6 +3599,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a2765c5c653c404ea5872b294652133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1085125205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085125200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521db3a723c421140a66fbc4ca37f62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1179325657 stripped
@@ -3966,7 +3979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a549d7fe2afb0534db013d14e919a623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 30
   startPosition: {x: 0, y: 0, z: 0}
   repeatWhen: 180
 --- !u!212 &1281923854
@@ -4076,7 +4089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a549d7fe2afb0534db013d14e919a623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 60
   startPosition: {x: 0, y: 0, z: 0}
   repeatWhen: 180
 --- !u!212 &1488008994
@@ -4471,7 +4484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a549d7fe2afb0534db013d14e919a623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 60
   startPosition: {x: 0, y: 0, z: 0}
   repeatWhen: 180
 --- !u!212 &1827396343
@@ -5092,7 +5105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a549d7fe2afb0534db013d14e919a623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 30
   startPosition: {x: 0, y: 0, z: 0}
   repeatWhen: 180
 --- !u!212 &1974989217
@@ -5898,7 +5911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a549d7fe2afb0534db013d14e919a623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 60
   startPosition: {x: 0, y: 0, z: 0}
   repeatWhen: 180
 --- !u!212 &2145790496
@@ -7206,6 +7219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052334058319178578}
   - component: {fileID: 5452481958075828742}
+  - component: {fileID: 5452481958075828743}
   m_Layer: 0
   m_Name: Layer-0
   m_TagString: Untagged
@@ -7623,6 +7637,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5452481958075828743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445553880083021370}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a549d7fe2afb0534db013d14e919a623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  startPosition: {x: 0, y: 0, z: 0}
+  repeatWhen: 50
 --- !u!212 &5597535507099765749
 SpriteRenderer:
   m_ObjectHideFlags: 0
