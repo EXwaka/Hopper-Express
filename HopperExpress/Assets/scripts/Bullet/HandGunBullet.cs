@@ -4,10 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class Bullet : MonoBehaviour
+public class HandGunBullet : MonoBehaviour
 {
-    public GameObject bullet;
-    public float BulletDamage = 1f;
+    public float handGunBulletDamage = 5f;
     float clear = 3;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +22,7 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
             clear = 0;
-
+            //destroy bullet after secs
         }
 
     }
@@ -33,7 +32,7 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
         {
             //play "explode" animation
-            enemyComponent.TakeDamage(BulletDamage);
+            enemyComponent.TakeDamage(handGunBulletDamage);
             Destroy(gameObject);
         }
         else if (other.gameObject)

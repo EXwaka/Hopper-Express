@@ -32,14 +32,8 @@ public class SkillSelectUI : MonoBehaviour
         {
             SkillMenu.SetActive(true);
             StartCoroutine(SlideIn());
-            StartCoroutine(Wait());
         }
-        //if (FinishPoint.LevelComplete==true && okButton==false)
-        //{
-        //    SkillMenu.SetActive(true);
-        //    SlideIn();
-        //    Time.timeScale = 0f;
-        //}
+
         else if (okButton == false)
         {
             Time.timeScale = 1f; 
@@ -51,21 +45,16 @@ public class SkillSelectUI : MonoBehaviour
     {
         Time.timeScale = 0.2f;
         yield return new WaitForSeconds(0.3f);
-        rectTransform.DOAnchorPosY(middlePosY, tweenDuration)
-            .OnComplete(() => Time.timeScale = 0f);
+        Time.timeScale = 1f;
+
+        rectTransform.DOAnchorPosY(middlePosY, tweenDuration);
     }
 
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(tweenDuration); 
-        Time.timeScale = 0f; 
-    }
 
     public void SlideOut()
     {
 
         SceneController.instance.NextLevel();
-        FinishPoint.LevelComplete = false;
 
 
     }

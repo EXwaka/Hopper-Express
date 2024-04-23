@@ -11,6 +11,7 @@ public class CameraShake : MonoBehaviour
 
     private float timer = 0;
     private CinemachineBasicMultiChannelPerlin m_cbmcp;
+    
     // Start is called before the first frame update
 
     void Awake()
@@ -32,14 +33,12 @@ public class CameraShake : MonoBehaviour
     void Update()
     {
         //ShakeCamera();
-        if(FinishPoint.LevelComplete==true) 
-        {
-            StopShake();
+        //if() 
+        //{
+        //    StopShake();
         
-        }
-        else
-        {
+        //}
+
             ShakeCamera();
-        }
     }
 }

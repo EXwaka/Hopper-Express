@@ -13,7 +13,6 @@ public class CharacterMove : MonoBehaviour
     public static bool moveRight = true;
     //public static bool LevelComplete = false;
 
-
     // Update is called once per frame
     void Update()
     {

@@ -14,6 +14,7 @@ public class rifle : MonoBehaviour
     float shootTimer = 0;
     float shootTimer2 = 0;
 
+
     private void Start()
     {
         isShooting = false;
@@ -84,11 +85,14 @@ public class rifle : MonoBehaviour
 
     IEnumerator Reload()
     {
+        WeaponSwap.reloading = true;
         isShooting = false; 
         shootTimer = 0f;   
         yield return new WaitForSeconds(reloadTime);
         bulletLeft = ammo;
-        isShooting = true;  
+        isShooting = true;
+        WeaponSwap.reloading = false;
+
     }
 
 

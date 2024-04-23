@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf09eed1120fe246aca711b2467b729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4.5
+  moveSpeed: 5
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
 --- !u!114 &2819332990247076548
 MonoBehaviour:
@@ -195,14 +195,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122e3dcfc72be1a4faeadfed60f249e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HP: 2
+  m_HP: 10
   MonsAttackPoint: {fileID: 1304609634405611177}
   AttackRange: 0.8
   enemy:
     serializedVersion: 2
     m_Bits: 8
   MonsInRange: 0
-  MonsDamage: 1
+  MonsDamage: 2
   atkCooldown: 1
   Counter: 0
 --- !u!95 &9023242169555994704

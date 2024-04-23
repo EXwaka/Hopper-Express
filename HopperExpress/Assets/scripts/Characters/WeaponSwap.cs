@@ -3,6 +3,8 @@ using UnityEngine;
 public class WeaponSwap : MonoBehaviour
 {
     public int selectedWeapon = 0;
+    public static bool reloading = false;
+
     // Start is called before the first frame update
     void Start()
     {
