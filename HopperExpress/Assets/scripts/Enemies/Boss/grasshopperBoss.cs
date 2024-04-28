@@ -9,7 +9,9 @@ public class grasshopperBoss : MonoBehaviour
     public GameObject minions;
     public float moveSpeed = 2f;
     public GameObject target;
-    bool wave1 = false;
+    public float spawnRate = 2f;
+    public float setSpawnRate = 2f;
+
     void Start()
     {
         monsterManager = GetComponent<MonsterManager>();
@@ -19,17 +21,30 @@ public class grasshopperBoss : MonoBehaviour
     void Update()
     {
         MoveToTarget();
+        Debug.Log("HP:" + monsterManager.m_HP);
 
-        if (monsterManager.m_HP<=151&& wave1 == false) 
+        if (monsterManager.m_HP<=151) 
         {
             SpawnMinions();
         }
+        if (monsterManager.m_HP<=100)
+        {
+            SpawnMinions();
+
+        }
     }
+
+
+
     void SpawnMinions()
     {
+        spawnRate -=Time.deltaTime;
+        if (spawnRate <= 0)
+        {
+            Instantiate(minions, transform.position, Quaternion.identity);
+            spawnRate = setSpawnRate;
+        }
 
-        Instantiate(minions, transform.position, Quaternion.identity);
-        wave1 = true;
 
     }
     void MoveToTarget()
