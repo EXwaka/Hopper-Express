@@ -6,12 +6,9 @@ public class CharacterMove : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public float jumpForce = 20f;
-    public GameObject bulletPrefab; 
-    public Transform bulletSpawnPoint;
     private bool isGrounded;
 
     public static bool moveRight = true;
-    //public static bool LevelComplete = false;
 
     // Update is called once per frame
     void Update()
@@ -20,7 +17,6 @@ public class CharacterMove : MonoBehaviour
         {
             Jump();
         }
-        //Debug.Log("CanThrowFire:" + Skills.skill_throwfire);
     }
 
     void FixedUpdate()
@@ -55,23 +51,6 @@ public class CharacterMove : MonoBehaviour
         isGrounded = false;
     }
 
-    //public static void Shoot(GameObject bulletPrefab, Transform bulletSpawnPoint)
-    //{
-    //    if (bulletPrefab != null && bulletSpawnPoint != null)
-    //    {
-    //        Vector3 mousePosition = Input.mousePosition;
-    //        mousePosition.z = bulletSpawnPoint.position.z - Camera.main.transform.position.z;
-
-    //        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-    //        Vector3 shootDirection = (worldMousePosition - bulletSpawnPoint.position).normalized;
-
-    //        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
-
-    //        bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
-    //    }
-    //}
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ground")
@@ -81,18 +60,5 @@ public class CharacterMove : MonoBehaviour
 
     }
 
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Ground")
-    //    {
-    //        isGrounded = false;
-    //    }
-    //}
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.tag == "LevelComplete")
-    //    {
-    //        LevelComplete = true;
-    //    }
-    //}
+
 }

@@ -7,6 +7,7 @@ public class Skills : MonoBehaviour
     public static bool skill_floorspike=false;
     public static bool skill_forcefield=false;
     public static bool skill_throwfire=false;
+    public static bool skill_electricfance=false;
 
     // Start is called before the first frame update
     void Start()

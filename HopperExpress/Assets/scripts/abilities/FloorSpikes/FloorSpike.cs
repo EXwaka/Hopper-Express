@@ -19,14 +19,14 @@ public class FloorSpike : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Skills.skill_floorspike == true)
-        {
-            floorspike.SetActive(true);
-        }
-        else if (Skills.skill_floorspike == false)
-        {
-            floorspike.SetActive(false);
-        }
+        //if (Skills.skill_floorspike == true)
+        //{
+        //    floorspike.SetActive(true);
+        //}
+        //else if (Skills.skill_floorspike == false)
+        //{
+        //    floorspike.SetActive(false);
+        //}
     }
 
     private void OnTriggerEnter(Collider other)

@@ -62,16 +62,15 @@ public class SkillSelectUI : MonoBehaviour
     public void ChooseSkill1()
     {
         Skills.skill_forcefield = true;
-        Skills.skill_throwfire = false;
+        Skills.skill_electricfance = false;
         Skills.skill_floorspike = false;
-        //Debug.Log(Skills.skill_forcefield);
         NextButton.SetActive(true);
 
     }
     public void ChooseSkill2()
     {
         Skills.skill_forcefield = false;
-        Skills.skill_throwfire = true;
+        Skills.skill_electricfance = true;
         Skills.skill_floorspike = false;
         NextButton.SetActive(true);
 
@@ -80,7 +79,7 @@ public class SkillSelectUI : MonoBehaviour
     public void ChooseSkill3()
     {
         Skills.skill_forcefield = false;
-        Skills.skill_throwfire = false;
+        Skills.skill_electricfance = false;
         Skills.skill_floorspike = true;
         NextButton.SetActive(true);
 
