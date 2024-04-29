@@ -34,9 +34,14 @@ public class grallhopperMinions : MonoBehaviour
         if (other.CompareTag("MonsterAttackRange"))
         {
             moveSpeed = 0;
+            Core.HP_core -= 15;
+            Destroy(gameObject);
+            Wavespawner.monsCount--;
+
         }
 
     }
+
     //private void OnTriggerExit(Collider other)
     //{
 

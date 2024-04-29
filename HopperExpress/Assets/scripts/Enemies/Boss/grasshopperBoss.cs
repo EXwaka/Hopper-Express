@@ -23,6 +23,8 @@ public class grasshopperBoss : MonoBehaviour
         MoveToTarget();
         Debug.Log("HP:" + monsterManager.m_HP);
 
+        SpawnMinions();
+
         if (monsterManager.m_HP<=151) 
         {
             SpawnMinions();
@@ -43,6 +45,8 @@ public class grasshopperBoss : MonoBehaviour
         {
             Instantiate(minions, transform.position, Quaternion.identity);
             spawnRate = setSpawnRate;
+            Wavespawner.monsCount++;
+
         }
 
 
