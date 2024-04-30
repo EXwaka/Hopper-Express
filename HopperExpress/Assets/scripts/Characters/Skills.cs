@@ -12,9 +12,7 @@ public class Skills : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //skill_floorspike = false;
-        //skill_forcefield = false;
-        //skill_throwfire = false;
+
 
     }
 

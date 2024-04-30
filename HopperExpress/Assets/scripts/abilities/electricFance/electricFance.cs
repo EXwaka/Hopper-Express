@@ -6,9 +6,10 @@ using UnityEngine;
 public class electricFance : MonoBehaviour
 {
     public Animator animator;
-    public float electricDamage = 1;
+    public float electricDamage = 5;
     public float cooldown = 0.5f;
     public float Timer = 1;
+    public float shockTime = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class electricFance : MonoBehaviour
             if (Timer >= cooldown)
             {
                 enemyComponent.TakeDamage(electricDamage);
+                enemyComponent.Shock(shockTime);
                 Timer = 0;
             }
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Core : MonoBehaviour
 {
     public GameObject core;
-    public static float HP_core=10;
+    public static float HP_core=100;
 
     // Start is called before the first frame update
     void Start()

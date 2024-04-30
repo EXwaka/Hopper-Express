@@ -27,7 +27,7 @@ public class SkillSelectUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("TimeScale" + Time.timeScale);
+        //Debug.Log("TimeScale" + Time.timeScale);
         if (Timer.timeLeft <= 1 && Wavespawner.monsCount <= 0)
         {
             SkillMenu.SetActive(true);

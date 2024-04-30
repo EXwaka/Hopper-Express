@@ -43,10 +43,13 @@ public class grasshopperBoss : MonoBehaviour
         spawnRate -=Time.deltaTime;
         if (spawnRate <= 0)
         {
-            Instantiate(minions, transform.position, Quaternion.identity);
+            Vector3 bossPosition = transform.position;
+            float randomX = Random.Range(-2f, 2f);
+            float randomY = Random.Range(-3f, 3f);
+            Vector3 spawnPosition = new Vector3(bossPosition.x + randomX, bossPosition.y + randomY, bossPosition.z);
+            Instantiate(minions, spawnPosition, Quaternion.identity);
             spawnRate = setSpawnRate;
             Wavespawner.monsCount++;
-
         }
 
 

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MonsterManager : MonoBehaviour
 {
+    public GameObject target;
+    public float moveSpeed=1;
+    public float moveSpeedMax;
+
     public float m_HP = 5f;
     public Transform MonsAttackPoint;
     public float AttackRange = 0.5f;
@@ -20,7 +24,7 @@ public class MonsterManager : MonoBehaviour
     void Start()
     {
         MonsInRange = false;
-
+        moveSpeedMax = moveSpeed;
         waveSpawner = GetComponentInParent<Wavespawner>();
 
     }
@@ -30,7 +34,7 @@ public class MonsterManager : MonoBehaviour
     {
         //Debug.Log("Slime HP: " + m_HP);
         //Debug.Log("monster in range:" + MonsInRange);
-
+        MoveToTarget();
         if (MonsInRange == true)
         {
             Counter += Time.deltaTime;
@@ -43,6 +47,17 @@ public class MonsterManager : MonoBehaviour
 
         }
 
+    }
+    public void MoveToTarget()
+    {
+        if (target != null)
+        {
+            Vector3 currentPosition = transform.position;
+
+            Vector3 targetPosition = new Vector3(target.transform.position.x, 0f, 0f);
+
+            transform.position = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
+        }
     }
     public void TakeDamage(float damageAmount)//monster take damage
     {
@@ -76,6 +91,17 @@ public class MonsterManager : MonoBehaviour
             isAttacking = false; 
         }
     }
+
+    public void Shock(float shockTime)
+    {
+        moveSpeed = 0;
+        StartCoroutine(RecoverSpeed(shockTime));
+    }
+    private IEnumerator RecoverSpeed(float Time)
+    {
+        yield return new WaitForSeconds(Time);
+        moveSpeed = moveSpeedMax;
+    }
     void OnDrawGizmosSelected()
     {
         if(MonsAttackPoint == null)
@@ -89,14 +115,30 @@ public class MonsterManager : MonoBehaviour
         if (other.CompareTag ( "MonsterAttackRange"))
         {
             MonsInRange= true;
-        } 
+            moveSpeed = 0;
+
+        }
+        if (other.CompareTag("floorspike"))
+        {
+            moveSpeed *= 0.3f;
+        }
+
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag( "MonsterAttackRange"))
         {
             MonsInRange = false;
+            moveSpeed = moveSpeedMax;
+
         }
+        if (other.CompareTag("floorspike"))
+        {
+            moveSpeed = moveSpeedMax;
+        }
+
     }
+
+
 
 }
