@@ -15,6 +15,7 @@ TagManager:
   - MonsterAttackRange
   - LevelComplete
   - NextLevel
+  - Fire
   layers:
   - Default
   - TransparentFX

@@ -97,6 +97,22 @@ public class MonsterManager : MonoBehaviour
         moveSpeed = 0;
         StartCoroutine(RecoverSpeed(shockTime));
     }
+    public void Frozen(float frozenTime)
+    {
+        moveSpeed = 0;
+        StartCoroutine(RecoverSpeed(frozenTime));
+    }
+    public void ColdSlow(float slowDownTime)
+    {
+        moveSpeed *= 0.3f;
+        StartCoroutine(RecoverSpeed(slowDownTime));
+    }
+    public void Burning(float slowDownTime)
+    {
+        moveSpeed *= 0.7f;
+        StartCoroutine(RecoverSpeed(slowDownTime));
+    }
+
     private IEnumerator RecoverSpeed(float Time)
     {
         yield return new WaitForSeconds(Time);
@@ -122,6 +138,7 @@ public class MonsterManager : MonoBehaviour
         {
             moveSpeed *= 0.3f;
         }
+
 
     }
     private void OnTriggerExit(Collider other)

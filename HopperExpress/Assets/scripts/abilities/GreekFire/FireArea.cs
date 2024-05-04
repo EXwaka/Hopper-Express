@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class FireArea : MonoBehaviour
 {
-    public float fireDamage = 1f;
+    public float fireDamage = 2f;
     public float cooldown = 0.5f;
+    public float destroyAfterSec=5;
     public float Timer = 0;
+    public float slowDownTime = 0.8f;
+    public Animator animator;
 
     private void Start()
     {
-        Destroy(gameObject, 3f);
+        animator = GetComponent<Animator>();
+        animator.SetBool("IsBurning", true);
+        Destroy(gameObject, destroyAfterSec);
 
     }
 
@@ -27,5 +32,13 @@ public class FireArea : MonoBehaviour
             }
         }
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
+        {
+            enemyComponent.Burning(slowDownTime);
+
+        }
     }
 }
