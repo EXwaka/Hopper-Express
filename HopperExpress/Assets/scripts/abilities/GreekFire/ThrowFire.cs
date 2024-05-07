@@ -21,7 +21,7 @@ public class ThrowFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (Input.GetKeyDown(KeyCode.Q)&&Skills.skill_throwfire==true&&readyToThrow==true)
         {
             readyToThrow = false;
