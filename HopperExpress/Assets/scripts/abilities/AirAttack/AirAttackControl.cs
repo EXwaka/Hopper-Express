@@ -9,20 +9,37 @@ public class AirAttackControl : MonoBehaviour
     bool aimimg = false;
     public GameObject AttackAim;
     public GameObject AttackArea;
+    public float CDMax = 30f;
+    float CD;
+    bool readyToAttack = false;
+
+    
     // Start is called before the first frame update
     void Start()
     {
+        CD = CDMax;
+        readyToAttack = true;
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         aimimg =  false;
         AttackAim.SetActive(false);
-        AttackArea.SetActive(false);
+        //AttackArea.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (readyToAttack == false)
+        {
+            CD -= Time.deltaTime;
+            if (CD <= 0)
+            {
+                CD = CDMax;
+                readyToAttack = true;
+            }
+        }
+
         Debug.Log("Aiming" + aimimg);
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q)&&readyToAttack==true)
         {
             aimimg = !aimimg;
 
@@ -44,8 +61,12 @@ public class AirAttackControl : MonoBehaviour
             transform.position = cam.ScreenToWorldPoint(mousePosition);
             if(Input.GetMouseButtonDown(0))
             {
-                AttackArea.SetActive(true);
+                Instantiate(AttackArea, transform.position, transform.rotation);
+
                 aimimg = false;
+                AttackAim.SetActive(false);
+                readyToAttack = false;
+
             }
         }
 
