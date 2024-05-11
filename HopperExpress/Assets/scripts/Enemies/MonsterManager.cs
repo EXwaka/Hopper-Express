@@ -67,6 +67,7 @@ public class MonsterManager : MonoBehaviour
         {
             //play "dead" animation
             MonsterSpawn.monsCount--;
+            FindObjectOfType<AudioManager>().Play("MonsterDeath");
             Destroy(gameObject);
             Wavespawner.monsCount--;
         }

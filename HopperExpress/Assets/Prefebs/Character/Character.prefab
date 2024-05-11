@@ -447,8 +447,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5066260094924477038}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0024999755, y: -0, z: -0, w: 0.9999969}
-  m_LocalPosition: {x: 0, y: 2.95, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.07518, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -707,6 +707,7 @@ MonoBehaviour:
   projectile: {fileID: 1607565285864532033, guid: e03d2704f72a48d45a8bc7f56f404ad3, type: 3}
   speedx: 10
   speedy: 6.67
+  greekFireCD: 15
 --- !u!114 &1744631019346746372
 MonoBehaviour:
   m_ObjectHideFlags: 0
