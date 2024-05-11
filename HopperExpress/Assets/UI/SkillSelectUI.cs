@@ -34,10 +34,10 @@ public class SkillSelectUI : MonoBehaviour
             StartCoroutine(SlideIn());
         }
 
-        else if (okButton == false)
-        {
-            Time.timeScale = 1f; 
-        }
+        //else if (okButton == false)
+        //{
+        //    Time.timeScale = 1f; 
+        //}
 
     }
 
