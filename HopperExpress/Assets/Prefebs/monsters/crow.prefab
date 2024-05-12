@@ -167,7 +167,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 3.06}
+  m_Size: {x: 1, y: 1, z: 12.66}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &818307097302179944
 MonoBehaviour:
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
-  moveSpeed: 1
+  moveSpeed: 8
   moveSpeedMax: 0
   m_HP: 10
   MonsAttackPoint: {fileID: 1304609634405611177}

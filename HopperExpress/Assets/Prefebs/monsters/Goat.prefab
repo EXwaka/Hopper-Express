@@ -130,13 +130,13 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 448
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 2.66}
+  m_Size: {x: 1, y: 1, z: 17.28}
   m_Center: {x: 0, y: 0, z: -0.42}
 --- !u!114 &173543179816781969
 MonoBehaviour:
@@ -150,10 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b1a88147a9db342a1e4a45d2363cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
-  moveSpeedMax: 0
   JumpForce: 10
-  target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
 --- !u!114 &7179648327133775092
 MonoBehaviour:
   m_ObjectHideFlags: 0
