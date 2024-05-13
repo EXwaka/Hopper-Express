@@ -38,7 +38,7 @@ public class AirAttackControl : MonoBehaviour
             }
         }
 
-        Debug.Log("Aiming" + aimimg);
+        //Debug.Log("Aiming" + aimimg);
         if (Input.GetKeyDown(KeyCode.Q)&&readyToAttack==true)
         {
             aimimg = !aimimg;

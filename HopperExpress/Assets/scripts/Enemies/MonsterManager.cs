@@ -13,7 +13,7 @@ public class MonsterManager : MonoBehaviour
     public float AttackRange = 0.5f;
     public LayerMask enemy;
     public bool MonsInRange;
-    public float MonsDamage = 1;
+    public int MonsDamage = 1;
     public float atkCooldown = 1;
     public float Counter = 0;
     private bool isAttacking = false;
@@ -74,7 +74,7 @@ public class MonsterManager : MonoBehaviour
 
     }
 
-    public void MonsterAttack(float damageAmount)
+    public void MonsterAttack(int damageAmount)
     {
         if (!isAttacking) 
         {
@@ -85,8 +85,11 @@ public class MonsterManager : MonoBehaviour
             foreach (Collider enemy in HitAny)
             {
                 //Debug.Log("Target gets hit:" + enemy.name);
-                Core.HP_core -= damageAmount;
-
+                Core core = enemy.GetComponent<Core>();
+                if (core != null)
+                {
+                    core.GetHit(damageAmount);
+                }
             }
 
             isAttacking = false; 

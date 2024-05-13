@@ -20,7 +20,7 @@ public class CoreUI : MonoBehaviour
     {
         if (CoreHPText != null)
         {
-            CoreHPText.text = string.Format("®Ö¤ß HP: {0}", Core.HP_core);
+            //CoreHPText.text = string.Format("®Ö¤ß HP: {0}");
 
         }
     }

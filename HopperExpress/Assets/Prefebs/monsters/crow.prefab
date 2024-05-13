@@ -198,7 +198,7 @@ MonoBehaviour:
   moveSpeedMax: 0
   m_HP: 10
   MonsAttackPoint: {fileID: 1304609634405611177}
-  AttackRange: 0.8
+  AttackRange: 5
   enemy:
     serializedVersion: 2
     m_Bits: 8

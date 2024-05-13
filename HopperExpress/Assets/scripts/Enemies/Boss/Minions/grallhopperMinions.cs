@@ -31,14 +31,15 @@ public class grallhopperMinions : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("MonsterAttackRange"))
+        if (other.gameObject.TryGetComponent<Core>(out Core core))
         {
-            moveSpeed = 0;
-            Core.HP_core -= 15;
+            core.GetHit(15);
             Destroy(gameObject);
             Wavespawner.monsCount--;
 
         }
+
+
 
     }
 
