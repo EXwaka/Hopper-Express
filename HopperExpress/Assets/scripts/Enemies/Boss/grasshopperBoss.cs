@@ -73,6 +73,7 @@ public class grasshopperBoss : MonoBehaviour
             moveSpeed = 0;
         }
 
+
     }
     private void OnTriggerExit(Collider other)
     {

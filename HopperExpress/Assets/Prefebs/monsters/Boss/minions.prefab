@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2012952551701910351}
@@ -56,8 +56,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.2162967, y: 2.913142, z: 4.82}
-  m_Center: {x: 0, y: 0.06931697, z: 0}
+  m_Size: {x: 1.6906512, y: 1.5670462, z: 16.05}
+  m_Center: {x: -0.03159249, y: -0.022281647, z: 0}
 --- !u!54 &4302854811331072653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -97,9 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122e3dcfc72be1a4faeadfed60f249e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveSpeed: 1
+  moveSpeedMax: 0
   m_HP: 8
   MonsAttackPoint: {fileID: 2012952551701910351}
-  AttackRange: 0.8
+  AttackRange: 0
   enemy:
     serializedVersion: 2
     m_Bits: 8
@@ -161,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: ed33a72f51f9f304a90b8229de31cc5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3999663d263386648afd5f2ee7e00cd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

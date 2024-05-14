@@ -16,6 +16,7 @@ TagManager:
   - LevelComplete
   - NextLevel
   - Fire
+  - BossStop
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - enemy
   - Wall
   - Player
-  - 
+  - 2
   - 
   - 
   - 

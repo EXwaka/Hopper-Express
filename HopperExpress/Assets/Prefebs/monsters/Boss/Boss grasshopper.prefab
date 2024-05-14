@@ -61,8 +61,8 @@ Transform:
   m_GameObject: {fileID: 4290010059460625721}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.29, y: 10.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3102, y: 2.3102, z: 2.3102}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7357884737609227582}
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: ed33a72f51f9f304a90b8229de31cc5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15a4aca2f089b6f4e8d7b940f9e36358, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -166,8 +166,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.5, y: 3.0025976, z: 11.31}
-  m_Center: {x: 0, y: 0.04122889, z: 0}
+  m_Size: {x: 2.0351536, y: 1.4070781, z: 11.31}
+  m_Center: {x: 0.22662297, y: 0.033987757, z: 0}
 --- !u!114 &3511199294708101637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122e3dcfc72be1a4faeadfed60f249e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+  moveSpeed: 3
+  moveSpeedMax: 0
   m_HP: 250
   MonsAttackPoint: {fileID: 7357884737609227582}
   AttackRange: 1
@@ -204,6 +207,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minions: {fileID: 3822640789416498159, guid: f0f003d12fd25dd4ab79acd5c1c07f32, type: 3}
   moveSpeed: 2
-  target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+  target: {fileID: 0}
   spawnRate: 1
   setSpawnRate: 3

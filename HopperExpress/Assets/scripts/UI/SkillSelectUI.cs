@@ -84,5 +84,28 @@ public class SkillSelectUI : MonoBehaviour
         NextButton.SetActive(true);
 
     }
+    public void ChooseSkill4()
+    {
+        Skills.skill_throwfire = true;
+        Skills.skill_throwice = false;
+        Skills.skill_airattack = false;
+        NextButton.SetActive(true);
 
+    }
+    public void ChooseSkill5()
+    {
+        Skills.skill_throwfire = false;
+        Skills.skill_throwice = true;
+        Skills.skill_airattack = false;
+        NextButton.SetActive(true);
+
+    }
+    public void ChooseSkill6()
+    {
+        Skills.skill_throwfire = false;
+        Skills.skill_throwice = false;
+        Skills.skill_airattack = true;
+        NextButton.SetActive(true);
+
+    }
 }
