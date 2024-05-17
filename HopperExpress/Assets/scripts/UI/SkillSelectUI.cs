@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using Cinemachine;
+using Unity.Burst.Intrinsics;
 
 
 public class SkillSelectUI : MonoBehaviour
@@ -15,13 +17,17 @@ public class SkillSelectUI : MonoBehaviour
     public float tweenDuration;
     public bool okButton=false;
     public GameObject NextButton;
+    private CinemachineBrain cinemachineBrain;
+    private bool slideIn=false;
 
     // Start is called before the first frame update
     void Start()
     {
         SkillMenu.SetActive(false);
         okButton = false;
-        NextButton.SetActive(false);
+        NextButton.SetActive(false); 
+        slideIn = false;
+        cinemachineBrain = FindObjectOfType<CinemachineBrain>();
     }
 
     // Update is called once per frame
@@ -31,7 +37,11 @@ public class SkillSelectUI : MonoBehaviour
         if (Timer.timeLeft <= 1 && Wavespawner.monsCount <= 0)
         {
             SkillMenu.SetActive(true);
-            StartCoroutine(SlideIn());
+            if(!slideIn)
+            {
+                StartCoroutine(SlideIn());
+                slideIn = true;
+            }
         }
 
         //else if (okButton == false)
@@ -43,17 +53,22 @@ public class SkillSelectUI : MonoBehaviour
 
     IEnumerator SlideIn()
     {
-        Time.timeScale = 0.2f;
-        yield return new WaitForSeconds(0.3f);
-        Time.timeScale = 1f;
+        Time.timeScale = 0.2f; 
+        yield return new WaitForSecondsRealtime(1f);
 
-        rectTransform.DOAnchorPosY(middlePosY, tweenDuration);
+        if (cinemachineBrain != null)
+        {
+            cinemachineBrain.enabled = false;
+        }
+        Time.timeScale = 0f; 
+        rectTransform.DOAnchorPosY(middlePosY, tweenDuration).SetUpdate(true);
     }
 
 
     public void SlideOut()
     {
 
+            cinemachineBrain.enabled = true;
         SceneController.instance.NextLevel();
 
 

@@ -19,6 +19,7 @@ public class Wavespawner : MonoBehaviour
 
     private void Start()
     {
+        monsCount = 0;
         StartCoroutine(SpawnWaves());
     }
 

@@ -1,5 +1,7 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+
 
 public class rifle : MonoBehaviour
 {
@@ -13,13 +15,26 @@ public class rifle : MonoBehaviour
     public float cooldown = 0.1f;
     float shootTimer = 0;
     float shootTimer2 = 0;
+    public TextMeshProUGUI ammoText;
+
 
 
     private void Start()
     {
         isShooting = false;
         firstShot = false;
-        shootTimer = 0;
+        shootTimer = 0; 
+        UpdateAmmoUI();
+
+    }
+    void OnEnable()
+    {
+        UpdateAmmoUI();
+    }
+
+    void OnDisable()
+    {
+        HideAmmoUI();
     }
 
     void Update()
@@ -47,7 +62,7 @@ public class rifle : MonoBehaviour
 
         if (bulletLeft <= 0)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 StartCoroutine(Reload());
             }
@@ -61,6 +76,10 @@ public class rifle : MonoBehaviour
                 Shoot(bulletPrefab, bulletSpawnPoint);
                 shootTimer = 0f;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            UpdateAmmoUI();
         }
     }
 
@@ -81,6 +100,8 @@ public class rifle : MonoBehaviour
         }
 
         bulletLeft--;
+        UpdateAmmoUI();
+
     }
 
     IEnumerator Reload()
@@ -92,8 +113,32 @@ public class rifle : MonoBehaviour
         bulletLeft = ammo;
         isShooting = true;
         WeaponSwap.reloading = false;
+        UpdateAmmoUI();
 
     }
-
-
+    private void UpdateAmmoUI()
+    {
+        if (gameObject.activeSelf && ammoText != null)
+        {
+            if (bulletLeft > 0)
+            {
+                ammoText.fontSize = 45;
+                ammoText.text = $"{bulletLeft}/{ammo}";
+                ammoText.gameObject.SetActive(true);
+            }
+            else
+            {
+                ammoText.fontSize = 30;
+                ammoText.text = "¤l¼u¥ÎºÉ!\n«ö¤U·Æ¹«¥ªÁä¶ñ¸Ë!";
+                ammoText.gameObject.SetActive(true);
+            }
+        }
+    }
+    private void HideAmmoUI()
+    {
+        if (ammoText != null)
+        {
+            ammoText.gameObject.SetActive(false);
+        }
+    }
 }

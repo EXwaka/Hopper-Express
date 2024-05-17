@@ -15,7 +15,7 @@ public class Cheater : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Tab))
         {
-            Timer.timeLeft = 1;
+            Timer.timeLeft = 0;
             Wavespawner.monsCount=0;
         }
     }

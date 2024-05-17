@@ -2345,8 +2345,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4446,7 +4446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e8d5e751200f34d8c3d8504b5e6cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: f61b4dfbef857244bb4e32468353835e, type: 3}
+  defaultCursorTexture: {fileID: 0}
+  cursorAnimations: []
 --- !u!4 &1274725161
 Transform:
   m_ObjectHideFlags: 0

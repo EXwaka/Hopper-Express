@@ -1,5 +1,5 @@
+using Unity.VisualScripting;
 using UnityEngine;
-
 public class WeaponSwap : MonoBehaviour
 {
     public int selectedWeapon = 0;
@@ -39,4 +39,5 @@ public class WeaponSwap : MonoBehaviour
             i++;
         }
     }
+
 }

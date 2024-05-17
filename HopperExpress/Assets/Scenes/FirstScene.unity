@@ -1160,7 +1160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e8d5e751200f34d8c3d8504b5e6cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: ca5b56c9d12972f448bac082bf9c40c8, type: 3}
+  defaultCursorTexture: {fileID: 0}
+  cursorAnimations: []
 --- !u!4 &473001649
 Transform:
   m_ObjectHideFlags: 0
@@ -2613,7 +2614,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 9fc50a6cd7ea08d409e5cd090500ae39, type: 3}
     - target: {fileID: 3021216976333731949, guid: 885f672246c9c104cac85743a9b0c329, type: 3}
       propertyPath: sounds.Array.data[0].volum
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3737657288590066523, guid: 885f672246c9c104cac85743a9b0c329, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3322,7 +3323,7 @@ Transform:
   m_GameObject: {fileID: 1952839256800574260}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.4, y: 31.59, z: 0}
+  m_LocalPosition: {x: 67.4, y: 26, z: 3}
   m_LocalScale: {x: 10, y: 10, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []

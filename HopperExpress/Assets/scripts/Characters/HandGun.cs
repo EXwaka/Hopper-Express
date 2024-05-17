@@ -1,19 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HandGun : MonoBehaviour
 {
-    // Reference to the bullet prefab and spawn point
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
-    public int ammo=10;
-    public int bulletLeft=10;
+    public int ammo = 10;
+    public int bulletLeft = 10;
     public float reloadTime = 3;
+    public TextMeshProUGUI ammoText;
+    //public GameObject text;
+
+    void Start()
+    {
+        UpdateAmmoUI();
+    }
+
+    void OnEnable()
+    {
+        UpdateAmmoUI();
+    }
+
+    void OnDisable()
+    {
+        HideAmmoUI();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)&&bulletLeft>0)
+        if (Input.GetMouseButtonDown(0) && bulletLeft > 0)
         {
             Shoot(bulletPrefab, bulletSpawnPoint);
         }
@@ -21,7 +39,14 @@ public class HandGun : MonoBehaviour
         {
             StartCoroutine(Reload());
         }
+
+        // Check for the E key press to update ammo display
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            UpdateAmmoUI();
+        }
     }
+
     public void Shoot(GameObject bulletPrefab, Transform bulletSpawnPoint)
     {
         if (bulletPrefab != null && bulletSpawnPoint != null)
@@ -38,11 +63,40 @@ public class HandGun : MonoBehaviour
             bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
         }
         bulletLeft--;
+        UpdateAmmoUI();
     }
 
     IEnumerator Reload()
     {
         yield return new WaitForSeconds(reloadTime);
         bulletLeft = ammo;
+        UpdateAmmoUI();
+    }
+
+    private void UpdateAmmoUI()
+    {
+        if (gameObject.activeSelf && ammoText != null)
+        {
+            if (bulletLeft > 0)
+            {
+                ammoText.fontSize = 45;
+                ammoText.text = $"{bulletLeft}/{ammo}";
+                ammoText.gameObject.SetActive(true);
+            }
+            else
+            {
+                ammoText.fontSize = 30;
+                ammoText.text = "¤l¼u¥ÎºÉ!\n«ö¤U·Æ¹«¥ªÁä¶ñ¸Ë!";
+                ammoText.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    private void HideAmmoUI()
+    {
+        if (ammoText != null)
+        {
+            ammoText.gameObject.SetActive(false);
+        }
     }
 }
