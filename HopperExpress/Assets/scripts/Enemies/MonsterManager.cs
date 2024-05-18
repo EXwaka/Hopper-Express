@@ -32,7 +32,7 @@ public class MonsterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("Slime HP: " + m_HP);
+        //Debug.Log("HP: " + m_HP);
         //Debug.Log("monster in range:" + MonsInRange);
         MoveToTarget();
         if (MonsInRange == true)

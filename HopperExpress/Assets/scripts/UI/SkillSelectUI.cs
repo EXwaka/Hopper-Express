@@ -67,9 +67,10 @@ public class SkillSelectUI : MonoBehaviour
 
     public void SlideOut()
     {
-
-            cinemachineBrain.enabled = true;
+        
+        cinemachineBrain.enabled = true;
         SceneController.instance.NextLevel();
+        Time.timeScale = 1f;
 
 
     }

@@ -44,4 +44,11 @@ public class ForceField : MonoBehaviour
 
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
+        {
+            Timer = 0;
+        }
+    }
 }

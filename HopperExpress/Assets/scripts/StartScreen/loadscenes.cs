@@ -10,4 +10,8 @@ public class loadscreen : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("FirstStory");
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
