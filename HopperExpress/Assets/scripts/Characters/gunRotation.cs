@@ -6,7 +6,8 @@ public class MouseRotation : MonoBehaviour
 {
     [SerializeField] private Camera mainCam;
     private SpriteRenderer spriteRenderer;
-
+    public float flipX;
+    public float flipY;
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -35,10 +36,12 @@ public class MouseRotation : MonoBehaviour
         if (directionToMouse.x < 0)
         {
             spriteRenderer.flipY = true;
+            transform.localPosition = new Vector3(flipX, flipY,0);
         }
         else
         {
             spriteRenderer.flipY = false;
+            transform.localPosition = new Vector3(-flipX, flipY,0);
         }
     }
 }

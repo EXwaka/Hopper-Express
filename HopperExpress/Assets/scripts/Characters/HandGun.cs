@@ -11,10 +11,12 @@ public class HandGun : MonoBehaviour
     public int bulletLeft = 10;
     public float reloadTime = 3;
     public TextMeshProUGUI ammoText;
+    public Animator animator;
     //public GameObject text;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         UpdateAmmoUI();
     }
 
@@ -61,6 +63,8 @@ public class HandGun : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
 
             bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
+            animator.SetTrigger("IsFiring");
+
         }
         bulletLeft--;
         UpdateAmmoUI();

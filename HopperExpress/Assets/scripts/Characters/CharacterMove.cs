@@ -7,9 +7,13 @@ public class CharacterMove : MonoBehaviour
     public float moveSpeed = 10f;
     public float jumpForce = 20f;
     private bool isGrounded;
-
+    public Animator animator;
     public static bool moveRight = true;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -33,7 +37,10 @@ public class CharacterMove : MonoBehaviour
             moveRight = false;
             Move(Vector3.left);
             GetComponent<SpriteRenderer>().flipX = true;
-
+        }
+        else
+        {
+            StopMove();
         }
 
         // Apply a downward force to simulate gravity
@@ -42,7 +49,14 @@ public class CharacterMove : MonoBehaviour
 
     void Move(Vector3 direction)
     {
+        animator.SetBool("IsWalking", true);
         transform.Translate(direction * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    void StopMove()
+    {
+        animator.SetBool("IsWalking", false);
+
     }
 
     void Jump()

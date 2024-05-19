@@ -7,8 +7,8 @@ public class Core : MonoBehaviour
     public GameObject core;
     public int HPmax_core=100;
     public int HPcurrent_core;
-    public HBbar healthBar;
-
+    public HBbar healthBar; 
+    public GameOverControl gameOverControl;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class Core : MonoBehaviour
         //Debug.Log("coreHP: " + HP_core);
         if (HPcurrent_core <= 0)
         {
-
+            gameOverControl.SlideIn();
             Destroy(this.gameObject);
         
         }

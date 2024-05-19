@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ public class rifle : MonoBehaviour
     float shootTimer = 0;
     float shootTimer2 = 0;
     public TextMeshProUGUI ammoText;
-
+    public Animator animator;
 
 
     private void Start()
@@ -25,7 +25,7 @@ public class rifle : MonoBehaviour
         firstShot = false;
         shootTimer = 0; 
         UpdateAmmoUI();
-
+        animator = gameObject.GetComponent<Animator>();
     }
     void OnEnable()
     {
@@ -58,6 +58,7 @@ public class rifle : MonoBehaviour
         else
         {
             isShooting = false;
+            animator.SetBool("IsFiring", false);
         }
 
         if (bulletLeft <= 0)
@@ -97,6 +98,8 @@ public class rifle : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
 
             bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
+            animator.SetTrigger("IsFiring");
+
         }
 
         bulletLeft--;
@@ -129,7 +132,7 @@ public class rifle : MonoBehaviour
             else
             {
                 ammoText.fontSize = 30;
-                ammoText.text = "§lºu•Œ∫…!\n´ˆ§U∑∆π´•™¡‰∂Ò∏À!";
+                ammoText.text = "Â≠êÂΩàÁî®Áõ°!\nÊåâ‰∏ãÊªëÈº†Â∑¶ÈçµÂ°´Ë£ù!";
                 ammoText.gameObject.SetActive(true);
             }
         }
