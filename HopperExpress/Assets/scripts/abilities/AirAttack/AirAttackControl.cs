@@ -22,7 +22,14 @@ public class AirAttackControl : MonoBehaviour
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         aimimg =  false;
         AttackAim.SetActive(false);
-        //AttackArea.SetActive(false);
+        if(Skills.skill_airattack)
+        {
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame

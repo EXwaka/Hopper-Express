@@ -77,7 +77,7 @@ public class SkillSelectUI : MonoBehaviour
 
     public void ChooseSkill1()
     {
-        Skills.skill_forcefield = true;
+        Skills.skill_forcefield = false;
         Skills.skill_electricfance = false;
         Skills.skill_floorspike = false;
         NextButton.SetActive(true);

@@ -17,7 +17,7 @@ public class GetOnTrain : MonoBehaviour
     {
         if (Ebutton.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadSceneAsync("SampleScene");
+            SceneManager.LoadSceneAsync("Level1-0");
 
         }
     }
