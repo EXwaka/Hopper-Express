@@ -6,18 +6,22 @@ using TMPro;
 public class HandGun : MonoBehaviour
 {
     public GameObject bulletPrefab;
+    public GameObject handGunImg;
     public Transform bulletSpawnPoint;
     public int ammo = 10;
     public int bulletLeft = 10;
     public float reloadTime = 3;
     public TextMeshProUGUI ammoText;
     public Animator animator;
+    bool reloading=false;
     //public GameObject text;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         UpdateAmmoUI();
+        reloading = false;
+
     }
 
     void OnEnable()
@@ -37,9 +41,12 @@ public class HandGun : MonoBehaviour
         {
             Shoot(bulletPrefab, bulletSpawnPoint);
         }
-        else if (Input.GetMouseButtonDown(0))
+        else if (bulletLeft<=0 )
         {
-            StartCoroutine(Reload());
+            if (Input.GetMouseButtonDown(0)&&!reloading)
+            {
+                StartCoroutine(Reload());
+            }
         }
 
         // Check for the E key press to update ammo display
@@ -72,9 +79,11 @@ public class HandGun : MonoBehaviour
 
     IEnumerator Reload()
     {
+        reloading = true;
         yield return new WaitForSeconds(reloadTime);
         bulletLeft = ammo;
         UpdateAmmoUI();
+        reloading = false;
     }
 
     private void UpdateAmmoUI()
@@ -83,12 +92,14 @@ public class HandGun : MonoBehaviour
         {
             if (bulletLeft > 0)
             {
+                handGunImg.SetActive(true);
                 ammoText.fontSize = 45;
                 ammoText.text = $"{bulletLeft}/{ammo}";
                 ammoText.gameObject.SetActive(true);
             }
             else
             {
+                handGunImg.SetActive(false);
                 ammoText.fontSize = 30;
                 ammoText.text = "¤l¼u¥ÎºÉ!\n«ö¤U·Æ¹«¥ªÁä¶ñ¸Ë!";
                 ammoText.gameObject.SetActive(true);

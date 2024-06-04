@@ -17,10 +17,11 @@ public class rifle : MonoBehaviour
     float shootTimer2 = 0;
     public TextMeshProUGUI ammoText;
     public Animator animator;
-
+    bool reloading = false;
 
     private void Start()
     {
+        reloading = false;
         isShooting = false;
         firstShot = false;
         shootTimer = 0; 
@@ -63,7 +64,7 @@ public class rifle : MonoBehaviour
 
         if (bulletLeft <= 0)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !reloading )
             {
                 StartCoroutine(Reload());
             }
@@ -109,14 +110,16 @@ public class rifle : MonoBehaviour
 
     IEnumerator Reload()
     {
+        reloading = true;
         WeaponSwap.reloading = true;
-        isShooting = false; 
-        shootTimer = 0f;   
+        isShooting = false;
+        shootTimer = 0f;
         yield return new WaitForSeconds(reloadTime);
         bulletLeft = ammo;
         isShooting = true;
         WeaponSwap.reloading = false;
         UpdateAmmoUI();
+        reloading = false;
 
     }
     private void UpdateAmmoUI()

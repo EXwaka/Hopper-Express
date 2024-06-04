@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1616731260781245893}
   - component: {fileID: 8393630453406854311}
   - component: {fileID: 5331485187489270633}
-  - component: {fileID: 4056064430076653583}
+  - component: {fileID: 1439141380205443249}
   - component: {fileID: 7179648327133775092}
   - component: {fileID: 6974265697061503012}
   - component: {fileID: 9117055810353471842}
@@ -86,7 +86,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.8836331, y: 3.8506536, z: 13.5}
   m_Center: {x: 0.04694295, y: -0.39566135, z: -0.42000008}
---- !u!114 &4056064430076653583
+--- !u!114 &1439141380205443249
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,10 +95,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4373350818202400889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6b6b23fd7bcb445a6fe18b4625c57c, type: 3}
+  m_Script: {fileID: 11500000, guid: 21b1a88147a9db342a1e4a45d2363cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  JumpForce: 15
 --- !u!114 &7179648327133775092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
-  moveSpeed: 2.5
+  moveSpeed: 5
   moveSpeedMax: 0
   m_HP: 15
   MonsAttackPoint: {fileID: 8021723557747095666}
