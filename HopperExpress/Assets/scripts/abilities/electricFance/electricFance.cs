@@ -24,7 +24,7 @@ public class electricFance : MonoBehaviour
     }
     void attack()
     {
-        animator.SetBool("IsAttacking", true);
+        animator.SetTrigger("IsAttacking");
     }
     private void OnTriggerStay(Collider other)
     {
