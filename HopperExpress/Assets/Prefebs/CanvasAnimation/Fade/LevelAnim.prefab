@@ -220,9 +220,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -367,6 +367,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5212742841427432337}
     m_Modifications:
+    - target: {fileID: 77063651256803450, guid: 472efc611825e0a439695afd155cd276, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 77063651256803450, guid: 472efc611825e0a439695afd155cd276, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6942427496083961879, guid: 472efc611825e0a439695afd155cd276, type: 3}
       propertyPath: m_Name
       value: Fade
