@@ -33,7 +33,7 @@ public class headRotation : MonoBehaviour
         Vector3 directionToMouse = targetPosition - transform.position;
 
         float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
-        Debug.Log(angle);
+        //Debug.Log(angle);
         // 檢查角度是否在允許範圍內
         if ((angle > ang1 && angle < ang2) || (angle > ang3 && angle < ang4) || (angle > ang5 && angle < ang6))
         {

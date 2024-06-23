@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,13 @@ public class Core : MonoBehaviour
     public GameObject core;
     public int HPmax_core=100;
     public int HPcurrent_core;
-    public HBbar healthBar; 
+    public HBbar healthBar;
+    private bool dead;
     public GameOverControl gameOverControl;
     // Start is called before the first frame update
     void Start()
     {
+        dead = false;
         HPcurrent_core = HPmax_core;
         healthBar.SetMaxHealth(HPmax_core);
     }
@@ -20,10 +23,10 @@ public class Core : MonoBehaviour
     void Update()
     {
         //Debug.Log("coreHP: " + HP_core);
-        if (HPcurrent_core <= 0)
+        if (HPcurrent_core <= 0&&!dead)
         {
-            gameOverControl.SlideIn();
-            Destroy(this.gameObject);
+            StartCoroutine(DeadAnim());
+            dead = true;
         
         }
     }
@@ -34,5 +37,13 @@ public class Core : MonoBehaviour
         healthBar.SetHealth(HPcurrent_core);
     }
 
+    IEnumerator DeadAnim()
+    {
+        Time.timeScale = 0.2f;
+        //play dead anim
+        yield return new WaitForSecondsRealtime(1f);
+        gameOverControl.SlideIn();
+        Time.timeScale = 0;
 
+    }
 }

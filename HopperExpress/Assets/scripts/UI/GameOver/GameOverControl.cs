@@ -28,7 +28,6 @@ public class GameOverControl : MonoBehaviour
 
     public void SlideIn()
     {
-        Time.timeScale = 0;
         rectTransform.DOAnchorPosY(middlePosY, tweenDuration).SetUpdate(true);
     }
 
@@ -36,9 +35,9 @@ public class GameOverControl : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1;
 
     }
     public void BackToMenu()

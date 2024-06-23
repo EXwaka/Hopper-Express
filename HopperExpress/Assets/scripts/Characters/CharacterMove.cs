@@ -17,6 +17,7 @@ public class CharacterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("mons left:" + Wavespawner.monsCount);
         
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded==true)
         {

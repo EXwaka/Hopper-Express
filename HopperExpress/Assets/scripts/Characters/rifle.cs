@@ -6,10 +6,12 @@ using UnityEngine;
 public class rifle : MonoBehaviour
 {
     public GameObject bulletPrefab;
+    public GameObject character;
     public Transform bulletSpawnPoint;
     public int ammo = 20;
     public int bulletLeft = 20;
     public float reloadTime = 3;
+    public float shootForce = 0.2f;
     public bool isShooting = false;
     private bool firstShot = false;
     public float cooldown = 0.1f;
@@ -18,7 +20,6 @@ public class rifle : MonoBehaviour
     public TextMeshProUGUI ammoText;
     public Animator animator;
     bool reloading = false;
-
     private void Start()
     {
         reloading = false;
@@ -40,6 +41,7 @@ public class rifle : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0) && firstShot == false && bulletLeft > 0)
         {
             Shoot(bulletPrefab, bulletSpawnPoint);
@@ -55,6 +57,7 @@ public class rifle : MonoBehaviour
         if (Input.GetMouseButton(0) && bulletLeft > 0)
         {
             isShooting = true;
+
         }
         else
         {
@@ -101,7 +104,27 @@ public class rifle : MonoBehaviour
             bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
             animator.SetTrigger("IsFiring");
 
+            Vector3 screenToWorldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, bulletSpawnPoint.position.z - Camera.main.transform.position.z));
+            float characterScreenX = character.transform.position.x;
+
+            if (screenToWorldMousePosition.x < characterScreenX)
+            {
+                // 滑鼠在角色左側
+                Vector3 characterPosition = character.transform.position;
+                characterPosition.x += shootForce; // 向右移動
+                character.transform.position = characterPosition;
+            }
+            else
+            {
+                // 滑鼠在角色右側
+                Vector3 characterPosition = character.transform.position;
+                characterPosition.x -= shootForce; // 向左移動
+                character.transform.position = characterPosition;
+            }
         }
+
+
+
 
         bulletLeft--;
         UpdateAmmoUI();

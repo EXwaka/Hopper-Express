@@ -14,6 +14,7 @@ public class grasshopperBoss : MonoBehaviour
 
     void Start()
     {
+        Wavespawner.monsCount += 1;
         monsterManager = GetComponent<MonsterManager>();
     }
 
@@ -21,7 +22,7 @@ public class grasshopperBoss : MonoBehaviour
     void Update()
     {
         MoveToTarget();
-        Debug.Log("HP:" + monsterManager.m_HP);
+        //Debug.Log("HP:" + monsterManager.m_HP);
 
         SpawnMinions();
 

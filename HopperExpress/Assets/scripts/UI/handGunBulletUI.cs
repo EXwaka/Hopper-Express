@@ -18,6 +18,7 @@ public class handGunBulletUI : MonoBehaviour
     void Update()
     {
         UpdateBulletCount(playerHandGun.bulletLeft);
+
     }
 
     public void UpdateBulletCount(int bulletCount)
