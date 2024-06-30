@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,17 +10,32 @@ public class CharacterMove : MonoBehaviour
     private bool isGrounded;
     public Animator animator;
     public static bool moveRight = true;
+    private KeyCode jumpKey;
 
+    public static CharacterMove instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     private void Start()
     {
+        jumpKey = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("JumpKey", KeyCode.Space.ToString()));
         animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("mons left:" + Wavespawner.monsCount);
-        
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded==true)
+        //Debug.Log(jumpKey);
+
+        if (Input.GetKeyDown(jumpKey) && isGrounded==true)
         {
             Jump();
         }
@@ -76,5 +92,9 @@ public class CharacterMove : MonoBehaviour
 
     }
 
+    public void UpdateKeyBindings()
+    {
+        jumpKey = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("JumpKey", KeyCode.Space.ToString()));
+    }
 
 }

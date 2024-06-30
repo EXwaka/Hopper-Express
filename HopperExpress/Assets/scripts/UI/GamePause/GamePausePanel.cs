@@ -69,9 +69,13 @@ public class GamePausePanel : MonoBehaviour
     }
     public void BackToMenu()
     {
-        pauseButton.SetActive(true);
+        SlideIn();
+        pauseButton.SetActive(false);
         mainCanvas.SetActive(false);
+        AudioManager.instance.Stop("LevelMusic");//stop music in levels
+        AudioManager.instance.Play("MainMenu");//play menu music
         Time.timeScale = 1;
+
         SceneManager.LoadScene("StartScreen");
 
     }

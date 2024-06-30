@@ -5635,7 +5635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: MainMenu
-    clip: {fileID: 8300000, guid: d48e721c94abd2240a63512d872daafc, type: 3}
+    clip: {fileID: 0}
     volume: 0
     pitch: 1
     loop: 1
@@ -5646,11 +5646,11 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
+  - name: LevelMusic
+    clip: {fileID: 8300000, guid: d48e721c94abd2240a63512d872daafc, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!1001 &6338788497684201493
 PrefabInstance:
@@ -6355,10 +6355,10 @@ SceneRoots:
   - {fileID: 1041693909}
   - {fileID: 3505093261312673606}
   - {fileID: 6924287101527032092}
-  - {fileID: 5259075905920597870}
   - {fileID: 2144945770}
   - {fileID: 3169618960461330216}
   - {fileID: 1274725161}
   - {fileID: 1876999955}
   - {fileID: 8773657317565138526}
   - {fileID: 520079144}
+  - {fileID: 5259075905920597870}

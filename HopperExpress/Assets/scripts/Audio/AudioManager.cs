@@ -12,15 +12,19 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            /*DontDestroyOnLoad(gameObject);*/ // don't destroy AudioManager when switching scenes
+            InitializeSounds();
+            LoadSettings(); 
         }
         else
         {
             Destroy(gameObject);
-            return;
+            InitializeSounds();
         }
 
-        DontDestroyOnLoad(gameObject);
-
+    }
+    void InitializeSounds()//
+    {
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -34,6 +38,8 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         Play("MainMenu");
+        Play("LevelMusic");
+
     }
 
     public void Play(string name)
@@ -46,18 +52,60 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            return;
+        }
+        s.source.Stop();
+    }
+
     public void SetVolume(float volume)
     {
-        if (sounds.Length > 0)
+        foreach (Sound s in sounds)
         {
-            sounds[0].source.volume = volume;
+            if (s.name == "MainMenu" || s.name == "LevelMusic")
+            {
+                s.source.volume = volume;
+            }
         }
+        SaveSettings();
     }
     public void SetSFX(float volume)
     {
-        for (int i = 1; i < sounds.Length; i++)
+        foreach (Sound s in sounds)
         {
-            sounds[i].source.volume = volume;
+            if (s.name == "MonsterDeath")
+            {
+                s.source.volume = volume;
+            }
+        }
+        SaveSettings();
+    }
+    private void SaveSettings()
+    {
+        foreach (Sound s in sounds)
+        {
+            PlayerPrefs.SetFloat(s.name + "_Volume", s.source.volume);
+            PlayerPrefs.SetFloat(s.name + "_Pitch", s.source.pitch);
+        }
+        PlayerPrefs.Save(); 
+    }
+
+    private void LoadSettings()
+    {
+        foreach (Sound s in sounds)
+        {
+            if (PlayerPrefs.HasKey(s.name + "_Volume"))
+            {
+                s.source.volume = PlayerPrefs.GetFloat(s.name + "_Volume");
+            }
+            if (PlayerPrefs.HasKey(s.name + "_Pitch"))
+            {
+                s.source.pitch = PlayerPrefs.GetFloat(s.name + "_Pitch");
+            }
         }
     }
 }

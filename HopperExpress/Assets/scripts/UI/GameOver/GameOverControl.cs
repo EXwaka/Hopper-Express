@@ -16,7 +16,7 @@ public class GameOverControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCanvas.SetActive(true);
+        mainCanvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,12 +38,14 @@ public class GameOverControl : MonoBehaviour
         Time.timeScale = 1;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        mainCanvas.SetActive(false);
 
     }
     public void BackToMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("StartScreen");
+        mainCanvas.SetActive(false);
 
     }
 
