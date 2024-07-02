@@ -6,14 +6,16 @@ using System;
 
 public class KeyBind : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI attackButtonText;
+    [SerializeField] private TextMeshProUGUI moveRButtonText;
+    [SerializeField] private TextMeshProUGUI moveLButtonText;
     [SerializeField] private TextMeshProUGUI jumpButtonText;
 
     private string currentKeyAction;
 
     private void Start()
     {
-        attackButtonText.text = PlayerPrefs.GetString("AttackKey", KeyCode.Mouse0.ToString());
+        moveRButtonText.text = PlayerPrefs.GetString("MoveRKey", KeyCode.D.ToString());
+        moveLButtonText.text = PlayerPrefs.GetString("MoveLKey", KeyCode.A.ToString());
         jumpButtonText.text = PlayerPrefs.GetString("JumpKey", KeyCode.Space.ToString());
     }
 
@@ -40,10 +42,15 @@ public class KeyBind : MonoBehaviour
         //}
     }
 
-    public void SetAttackKey()
+    public void SetMoveRKey()
     {
-        currentKeyAction = "AttackKey";
-        attackButtonText.text = "«ö¤U«öÁä¿é¤J";
+        currentKeyAction = "MoveRKey";
+        moveRButtonText.text = "«ö¤U«öÁä¿é¤J";
+    }
+    public void SetMoveLKey()
+    {
+        currentKeyAction = "MoveLKey";
+        moveLButtonText.text = "«ö¤U«öÁä¿é¤J";
     }
 
     public void SetJumpKey()
@@ -58,9 +65,14 @@ public class KeyBind : MonoBehaviour
 
         switch (action)
         {
-            case "AttackKey":
-                attackButtonText.text = keyName;
-                PlayerPrefs.SetString("AttackKey", keyName);
+            case "MoveRKey":
+                moveRButtonText.text = keyName;
+                PlayerPrefs.SetString("MoveRKey", keyName);
+                break;
+
+            case "MoveLKey":
+                moveLButtonText.text = keyName;
+                PlayerPrefs.SetString("MoveLKey", keyName);
                 break;
 
             case "JumpKey":
@@ -73,8 +85,12 @@ public class KeyBind : MonoBehaviour
         }
 
         PlayerPrefs.Save();
-        UpdateKeyBindings();  
+        if (CharacterMove.instance != null)
+        {
+            CharacterMove.instance.UpdateKeyBindings();
+        }
     }
+
 
     private void UpdateKeyBindings()
     {

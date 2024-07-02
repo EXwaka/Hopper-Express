@@ -11,8 +11,11 @@ public class CharacterMove : MonoBehaviour
     public Animator animator;
     public static bool moveRight = true;
     private KeyCode jumpKey;
+    private KeyCode moveRKey;
+    private KeyCode moveLKey;
 
     public static CharacterMove instance;
+
     private void Awake()
     {
         if (instance == null)
@@ -25,17 +28,16 @@ public class CharacterMove : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Start()
     {
-        jumpKey = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("JumpKey", KeyCode.Space.ToString()));
+        UpdateKeyBindings();
         animator = GetComponent<Animator>();
     }
-    // Update is called once per frame
+
     void Update()
     {
-        //Debug.Log(jumpKey);
-
-        if (Input.GetKeyDown(jumpKey) && isGrounded==true)
+        if (Input.GetKeyDown(jumpKey) && isGrounded)
         {
             Jump();
         }
@@ -43,13 +45,13 @@ public class CharacterMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(moveRKey))
         {
             moveRight = true;
             Move(Vector3.right);
             GetComponent<SpriteRenderer>().flipX = false;
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(moveLKey))
         {
             moveRight = false;
             Move(Vector3.left);
@@ -60,7 +62,6 @@ public class CharacterMove : MonoBehaviour
             StopMove();
         }
 
-        // Apply a downward force to simulate gravity
         GetComponent<Rigidbody>().AddForce(Vector3.down * 50f);
     }
 
@@ -73,28 +74,27 @@ public class CharacterMove : MonoBehaviour
     void StopMove()
     {
         animator.SetBool("IsWalking", false);
-
     }
 
     void Jump()
     {
-        // Add a force in the upward direction to simulate jumping
         GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isGrounded = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
         }
-
     }
 
     public void UpdateKeyBindings()
     {
         jumpKey = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("JumpKey", KeyCode.Space.ToString()));
+        moveRKey = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("MoveRKey", KeyCode.D.ToString()));
+        moveLKey = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("MoveLKey", KeyCode.A.ToString()));
+        Debug.Log("Updated bindings: JumpKey = " + jumpKey + ", MoveRKey = " + moveRKey);
     }
-
 }
