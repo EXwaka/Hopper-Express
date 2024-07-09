@@ -37,4 +37,10 @@ public class Timer : MonoBehaviour
         }
 
     }
+
+    public void ResetTimer()
+    {
+        EndCount = false;
+        timeLeft = TimeLeft;
+    }
 }

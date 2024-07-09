@@ -313,10 +313,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1599821152551707953, guid: 9da9436f07869e44bbded4fadb5fbf50, type: 3}
+  character: {fileID: 0}
   bulletSpawnPoint: {fileID: 6890923917028208424}
   ammo: 20
   bulletLeft: 20
   reloadTime: 1.2
+  shootForce: 0.2
   isShooting: 0
   cooldown: 0.1
   ammoText: {fileID: 4198974007096944107}
@@ -973,11 +975,11 @@ Transform:
   m_Children:
   - {fileID: 5972381362509351151}
   - {fileID: 5819569935837993671}
+  - {fileID: 3191142807878784043}
   - {fileID: 7420856206809954240}
   - {fileID: 7005907601249802918}
   - {fileID: 9087956496723028717}
   - {fileID: 787902317964925779}
-  - {fileID: 3191142807878784043}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4209398951737229310

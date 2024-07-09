@@ -72,7 +72,7 @@ public class GamePausePanel : MonoBehaviour
         SlideIn();
         pauseButton.SetActive(false);
         mainCanvas.SetActive(false);
-        AudioManager.instance.Stop("LevelMusic");//stop music in levels
+        AudioManager.instance.Stop("LevelMusic");//stop music in battle level scene
         AudioManager.instance.Play("MainMenu");//play menu music
         Time.timeScale = 1;
 
