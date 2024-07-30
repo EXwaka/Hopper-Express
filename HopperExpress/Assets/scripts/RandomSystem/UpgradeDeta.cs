@@ -5,17 +5,16 @@ using UnityEngine;
 
 public enum UpgradeType
 {
-    WeaponUpgrade,
-    ItemUpgeade,
-    WeaponUnlock,
-    ItemUnlock
+    WeaponUnlock
 
 }
 [CreateAssetMenu]
-
+[SerializeField]
 public class UpgradeDeta : ScriptableObject
 {
     public UpgradeType upgradeType;
     public string Name;
     public Sprite icon;
+
+    public GameObject skillObject;
 }

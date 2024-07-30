@@ -15,3 +15,4 @@ MonoBehaviour:
   upgradeType: 0
   Name: skill2
   icon: {fileID: 21300000, guid: 218f7ffd034903746a9c429e30820664, type: 3}
+  skillObject: {fileID: 1027212975278253404, guid: b774c37a796d8494ca999c6245c81f52, type: 3}

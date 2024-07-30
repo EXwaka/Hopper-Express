@@ -16,6 +16,8 @@ public class SkillSelectUI : MonoBehaviour
     List<UpgradeDeta> selectedUpgrades;
     [SerializeField]List<UpgradeDeta> acquiredUpgrades;
 
+    SkillsList skills;
+
     public GameObject SkillMenu;
 
     public RectTransform rectTransform;
@@ -36,6 +38,8 @@ public class SkillSelectUI : MonoBehaviour
         slideIn = false;
         cinemachineBrain = FindObjectOfType<CinemachineBrain>();
         HideButtons();
+
+        skills=GetComponent<SkillsList>();
     }
 
     private void Awake()
@@ -157,12 +161,20 @@ public class SkillSelectUI : MonoBehaviour
     public void Upgrade(int selectedUpgradeID)
     {
         UpgradeDeta upgradeDeta = selectedUpgrades[selectedUpgradeID];
-        if(acquiredUpgrades==null)
+        if (acquiredUpgrades == null)
         {
             acquiredUpgrades = new List<UpgradeDeta>();
         }
+
         acquiredUpgrades.Add(upgradeDeta);
         upgrades.Remove(upgradeDeta);
+
+        // Activate the skill's GameObject
+        if (upgradeDeta.skillObject != null)
+        {
+            upgradeDeta.skillObject.SetActive(true);
+        }
+
     }
     // =============DO NOT DELETE THIS!=============
     // Choose Skill System

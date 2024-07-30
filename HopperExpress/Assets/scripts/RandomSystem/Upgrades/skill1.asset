@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeType: 0
   Name: skill1
-  icon: {fileID: 21300000, guid: 27342ed74ddabd04e92d6ce49feb3126, type: 3}
+  icon: {fileID: -1156220318, guid: 572da83753c4b6b42818936c6e68ab69, type: 3}
+  skillObject: {fileID: 1935135463003591481, guid: e03d2704f72a48d45a8bc7f56f404ad3, type: 3}
