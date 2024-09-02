@@ -29,6 +29,8 @@ public class GameOverControl : MonoBehaviour
     public void SlideIn()
     {
         rectTransform.DOAnchorPosY(middlePosY, tweenDuration).SetUpdate(true);
+        mainCanvas.SetActive(true);
+
     }
 
 
