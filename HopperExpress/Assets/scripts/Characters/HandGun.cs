@@ -37,10 +37,16 @@ public class HandGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && bulletLeft > 0)
+        if (Input.GetMouseButtonDown(0) && bulletLeft > 0&&!reloading)
         {
             Shoot(bulletPrefab, bulletSpawnPoint);
         }
+
+        if (Input.GetKeyDown(KeyCode.R) && !reloading)
+        {
+            StartCoroutine(Reload());
+        }
+        
         else if (bulletLeft<=0 )
         {
             if (Input.GetMouseButtonDown(0)&&!reloading)
@@ -50,10 +56,10 @@ public class HandGun : MonoBehaviour
         }
 
         // Check for the E key press to update ammo display
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            UpdateAmmoUI();
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    UpdateAmmoUI();
+        //}
     }
 
     public void Shoot(GameObject bulletPrefab, Transform bulletSpawnPoint)
@@ -67,12 +73,15 @@ public class HandGun : MonoBehaviour
 
             Vector3 shootDirection = (worldMousePosition - bulletSpawnPoint.position).normalized;
 
-            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+            float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.Euler(0, 0, angle - 90));
 
             bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
             animator.SetTrigger("IsFiring");
 
         }
+        FindObjectOfType<AudioManager>().Play("Gun2");
+
         bulletLeft--;
         UpdateAmmoUI();
     }
@@ -80,6 +89,9 @@ public class HandGun : MonoBehaviour
     IEnumerator Reload()
     {
         reloading = true;
+        ammoText.fontSize = 45;
+        ammoText.text = "¸Ë¶ñ¤¤...";
+
         yield return new WaitForSeconds(reloadTime);
         bulletLeft = ammo;
         UpdateAmmoUI();

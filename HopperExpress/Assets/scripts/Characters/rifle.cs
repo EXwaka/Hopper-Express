@@ -42,7 +42,7 @@ public class rifle : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && firstShot == false && bulletLeft > 0)
+        if (Input.GetMouseButtonDown(0) && firstShot == false && bulletLeft > 0&& !reloading)
         {
             Shoot(bulletPrefab, bulletSpawnPoint);
             firstShot = true;
@@ -54,7 +54,7 @@ public class rifle : MonoBehaviour
             firstShot = false;
         }
 
-        if (Input.GetMouseButton(0) && bulletLeft > 0)
+        if (Input.GetMouseButton(0) && bulletLeft > 0&& !reloading)
         {
             isShooting = true;
 
@@ -65,6 +65,10 @@ public class rifle : MonoBehaviour
             animator.SetBool("IsFiring", false);
         }
 
+        if (Input.GetKeyDown(KeyCode.R) && !reloading)
+        {
+            StartCoroutine(Reload());
+        }
         if (bulletLeft <= 0)
         {
             if (Input.GetMouseButtonDown(0) && !reloading )
@@ -99,8 +103,10 @@ public class rifle : MonoBehaviour
 
             Vector3 shootDirection = (worldMousePosition - bulletSpawnPoint.position).normalized;
 
-            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
-
+            //bullet shoot direction
+            float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.Euler(0, 0, angle-90));
+            //
             bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
             animator.SetTrigger("IsFiring");
 
@@ -123,6 +129,7 @@ public class rifle : MonoBehaviour
             }
         }
 
+        FindObjectOfType<AudioManager>().Play("Gun1");
 
 
 
@@ -137,6 +144,8 @@ public class rifle : MonoBehaviour
         WeaponSwap.reloading = true;
         isShooting = false;
         shootTimer = 0f;
+        ammoText.fontSize = 45;
+        ammoText.text = "裝填中...";
         yield return new WaitForSeconds(reloadTime);
         bulletLeft = ammo;
         isShooting = true;

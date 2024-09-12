@@ -81,6 +81,14 @@ public class AudioManager : MonoBehaviour
             {
                 s.source.volume = volume;
             }
+            if(s.name == "Gun1")
+            {
+                s.source.volume = volume;
+            }
+            if (s.name == "Gun2")
+            {
+                s.source.volume = volume;
+            }
         }
         SaveSettings();
     }
