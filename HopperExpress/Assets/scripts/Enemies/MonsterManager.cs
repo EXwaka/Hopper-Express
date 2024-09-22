@@ -17,7 +17,7 @@ public class MonsterManager : MonoBehaviour
     public float atkCooldown = 1;
     public float Counter = 0;
     private bool isAttacking = false;
-    bool isDead=false;
+
     private Wavespawner waveSpawner;
 
     // Start is called before the first frame update
@@ -59,27 +59,19 @@ public class MonsterManager : MonoBehaviour
             transform.position = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
         }
     }
-    public void TakeDamage(float damageAmount)
+    public void TakeDamage(float damageAmount)//monster take damage
     {
-        if (isDead) return;  // 如果怪物已經死亡，則不執行後續邏輯
-
+        //play "hurt" animation
         m_HP -= damageAmount;
-
         if (m_HP <= 0)
         {
             //play "dead" animation
-
-            isDead = true;  // 標記怪物已經死亡
+            MonsterSpawn.monsCount--;
             FindObjectOfType<AudioManager>().Play("MonsterDeath");
-            Death();
+            Destroy(gameObject);
+            Wavespawner.monsCount--;
         }
 
-    }
-    public void Death()
-    {
-        Destroy(gameObject);
-        Wavespawner.monsCount--;
-        MonsterSpawn.monsCount--;
     }
 
     public void MonsterAttack(int damageAmount)

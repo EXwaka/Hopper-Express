@@ -14,8 +14,7 @@ public class WeaponSwap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (reloading) return;
-        if (Input.GetKeyDown(KeyCode.E)) 
+        if(Input.GetKeyDown(KeyCode.E)) 
         {
             selectedWeapon++;
             if(selectedWeapon >= 2) 

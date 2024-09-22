@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class HandGunBullet : MonoBehaviour
 {
-    float handGunBulletDamage = 8f;
-    float clear;
-    float damageReductionTimer = 0;
+    public float handGunBulletDamage = 5f;
+    float clear = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,26 +18,13 @@ public class HandGunBullet : MonoBehaviour
     void Update()
     {
         clear += Time.deltaTime;
-        damageReductionTimer += Time.deltaTime;
-
-        if (clear >= 0.25f)
+        if (clear >= 3)
         {
             Destroy(this.gameObject);
             clear = 0;
             //destroy bullet after secs
         }
-        // ¨C0.1¬í´î¤Ö2ÂI¶Ë®`
-        if (damageReductionTimer >= 0.1f)
-        {
-            handGunBulletDamage -= 4f;
-            damageReductionTimer = 0f; 
 
-            // ¨¾¤î¶Ë®`´î¤Ö¨ì­t­È
-            if (handGunBulletDamage <= 1f)
-            {
-                handGunBulletDamage = 1f;
-            }
-        }
     }
 
     private void OnTriggerEnter(Collider other)

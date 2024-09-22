@@ -7,21 +7,17 @@ public class HandGun : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject handGunImg;
-    public GameObject reloadAnim;
     public Transform bulletSpawnPoint;
     public int ammo = 10;
     public int bulletLeft = 10;
     public float reloadTime = 3;
     public TextMeshProUGUI ammoText;
     public Animator animator;
-    bool reloading =false;
-    public int bulletCount = 6; // 子彈數量
-    public float spreadAngle = 20f; // 偏移角度範圍
+    bool reloading=false;
     //public GameObject text;
 
     void Start()
     {
-        reloadAnim.SetActive(false);
         animator = GetComponent<Animator>();
         UpdateAmmoUI();
         reloading = false;
@@ -41,7 +37,6 @@ public class HandGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(" handgun" + reloading);
         if (Input.GetMouseButtonDown(0) && bulletLeft > 0&&!reloading)
         {
             Shoot(bulletPrefab, bulletSpawnPoint);
@@ -52,7 +47,7 @@ public class HandGun : MonoBehaviour
             StartCoroutine(Reload());
         }
         
-        if (bulletLeft<=0 )
+        else if (bulletLeft<=0 )
         {
             if (Input.GetMouseButtonDown(0)&&!reloading)
             {
@@ -76,57 +71,30 @@ public class HandGun : MonoBehaviour
 
             Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-            // 計算發射方向
             Vector3 shootDirection = (worldMousePosition - bulletSpawnPoint.position).normalized;
 
+            float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.Euler(0, 0, angle - 90));
 
-            for (int i = 0; i < bulletCount; i++)
-            {
-                // 隨機生成一個偏移角度
-                float angleOffset = Random.Range(-spreadAngle, spreadAngle);
-
-                // 計算旋轉後的新方向
-                Quaternion rotationOffset = Quaternion.Euler(0, 0, angleOffset);
-                Vector3 spreadDirection = rotationOffset * shootDirection;
-
-                // 計算子彈的旋轉角度
-                float angle = Mathf.Atan2(spreadDirection.y, spreadDirection.x) * Mathf.Rad2Deg;
-
-                // 生成子彈並設置旋轉
-                GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.Euler(0, 0, angle - 90));
-
-                // 設置子彈速度
-                bullet.GetComponent<Rigidbody>().velocity = spreadDirection * 40f;
-            }
-
-            // 播放開槍動畫和音效
+            bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40f;
             animator.SetTrigger("IsFiring");
-            FindObjectOfType<AudioManager>().Play("Gun2");
 
-            // 更新子彈剩餘數量並更新UI
-            bulletLeft--;
-            UpdateAmmoUI();
         }
+        FindObjectOfType<AudioManager>().Play("Gun2");
+
+        bulletLeft--;
+        UpdateAmmoUI();
     }
 
     IEnumerator Reload()
     {
         reloading = true;
-        WeaponSwap.reloading = true;
-
         ammoText.fontSize = 45;
         ammoText.text = "裝填中...";
 
-        handGunImg.SetActive(false);
-        reloadAnim.SetActive(true);//anim start
         yield return new WaitForSeconds(reloadTime);
-        reloadAnim.SetActive(false);//anim start
-        handGunImg.SetActive(true);
-
         bulletLeft = ammo;
         UpdateAmmoUI();
-
-        WeaponSwap.reloading = false;
         reloading = false;
     }
 
@@ -136,12 +104,14 @@ public class HandGun : MonoBehaviour
         {
             if (bulletLeft > 0)
             {
+                handGunImg.SetActive(true);
                 ammoText.fontSize = 45;
                 ammoText.text = $"{bulletLeft}/{ammo}";
                 ammoText.gameObject.SetActive(true);
             }
             else
             {
+                handGunImg.SetActive(false);
                 ammoText.fontSize = 30;
                 ammoText.text = "子彈用盡!\n按下滑鼠左鍵填裝!";
                 ammoText.gameObject.SetActive(true);

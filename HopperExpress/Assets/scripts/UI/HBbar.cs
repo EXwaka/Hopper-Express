@@ -5,21 +5,7 @@ using UnityEngine.UI;
 
 public class HBbar : MonoBehaviour
 {
-    public static HBbar instance;
     public Slider slider;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
     public void SetMaxHealth(int health)
     {
         slider.maxValue = health;
