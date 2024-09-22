@@ -19,8 +19,10 @@ public class SceneController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     public void NextLevel()
     {
+
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1);
         Time.timeScale = 1;
 

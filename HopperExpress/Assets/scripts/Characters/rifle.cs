@@ -2,11 +2,11 @@
 using TMPro;
 using UnityEngine;
 
-
 public class rifle : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject character;
+    public GameObject rifleImg;
     public Transform bulletSpawnPoint;
     public int ammo = 20;
     public int bulletLeft = 20;
@@ -20,8 +20,10 @@ public class rifle : MonoBehaviour
     public TextMeshProUGUI ammoText;
     public Animator animator;
     bool reloading = false;
+    public GameObject reloadAnim;
     private void Start()
     {
+        reloadAnim.SetActive(false);
         reloading = false;
         isShooting = false;
         firstShot = false;
@@ -41,6 +43,7 @@ public class rifle : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(" rifle" + reloading);
 
         if (Input.GetMouseButtonDown(0) && firstShot == false && bulletLeft > 0&& !reloading)
         {
@@ -69,12 +72,10 @@ public class rifle : MonoBehaviour
         {
             StartCoroutine(Reload());
         }
-        if (bulletLeft <= 0)
+
+        if (bulletLeft <= 0 && !reloading)
         {
-            if (Input.GetMouseButtonDown(0) && !reloading )
-            {
                 StartCoroutine(Reload());
-            }
         }
 
         if (isShooting)
@@ -86,10 +87,10 @@ public class rifle : MonoBehaviour
                 shootTimer = 0f;
             }
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            UpdateAmmoUI();
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    UpdateAmmoUI();
+        //}
     }
 
     public void Shoot(GameObject bulletPrefab, Transform bulletSpawnPoint)
@@ -142,15 +143,24 @@ public class rifle : MonoBehaviour
     {
         reloading = true;
         WeaponSwap.reloading = true;
+
+        WeaponSwap.reloading = true;
         isShooting = false;
         shootTimer = 0f;
         ammoText.fontSize = 45;
         ammoText.text = "裝填中...";
+        rifleImg.SetActive(false);
+        reloadAnim.SetActive(true);//anim start
         yield return new WaitForSeconds(reloadTime);
+        reloadAnim.SetActive(false);//anim ends
+        rifleImg.SetActive(true);
+
         bulletLeft = ammo;
         isShooting = true;
         WeaponSwap.reloading = false;
         UpdateAmmoUI();
+
+        WeaponSwap.reloading = false;
         reloading = false;
 
     }

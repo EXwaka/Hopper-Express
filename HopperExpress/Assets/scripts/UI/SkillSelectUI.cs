@@ -25,6 +25,7 @@ public class SkillSelectUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         SkillMenu.SetActive(false);
         okButton = false;
         NextButton.SetActive(false); 
@@ -91,11 +92,11 @@ public class SkillSelectUI : MonoBehaviour
         cinemachineBrain = FindObjectOfType<CinemachineBrain>();
         rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, topPosY);
 
-        gameObject.TryGetComponent<Timer>(out Timer timer);
-        {
-            timer.ResetTimer();
+        //gameObject.TryGetComponent<Timer>(out Timer timer);
+        //{
+        //    timer.ResetTimer();
 
-        }
+        //}
 
         SceneController.instance.NextLevel();
 
