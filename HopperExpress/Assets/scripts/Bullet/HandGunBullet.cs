@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HandGunBullet : MonoBehaviour
 {
-    float handGunBulletDamage = 8f;
+    float handGunBulletDamage = 7f;
     float clear;
     float damageReductionTimer = 0;
     // Start is called before the first frame update
@@ -26,13 +26,12 @@ public class HandGunBullet : MonoBehaviour
             clear = 0;
             //destroy bullet after secs
         }
-        // ¨C0.1¬í´î¤Ö2ÂI¶Ë®`
+        // reduce 2 damage per 0.1 sec
         if (damageReductionTimer >= 0.1f)
         {
             handGunBulletDamage -= 4f;
             damageReductionTimer = 0f; 
 
-            // ¨¾¤î¶Ë®`´î¤Ö¨ì­t­È
             if (handGunBulletDamage <= 1f)
             {
                 handGunBulletDamage = 1f;

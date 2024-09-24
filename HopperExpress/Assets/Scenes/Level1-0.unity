@@ -1082,6 +1082,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7908512678761737936, guid: 8973181297980bd40bef7ea2b6ef9dcb, type: 3}
   m_PrefabInstance: {fileID: 3254744619327681450}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &669367569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 352276719207580520, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+  m_PrefabInstance: {fileID: 6306070899002376409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4554,18 +4559,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 952206305646917611, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
-      propertyPath: m_Value
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1097180824309493752, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1097180824309493752, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
-      propertyPath: upgrades.Array.size
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 1084150670878749114, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: GreekFireImg
+      value: 
+      objectReference: {fileID: 669367569}
     - target: {fileID: 2132178899075222248, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4597,14 +4594,6 @@ PrefabInstance:
     - target: {fileID: 2806283969360547497, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4113356966500316552, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5889049989025940526, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5951384592412857985, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4617,10 +4606,6 @@ PrefabInstance:
     - target: {fileID: 5951384592412857985, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChooseSkill4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416988172840138854, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7538631982240749203, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4713,10 +4698,6 @@ PrefabInstance:
     - target: {fileID: 8420534582006875523, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_Name
       value: CanvasPack
-      objectReference: {fileID: 0}
-    - target: {fileID: 8420534582006875523, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -24,8 +24,8 @@ public class Skills : MonoBehaviour
         skillManager = new SkillsManager();
     }
 
-    public bool CanUseGreekFire()
-    {
-        return skillManager.IsSkillUnlocked(SkillsManager.SkillType.GreekFire);
-    }
+    //public bool CanUseGreekFire()
+    //{
+    //    return skillManager.IsSkillUnlocked(SkillsManager.SkillType.GreekFire);
+    //}
 }

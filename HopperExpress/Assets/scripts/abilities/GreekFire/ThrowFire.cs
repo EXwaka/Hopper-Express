@@ -9,7 +9,8 @@ public class ThrowFire : MonoBehaviour
     public float speedx=3;
     public float speedy=5;
     bool readyToThrow;
-    public float greekFireCD=15;
+    static public float greekFireCD=10;
+    static public bool Activated = false;
     float timer=0;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class ThrowFire : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)&&Skills.skill_throwfire==true&&readyToThrow==true)
         {
             readyToThrow = false;
+            Activated = true;
             if (CharacterMove.moveRight==true)
             {
                 Vector3 spawnPosition = new Vector3(0.8f + SpawnPoint.position.x, 1f + SpawnPoint.position.y, SpawnPoint.position.z);
@@ -45,6 +47,7 @@ public class ThrowFire : MonoBehaviour
             {
                 readyToThrow = true;
                 timer = greekFireCD;
+                Activated = false;
 
             }
         }

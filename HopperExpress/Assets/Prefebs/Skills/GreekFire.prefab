@@ -170,6 +170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 0.1
-  fireArea: {fileID: 0}
+  fireArea: {fileID: 8407530095017897850, guid: 74120ffb17d0a6842a5f8f1ca0aca904, type: 3}
   SpawnPoint: {fileID: 3903379790305572435}
   animator: {fileID: 5608763091145230344}
