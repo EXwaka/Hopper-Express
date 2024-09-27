@@ -18,6 +18,9 @@ public class MonsterManager : MonoBehaviour
     public float Counter = 0;
     private bool isAttacking = false;
     bool isDead=false;
+    private Animator animator;
+ 
+
     private Wavespawner waveSpawner;
 
     // Start is called before the first frame update
@@ -26,7 +29,7 @@ public class MonsterManager : MonoBehaviour
         MonsInRange = false;
         moveSpeedMax = moveSpeed;
         waveSpawner = GetComponentInParent<Wavespawner>();
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,16 +55,23 @@ public class MonsterManager : MonoBehaviour
     {
         if (target != null)
         {
+            
             Vector3 currentPosition = transform.position;
 
             Vector3 targetPosition = new Vector3(target.transform.position.x, 0f, 0f);
 
             transform.position = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
+            if(targetPosition.x>currentPosition.x)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+
+            }
         }
     }
     public void TakeDamage(float damageAmount)
     {
         if (isDead) return;  // 如果怪物已經死亡，則不執行後續邏輯
+        animator.SetTrigger("Hitten");
 
         m_HP -= damageAmount;
 
