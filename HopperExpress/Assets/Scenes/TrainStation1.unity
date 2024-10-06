@@ -870,8 +870,9 @@ MonoBehaviour:
   shootForce: 0.5
   isShooting: 0
   cooldown: 0.05
+  speedUpRate: 0.05
+  cooldownOr: 0.8
   ammoText: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!114 &446144958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3512,7 +3513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6550746634148823987, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

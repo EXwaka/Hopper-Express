@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6828319815292526911}
   - component: {fileID: 6436072937379012183}
   - component: {fileID: 7180118316240771201}
+  - component: {fileID: -8519496154566470069}
   m_Layer: 6
   m_Name: Wolf
   m_TagString: Untagged
@@ -197,6 +198,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8519496154566470069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448649531093429630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c9db310c5b50d4492eb4ec4011a5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
+  duration: 0.1
 --- !u!1 &6556066647435763160
 GameObject:
   m_ObjectHideFlags: 0

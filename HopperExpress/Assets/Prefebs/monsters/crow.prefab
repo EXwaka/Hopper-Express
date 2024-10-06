@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2819332990247076548}
   - component: {fileID: 9023242169555994704}
   - component: {fileID: 5487561923355098602}
+  - component: {fileID: 2968538823498803289}
   m_Layer: 6
   m_Name: crow
   m_TagString: Untagged
@@ -227,3 +228,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2968538823498803289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5070964644595726317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c9db310c5b50d4492eb4ec4011a5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
+  duration: 0.1

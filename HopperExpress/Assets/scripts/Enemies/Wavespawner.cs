@@ -6,6 +6,10 @@ public class Wavespawner : MonoBehaviour
     [SerializeField] public float timeBetweenWaves;
     [SerializeField] private GameObject spawnPointR;
     [SerializeField] private GameObject spawnPointL;
+
+    public float waitWhenStart=0;
+    private bool waitEnd=false;
+
     private int consecutiveSpawns = 0; // 連續生成的計數器
     public int maxConsecutiveSpawns = 4;
 
@@ -25,7 +29,18 @@ public class Wavespawner : MonoBehaviour
     private void Start()
     {
         monsCount = 0;
-        StartCoroutine(SpawnWaves());
+        waitEnd = false;
+
+    }
+
+    void Update()
+    {
+        waitWhenStart += Time.deltaTime;
+        if (waitWhenStart >= 2&&!waitEnd)
+        {
+            StartCoroutine(SpawnWaves());
+            waitEnd = true;
+        }
     }
 
     private IEnumerator SpawnWaves()
@@ -47,7 +62,9 @@ public class Wavespawner : MonoBehaviour
         {
             GameObject spawnPoint = GetSpawnPoint();
 
-            MonsterManager enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform.position, Quaternion.identity);
+            float randomZ = Mathf.Round(Random.Range(-2.5f, 2.5f) * 10) / 10f;//進位 避免差距過小
+            Vector3 spawnPos = new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, spawnPoint.transform.position.z+randomZ);
+            MonsterManager enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPos, Quaternion.identity);
             monsCount++;
 
             enemy.transform.SetParent(spawnPoint.transform);

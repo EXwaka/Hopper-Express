@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonsterManager : MonoBehaviour
 {
+    private FlashDam flashDam;
     public GameObject target;
     public float moveSpeed=1;
     public float moveSpeedMax;
@@ -26,6 +27,7 @@ public class MonsterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        flashDam = GetComponent<FlashDam>();
         MonsInRange = false;
         moveSpeedMax = moveSpeed;
         waveSpawner = GetComponentInParent<Wavespawner>();
@@ -71,7 +73,7 @@ public class MonsterManager : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         if (isDead) return;  // 如果怪物已經死亡，則不執行後續邏輯
-        animator.SetTrigger("Hitten");
+        flashDam.Flash();
 
         m_HP -= damageAmount;
 
