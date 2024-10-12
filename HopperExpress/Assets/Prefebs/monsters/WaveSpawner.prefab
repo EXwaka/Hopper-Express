@@ -46,7 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenWaves: 5
-  spawnPoint: {fileID: 8353589360706551605}
+  spawnPointR: {fileID: 0}
+  spawnPointL: {fileID: 0}
+  waitWhenStart: 0
+  maxConsecutiveSpawns: 4
   waves:
   - enemies:
     - {fileID: 6828319815292526911, guid: 8973181297980bd40bef7ea2b6ef9dcb, type: 3}

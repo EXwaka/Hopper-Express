@@ -6,7 +6,8 @@ using UnityEngine;
 public class IceArea : MonoBehaviour
 {
     public float destroyAfterSec = 0.2f;
-    public float frozenTime = 5f;
+    private float frozenTime = 1.5f;
+    private float Damage = 5;
     //public Animator animator;
 
     void Start()
@@ -28,7 +29,7 @@ public class IceArea : MonoBehaviour
         if (other.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
         {
             enemyComponent.Frozen(frozenTime);
-
+            enemyComponent.TakeDamage(Damage);
         }
     }
 }

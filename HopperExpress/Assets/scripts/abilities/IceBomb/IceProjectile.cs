@@ -28,9 +28,13 @@ public class IceProjectile : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             //animator.SetBool("HitOnFloor", true);
-            Instantiate(iceFog, SpawnPoint.position, Quaternion.identity);
+            GameObject spawnedIceFog = Instantiate(iceFog, SpawnPoint.position, Quaternion.identity);
+            Destroy(spawnedIceFog, 5f);
 
-            Instantiate(iceArea, SpawnPoint.position, Quaternion.identity);
+
+            GameObject spawnedIceArea = Instantiate(iceArea, SpawnPoint.position, Quaternion.identity);
+            Destroy(spawnedIceArea, 0.5f);
+
             Destroy(this.gameObject, 0.5f);
         }
     }

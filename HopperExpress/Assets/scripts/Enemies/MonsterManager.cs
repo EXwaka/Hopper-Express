@@ -128,13 +128,18 @@ public class MonsterManager : MonoBehaviour
     }
     public void ColdSlow(float slowDownTime)
     {
-        moveSpeed *= 0.3f;
+        moveSpeed *= 0.6f;
         StartCoroutine(RecoverSpeed(slowDownTime));
     }
     public void Burning(float slowDownTime)
     {
-        moveSpeed *= 0.7f;
+        moveSpeed *= 0.8f; 
+        InvokeRepeating("BurningDamage", 0f, 0.5f);
         StartCoroutine(RecoverSpeed(slowDownTime));
+    }
+    private void BurningDamage()
+    {
+        TakeDamage(2f);
     }
 
     private IEnumerator RecoverSpeed(float Time)

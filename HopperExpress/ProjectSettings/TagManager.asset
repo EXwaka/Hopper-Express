@@ -18,6 +18,7 @@ TagManager:
   - Fire
   - BossStop
   - Follow
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 9117055810353471842}
   m_Layer: 6
   m_Name: Goat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

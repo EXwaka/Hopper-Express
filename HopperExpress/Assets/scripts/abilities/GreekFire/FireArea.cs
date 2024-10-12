@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireArea : MonoBehaviour
 {
-    public float fireDamage = 2f;
+    public float Damage = 8f;
     public float cooldown = 0.5f;
     public float destroyAfterSec=5;
     public float Timer = 0;
@@ -27,7 +27,7 @@ public class FireArea : MonoBehaviour
             Timer += Time.deltaTime;
             if (Timer >= cooldown)
             {
-                enemy.TakeDamage(fireDamage);
+                enemy.TakeDamage(Damage);
                 Timer = 0;
             }
         }

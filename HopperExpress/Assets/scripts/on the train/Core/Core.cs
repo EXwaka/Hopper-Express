@@ -11,9 +11,12 @@ public class Core : MonoBehaviour
     public HBbar healthBar;
     private bool dead;
     public GameOverControl gameOverControl;
+
+    private FlashDam flashDam;
     // Start is called before the first frame update
     void Start()
     {
+        flashDam = GetComponent<FlashDam>();
         dead = false;
         HPcurrent_core = HPmax_core;
         healthBar.SetMaxHealth(HPmax_core);
@@ -35,6 +38,7 @@ public class Core : MonoBehaviour
     {
         HPcurrent_core -= damage;
         healthBar.SetHealth(HPcurrent_core);
+        flashDam.Flash();
     }
 
     IEnumerator DeadAnim()

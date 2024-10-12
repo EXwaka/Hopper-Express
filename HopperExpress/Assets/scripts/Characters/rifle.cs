@@ -43,7 +43,7 @@ public class rifle : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(" rifle" + reloading);
+        //Debug.Log(" rifle" + reloading);
 
         if (Input.GetMouseButtonDown(0) && firstShot == false && bulletLeft > 0&& !reloading)
         {

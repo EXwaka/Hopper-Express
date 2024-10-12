@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: 8fe2ada8271ed0348954f5f7cf4c647e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: power grid short-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97189ad095fe6a24bbd9215dce9279ae
+      internalID: -1224569497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f3485b81c466b44b664be9e8001cbf
+      internalID: -526838680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc20b7cc5abf064b966d38bb6d94118
+      internalID: 890844264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1d346eee722ac48b5c1c8ad500703c
+      internalID: -906065958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917c479d56babd240911f86e5b1de632
+      internalID: 1542622789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4dfdbfc57ff02d43bbb47626c6bf05e
+      internalID: 371677406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c929c2b8d8b255e47b0cb26e8c79fc5c
+      internalID: -1858095142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a47aaa21614f064ba9b749ed81f304b
+      internalID: 2086193321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653459f2c63e1ef4aacd35be3941e1a9
+      internalID: -626812621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30458237a3bee7f46a7a78b6a72237b0
+      internalID: 430928041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481987de6db7bd14a9a46bd7f971b122
+      internalID: -1051413377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97836b1e3c21c9449f2c4589029ada2
+      internalID: -1711248694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid short-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5164eb2ce21bb384d9f1c85b08fc818c
+      internalID: 2011311702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -791, y: 64}
+      - {x: -791, y: -64}
+      - {x: -748, y: -64}
+      - {x: -748, y: 64}
+    - - {x: -663, y: 64}
+      - {x: -663, y: -64}
+      - {x: -620, y: -64}
+      - {x: -620, y: 64}
+    - - {x: -535, y: 64}
+      - {x: -535, y: 18}
+      - {x: -533, y: 12}
+      - {x: -535, y: -5}
+      - {x: -535, y: -25}
+      - {x: -528, y: -39}
+      - {x: -535, y: -57}
+      - {x: -535, y: -64}
+      - {x: -493, y: -64}
+      - {x: -492, y: -63}
+      - {x: -492, y: 64}
+    - - {x: -364, y: 23}
+      - {x: -365, y: 27}
+      - {x: -372, y: 38}
+      - {x: -364, y: 57}
+      - {x: -364, y: 64}
+      - {x: -407, y: 64}
+      - {x: -407, y: -64}
+      - {x: -366, y: -64}
+      - {x: -366, y: -61}
+      - {x: -364, y: -57}
+    - - {x: -279, y: 64}
+      - {x: -279, y: -64}
+      - {x: -236, y: -64}
+      - {x: -236, y: 64}
+    - - {x: -109, y: -31}
+      - {x: -109, y: -20}
+      - {x: -113, y: 4}
+      - {x: -108, y: 9}
+      - {x: -108, y: 64}
+      - {x: -151, y: 64}
+      - {x: -151, y: -64}
+      - {x: -110, y: -64}
+      - {x: -110, y: -61}
+      - {x: -117, y: -50}
+    - - {x: -23, y: 64}
+      - {x: -23, y: -64}
+      - {x: 20, y: -64}
+      - {x: 20, y: 64}
+    - - {x: 105, y: 64}
+      - {x: 105, y: -64}
+      - {x: 148, y: -64}
+      - {x: 148, y: 64}
+    - - {x: 233, y: 64}
+      - {x: 233, y: 23}
+      - {x: 239, y: 23}
+      - {x: 236, y: 18}
+      - {x: 236, y: 17}
+      - {x: 239, y: 14}
+      - {x: 242, y: 14}
+      - {x: 233, y: -9}
+      - {x: 233, y: -64}
+      - {x: 276, y: -64}
+      - {x: 276, y: 64}
+    - - {x: 359, y: 64}
+      - {x: 354, y: 25}
+      - {x: 354, y: -12}
+      - {x: 365, y: -12}
+      - {x: 361, y: -23}
+      - {x: 362, y: -27}
+      - {x: 357, y: -64}
+      - {x: 405, y: -64}
+      - {x: 405, y: 64}
+    - - {x: 489, y: 64}
+      - {x: 489, y: -64}
+      - {x: 549, y: -64}
+      - {x: 552, y: -53}
+      - {x: 552, y: 33}
+      - {x: 539, y: 64}
+    - - {x: 617, y: 64}
+      - {x: 617, y: 23}
+      - {x: 623, y: 23}
+      - {x: 618, y: -24}
+      - {x: 618, y: -27}
+      - {x: 617, y: -34}
+      - {x: 617, y: -64}
+      - {x: 660, y: -64}
+      - {x: 660, y: 64}
+    - - {x: 745, y: 64}
+      - {x: 745, y: -64}
+      - {x: 788, y: -64}
+      - {x: 788, y: 64}
+    - - {x: -133, y: -12}
+      - {x: -134, y: -14}
+      - {x: -133, y: -15}
+      - {x: -132, y: -14}
+    - - {x: 251, y: -12}
+      - {x: 250, y: -14}
+      - {x: 251, y: -15}
+      - {x: 252, y: -14}
+    - - {x: 516, y: -9}
+      - {x: 517, y: -12}
+      - {x: 516, y: -12}
+      - {x: 515, y: -14}
+      - {x: 517, y: -13}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      power grid short-Sheet_0: -1224569497
+      power grid short-Sheet_1: -526838680
+      power grid short-Sheet_10: -1051413377
+      power grid short-Sheet_11: -1711248694
+      power grid short-Sheet_12: 2011311702
+      power grid short-Sheet_2: 890844264
+      power grid short-Sheet_3: -906065958
+      power grid short-Sheet_4: 1542622789
+      power grid short-Sheet_5: 371677406
+      power grid short-Sheet_6: -1858095142
+      power grid short-Sheet_7: 2086193321
+      power grid short-Sheet_8: -626812621
+      power grid short-Sheet_9: 430928041
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
