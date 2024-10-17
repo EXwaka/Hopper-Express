@@ -2804,9 +2804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23fe498031095284983c9d5b4681a5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: []
-  upgradeButtons: []
-  acquiredUpgrades: []
   SkillMenu: {fileID: 171539031}
   rectTransform: {fileID: 171539032}
   topPosY: 1000
@@ -6937,7 +6934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5895761515121895015, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.54
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5895761515121895015, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: m_LocalPosition.y
