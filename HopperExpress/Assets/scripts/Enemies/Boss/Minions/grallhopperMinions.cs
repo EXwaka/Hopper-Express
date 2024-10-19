@@ -33,9 +33,10 @@ public class grallhopperMinions : MonoBehaviour
 
         if (other.gameObject.TryGetComponent<Core>(out Core core))
         {
+            //Debug.Log("HitCore");
             core.GetHit(15);
             Destroy(gameObject);
-            Wavespawner.monsCount--;
+            //Wavespawner.monsCount--;
 
         }
 

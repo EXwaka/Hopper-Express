@@ -23,7 +23,7 @@ public class BossStop : MonoBehaviour
             {
                 enemy.moveSpeed = 0;
             }
-            Debug.Log("BossHit");
+            //Debug.Log("BossHit");
 
             boss.moveSpeed=0;
 

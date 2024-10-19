@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GetOnTrain : MonoBehaviour
 {
     public GameObject Ebutton;
+    public GameObject Character;
+    public GameObject Train;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,41 @@ public class GetOnTrain : MonoBehaviour
     {
         if (Ebutton.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadSceneAsync("Level1-0");
+            //if (SkillSelectUI.Chapter1Done)
+            //{
+            TrainMoneAnim.TrainGo = true;
+
+            TrainMoneAnim.TrainGo = true;
+                Invoke("Chapter2", 5f);
+                Invoke("TrainNoGo", 5f);
+
+            //}
+        }
+        else
+        {
+            //SceneManager.LoadSceneAsync("Level1-0");
 
         }
+
+        if (TrainMoneAnim.TrainGo)
+        {
+            Character.transform.position = new Vector3(Train.transform.position.x, Character.transform.position.y, Character.transform.position.z);
+        }
+        else
+        {
+            Character.transform.position = Character.transform.position;
+        }
+
+    }
+    void TrainNoGo()
+    {
+        TrainMoneAnim.TrainGo = false;
+
+    }
+    void Chapter2()
+    {
+        SceneManager.LoadSceneAsync("Level2-1");
+
     }
     private void OnTriggerEnter(Collider other)
     {

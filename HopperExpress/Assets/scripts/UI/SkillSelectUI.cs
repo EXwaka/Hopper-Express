@@ -21,7 +21,7 @@ public class SkillSelectUI : MonoBehaviour
     private CinemachineBrain cinemachineBrain;
     private bool slideIn=false;
 
-
+    static public bool Chapter1Done=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,17 +37,18 @@ public class SkillSelectUI : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
-        if (FindObjectsOfType<SkillSelectUI>().Length > 1)
-        {
-            Destroy(gameObject);
-        }
+        //if (FindObjectsOfType<SkillSelectUI>().Length > 1)
+        //{
+        //    Destroy(gameObject);
+        //}
     }
     // Update is called once per frame
     void Update()
     {
         //Debug.Log("TimeScale" + Time.timeScale);
+        //Debug.Log("MonsLeft" + Wavespawner.monsCount);
         if (Timer.timeLeft <= 1 && Wavespawner.monsCount <= 0)
         {
             SkillMenu.SetActive(true);
@@ -104,52 +105,57 @@ public class SkillSelectUI : MonoBehaviour
 
     public void ChooseSkill1()
     {
-        Skills.skill_forcefield = true;
-        Skills.skill_electricfance = false;
-        Skills.skill_floorspike = false;
-        NextButton.SetActive(true);
-
-    }
-    public void ChooseSkill2()
-    {
-        Skills.skill_forcefield = false;
-        Skills.skill_electricfance = true;
-        Skills.skill_floorspike = false;
-        NextButton.SetActive(true);
-
-
-    }
-    public void ChooseSkill3()
-    {
-        Skills.skill_forcefield = false;
-        Skills.skill_electricfance = false;
-        Skills.skill_floorspike = true;
-        NextButton.SetActive(true);
-
-    }
-    public void ChooseSkill4()
-    {
         Skills.skill_throwfire = true;
         Skills.skill_throwice = false;
         Skills.skill_airattack = false;
         NextButton.SetActive(true);
 
+
+        Chapter1Done = true;
     }
-    public void ChooseSkill5()
+    public void ChooseSkill2()
     {
         Skills.skill_throwfire = false;
         Skills.skill_throwice = true;
         Skills.skill_airattack = false;
         NextButton.SetActive(true);
+        Chapter1Done = true;
 
     }
-    public void ChooseSkill6()
+    public void ChooseSkill3()
     {
         Skills.skill_throwfire = false;
         Skills.skill_throwice = false;
         Skills.skill_airattack = true;
         NextButton.SetActive(true);
 
+        Chapter1Done = true;
+
+    }
+    public void ChooseSkill4()
+    {
+        Skills.skill_forcefield = true;
+        Skills.skill_electricfance = false;
+        Skills.skill_floorspike = false;
+        NextButton.SetActive(true);
+
+    }
+    public void ChooseSkill5()
+    {
+
+        Skills.skill_forcefield = false;
+        Skills.skill_electricfance = true;
+        Skills.skill_floorspike = false;
+        NextButton.SetActive(true);
+
+    }
+    public void ChooseSkill6()
+    {
+
+        Skills.skill_forcefield = false;
+        Skills.skill_electricfance = false;
+        Skills.skill_floorspike = true;
+        NextButton.SetActive(true);
     }
 
 }

@@ -13,6 +13,7 @@ public class CharacterMove : MonoBehaviour
     private KeyCode jumpKey;
     private KeyCode moveRKey;
     private KeyCode moveLKey;
+    private SpriteRenderer spriteRenderer;
 
     public static CharacterMove instance;
 
@@ -33,6 +34,9 @@ public class CharacterMove : MonoBehaviour
     {
         UpdateKeyBindings();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = true;
+
     }
 
     void Update()
@@ -41,6 +45,18 @@ public class CharacterMove : MonoBehaviour
         {
             Jump();
         }
+        if (TrainMoneAnim.TrainGo)
+        {
+            // 獲取當前物件及其所有子物件的 SpriteRenderer
+            SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+            // 遍歷所有 SpriteRenderer，並將它們的 enabled 設置為 false
+            foreach (SpriteRenderer spriteRenderer in spriteRenderers)
+            {
+                spriteRenderer.enabled = false;
+            }
+        }
+
     }
 
     void FixedUpdate()
@@ -88,8 +104,17 @@ public class CharacterMove : MonoBehaviour
         {
             isGrounded = true;
         }
-    }
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("AnimationStop"))
+        {
+            Debug.Log("HitWall");
+            TrainMoneAnim.TrainGo = false;
+
+        }
+    }
     public void UpdateKeyBindings()
     {
         jumpKey = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("JumpKey", KeyCode.Space.ToString()));

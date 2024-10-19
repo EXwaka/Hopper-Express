@@ -35,6 +35,7 @@ public class Wavespawner : MonoBehaviour
 
     void Update()
     {
+        //Debug.Log("monsLeft"+monsCount);
         waitWhenStart += Time.deltaTime;
         if (waitWhenStart >= 2&&!waitEnd)
         {

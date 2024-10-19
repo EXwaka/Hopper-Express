@@ -19,6 +19,7 @@ TagManager:
   - BossStop
   - Follow
   - Enemy
+  - AnimationStop
   layers:
   - Default
   - TransparentFX
