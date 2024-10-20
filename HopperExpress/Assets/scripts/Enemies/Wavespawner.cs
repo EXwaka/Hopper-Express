@@ -19,7 +19,6 @@ public class Wavespawner : MonoBehaviour
 
     private GameObject lastSpawnPoint;
 
-    private bool spawningWave = false;
 
     //public void Update()
     //{
@@ -57,7 +56,6 @@ public class Wavespawner : MonoBehaviour
 
     private IEnumerator SpawnWave()
     {
-        spawningWave = true;
 
         for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
         {
@@ -84,7 +82,6 @@ public class Wavespawner : MonoBehaviour
         }
 
         currentWaveIndex++;
-        spawningWave = false;
     }
     private GameObject GetSpawnPoint()
     {

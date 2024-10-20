@@ -41,7 +41,7 @@ public class HandGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(" handgun" + reloading);
+        //Debug.Log(" handgun" + reloading);
         if (Input.GetMouseButtonDown(0) && bulletLeft > 0&&!reloading)
         {
             Shoot(bulletPrefab, bulletSpawnPoint);

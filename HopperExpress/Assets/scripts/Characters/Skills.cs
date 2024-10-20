@@ -11,7 +11,6 @@ public class Skills : MonoBehaviour
     public static bool skill_electricfance=false;
     public static bool skill_airattack=false;
 
-    private SkillsManager skillManager;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +20,6 @@ public class Skills : MonoBehaviour
     }
     private void Awake()
     {
-        skillManager = new SkillsManager();
     }
 
     //public bool CanUseGreekFire()

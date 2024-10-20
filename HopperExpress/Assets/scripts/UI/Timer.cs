@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
         {
             TimeCounter.color = Color.green;
 
-            TimeCounter.text="任務完成 殺死剩餘敵人後前往撤離";
+            TimeCounter.text="殺死全部敵人以完成任務";
             EndCount = true;
 
         }

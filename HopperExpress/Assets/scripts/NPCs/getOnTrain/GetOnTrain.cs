@@ -12,6 +12,7 @@ public class GetOnTrain : MonoBehaviour
     void Start()
     {
         Ebutton.SetActive(false);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -19,19 +20,19 @@ public class GetOnTrain : MonoBehaviour
     {
         if (Ebutton.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            //if (SkillSelectUI.Chapter1Done)
-            //{
-            TrainMoneAnim.TrainGo = true;
+            if (SkillSelectUI.Chapter1Done)
+            {
+                TrainMoneAnim.TrainGo = true;
 
-            TrainMoneAnim.TrainGo = true;
+                TrainMoneAnim.TrainGo = true;
                 Invoke("Chapter2", 5f);
                 Invoke("TrainNoGo", 5f);
 
-            //}
+            }
         }
-        else
+        else if(!SkillSelectUI.Chapter1Done)
         {
-            //SceneManager.LoadSceneAsync("Level1-0");
+            SceneManager.LoadSceneAsync("Level1-0");
 
         }
 

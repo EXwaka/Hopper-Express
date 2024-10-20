@@ -5,7 +5,6 @@ using UnityEngine;
 public class flashScreen : MonoBehaviour
 {
     public Animator flashAnimation;
-    private bool animationPlayed = false;
 
     void Start()
     {

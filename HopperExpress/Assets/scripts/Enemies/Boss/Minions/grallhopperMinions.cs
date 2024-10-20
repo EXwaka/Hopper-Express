@@ -6,9 +6,11 @@ public class grallhopperMinions : MonoBehaviour
 {
     float moveSpeed;
     public GameObject target;
+    private MonsterManager monsterManager;
 
     private void Start()
     {
+        monsterManager = GetComponent<MonsterManager>();
         moveSpeed = Random.Range(3f, 8f);
     }
 
@@ -35,7 +37,8 @@ public class grallhopperMinions : MonoBehaviour
         {
             //Debug.Log("HitCore");
             core.GetHit(15);
-            Destroy(gameObject);
+            monsterManager.Death();
+            //Destroy(gameObject);
             //Wavespawner.monsCount--;
 
         }
