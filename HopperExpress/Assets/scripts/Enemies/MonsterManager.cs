@@ -9,7 +9,11 @@ public class MonsterManager : MonoBehaviour
     public float moveSpeed=1;
     public float moveSpeedMax;
 
+    public float maxHP;
     public float m_HP = 5f;
+    private float currentHP;
+    public MonsterHP healthBar;
+
     public Transform MonsAttackPoint;
     public float AttackRange = 0.5f;
     public LayerMask enemy;
@@ -28,6 +32,10 @@ public class MonsterManager : MonoBehaviour
     void Start()
     {
         flashDam = GetComponent<FlashDam>();
+
+        currentHP = maxHP;
+        healthBar.SetMaxHealth(maxHP);
+
         MonsInRange = false;
         moveSpeedMax = moveSpeed;
         waveSpawner = GetComponentInParent<Wavespawner>();
@@ -74,6 +82,10 @@ public class MonsterManager : MonoBehaviour
     {
         if (isDead) return;  // 如果怪物已經死亡，則不執行後續邏輯
         flashDam.Flash();
+
+        currentHP -= (float)damageAmount;
+        healthBar.SetHealth(currentHP);
+
 
         m_HP -= damageAmount;
 

@@ -10,6 +10,8 @@ public class IceFog : MonoBehaviour
     void Start()
     {
         Destroy(gameObject,destroyAfterSec);
+        FindObjectOfType<AudioManager>().Play("iceFog");
+
     }
 
     // Update is called once per frame

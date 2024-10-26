@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8376946684422984822}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.4907694, y: 1.6629, z: -15.319}
   m_LocalScale: {x: 1.6629, y: 1.6629, z: 1.6629}
   m_ConstrainProportionsScale: 0
@@ -72,6 +72,36 @@ MonoBehaviour:
   - name: Gun2
     clip: {fileID: 8300000, guid: e96527f12f39fed4095bc195eb60b034, type: 3}
     volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: reloading1
+    clip: {fileID: 8300000, guid: a189d39f95a8d6742b8add1230575724, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: weapon_swap
+    clip: {fileID: 8300000, guid: 3e308f1494cbd20409e2ac44532152c7, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: greekFire
+    clip: {fileID: 8300000, guid: 4da0827d9640d334286ea1db93314b91, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: burning
+    clip: {fileID: 8300000, guid: c6226d7b26d4d86498a4734a39c0b59a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: iceFog
+    clip: {fileID: 8300000, guid: 352c88ef83de0594cb4794ee85c200a8, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}

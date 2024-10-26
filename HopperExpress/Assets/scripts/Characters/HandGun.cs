@@ -111,6 +111,8 @@ public class HandGun : MonoBehaviour
 
     IEnumerator Reload()
     {
+        FindObjectOfType<AudioManager>().Play("reloading1");
+
         reloading = true;
         WeaponSwap.reloading = true;
 

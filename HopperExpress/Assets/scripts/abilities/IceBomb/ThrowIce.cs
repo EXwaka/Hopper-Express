@@ -34,6 +34,8 @@ public class ThrowIce : MonoBehaviour
         //Debug.Log(timer);
         if (Input.GetKeyDown(KeyCode.Q) && Skills.skill_throwice == true && readyToThrow == true)
         {
+            FindObjectOfType<AudioManager>().Play("greekFire");
+
             CDactivated = true;
             readyToThrow = false;
             //if (CharacterMove.moveRight == true)
@@ -54,6 +56,8 @@ public class ThrowIce : MonoBehaviour
                 var _projectile = Instantiate(projectile, spawnPosition, transform.rotation);
                 _projectile.GetComponent<Rigidbody>().velocity = new Vector3(-speedx, speedy, 0);
 
+
+
             }
             else
             {
@@ -61,6 +65,7 @@ public class ThrowIce : MonoBehaviour
                 Vector3 spawnPosition = new Vector3(0.8f + SpawnPoint.position.x, 1f + SpawnPoint.position.y, SpawnPoint.position.z);
                 var _projectile = Instantiate(projectile, spawnPosition, transform.rotation);
                 _projectile.GetComponent<Rigidbody>().velocity = new Vector3(speedx, speedy, 0);
+
 
             }
         }

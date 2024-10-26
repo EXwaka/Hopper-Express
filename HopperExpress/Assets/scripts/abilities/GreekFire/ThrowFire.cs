@@ -36,12 +36,15 @@ public class ThrowFire : MonoBehaviour
         {
             readyToThrow = false;
             CDactivated = true;
+            FindObjectOfType<AudioManager>().Play("greekFire");
 
             if (directionToMouse.x < 0)
             {
                 Vector3 spawnPosition = new Vector3(-0.8f + SpawnPoint.position.x, 1f + SpawnPoint.position.y, SpawnPoint.position.z);
                 var _projectile = Instantiate(projectile, spawnPosition, transform.rotation);
                 _projectile.GetComponent<Rigidbody>().velocity = new Vector3(-speedx, speedy, 0);
+
+
 
             }
             else
@@ -50,6 +53,8 @@ public class ThrowFire : MonoBehaviour
                 Vector3 spawnPosition = new Vector3(0.8f + SpawnPoint.position.x, 1f + SpawnPoint.position.y, SpawnPoint.position.z);
                 var _projectile = Instantiate(projectile, spawnPosition, transform.rotation);
                 _projectile.GetComponent<Rigidbody>().velocity = new Vector3(speedx, speedy, 0);
+
+
 
             }
             //原始腳本 朝玩家面對方向擲出

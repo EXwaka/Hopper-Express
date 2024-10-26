@@ -20,21 +20,21 @@ public class GetOnTrain : MonoBehaviour
     {
         if (Ebutton.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            if (SkillSelectUI.Chapter1Done)
-            {
-                TrainMoneAnim.TrainGo = true;
+            //    if (SkillSelectUI.Chapter1Done)
+            //    {
+            TrainMoneAnim.TrainGo = true;
 
                 TrainMoneAnim.TrainGo = true;
                 Invoke("Chapter2", 5f);
                 Invoke("TrainNoGo", 5f);
 
-            }
+            //    }
         }
-        else if(!SkillSelectUI.Chapter1Done)
-        {
-            SceneManager.LoadSceneAsync("Level1-0");
+        //else if(!SkillSelectUI.Chapter1Done)
+        //{
+        //    SceneManager.LoadSceneAsync("Level1-0");
 
-        }
+        //}
 
         if (TrainMoneAnim.TrainGo)
         {

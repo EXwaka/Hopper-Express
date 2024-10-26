@@ -2496,6 +2496,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 095a2e2922e59574183decfa2814ce07, type: 3}
+--- !u!114 &824541722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8699770382927058959, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
+  m_PrefabInstance: {fileID: 1194769280}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d86178522169ba46af12e229624ae94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &860813040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4635635012959584268, guid: 4626d43eddc66954e9a338eb5efe293d, type: 3}
@@ -3302,13 +3313,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1285977566409430316, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285977566409430316, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511199294708101637, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
+      propertyPath: maxHP
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511199294708101637, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 824541722}
     - target: {fileID: 4290010059460625721, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
       propertyPath: m_Name
       value: Boss grasshopper
-      objectReference: {fileID: 0}
-    - target: {fileID: 4290010059460625721, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5424466850005706094, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3350,10 +3373,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8608430321583148973, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
-      propertyPath: flashMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
     - target: {fileID: 8747437233692121608, guid: 331ac02fbda0a044486db52f56b64789, type: 3}
       propertyPath: target
       value: 
@@ -4417,6 +4436,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1828915248 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2720263302795186162, guid: f0f003d12fd25dd4ab79acd5c1c07f32, type: 3}
+  m_PrefabInstance: {fileID: 1887107555641348358}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d86178522169ba46af12e229624ae94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1856832640 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3903379790305572435, guid: e03d2704f72a48d45a8bc7f56f404ad3, type: 3}
@@ -6227,10 +6257,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 724087876570954385, guid: f0f003d12fd25dd4ab79acd5c1c07f32, type: 3}
-      propertyPath: flashMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
     - target: {fileID: 3822640789416498159, guid: f0f003d12fd25dd4ab79acd5c1c07f32, type: 3}
       propertyPath: m_Name
       value: minions
@@ -6279,10 +6305,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5522310167837999825, guid: f0f003d12fd25dd4ab79acd5c1c07f32, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522310167837999825, guid: f0f003d12fd25dd4ab79acd5c1c07f32, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749905543028975945, guid: f0f003d12fd25dd4ab79acd5c1c07f32, type: 3}
+      propertyPath: maxHP
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7749905543028975945, guid: f0f003d12fd25dd4ab79acd5c1c07f32, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 8796351073343338648}
+    - target: {fileID: 7749905543028975945, guid: f0f003d12fd25dd4ab79acd5c1c07f32, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1828915248}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

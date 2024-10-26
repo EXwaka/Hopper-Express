@@ -16,6 +16,7 @@ public class FireArea : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetBool("IsBurning", true);
         Destroy(gameObject, destroyAfterSec);
+        FindObjectOfType<AudioManager>().Play("burning");
 
     }
 

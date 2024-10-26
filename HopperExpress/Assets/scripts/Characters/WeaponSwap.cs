@@ -17,7 +17,9 @@ public class WeaponSwap : MonoBehaviour
         if (reloading) return;
         if (Input.GetKeyDown(KeyCode.E)) 
         {
+            FindObjectOfType<AudioManager>().Play("weapon_swap");
             selectedWeapon++;
+
             if(selectedWeapon >= 2) 
             {
                 selectedWeapon = 0;
