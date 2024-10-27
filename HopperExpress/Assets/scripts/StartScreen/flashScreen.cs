@@ -16,7 +16,7 @@ public class flashScreen : MonoBehaviour
         if (startScreenTrain.trainArrived == true)
         {
             flashAnimation.enabled = true;
-            flashAnimation.SetTrigger("Flash");
+            //flashAnimation.SetTrigger("Flash");
         }
     }
 }

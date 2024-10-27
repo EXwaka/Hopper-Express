@@ -104,6 +104,7 @@ public class SkillSelectUI : MonoBehaviour
 
     }
 
+
     public void ChooseSkill1()
     {
         Skills.skill_throwfire = true;
@@ -112,7 +113,6 @@ public class SkillSelectUI : MonoBehaviour
         NextButton.SetActive(true);
 
 
-        Chapter1Done = true;
     }
     public void ChooseSkill2()
     {
@@ -130,7 +130,6 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_airattack = true;
         NextButton.SetActive(true);
 
-        Chapter1Done = true;
 
     }
     public void ChooseSkill4()
@@ -139,6 +138,8 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_electricfance = false;
         Skills.skill_floorspike = false;
         NextButton.SetActive(true);
+
+        Chapter1Done = true;
 
     }
     public void ChooseSkill5()
@@ -149,14 +150,18 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_floorspike = false;
         NextButton.SetActive(true);
 
+        Chapter1Done = true;
+
     }
     public void ChooseSkill6()
     {
-
         Skills.skill_forcefield = false;
         Skills.skill_electricfance = false;
         Skills.skill_floorspike = true;
         NextButton.SetActive(true);
+
+        Chapter1Done = true;
+
     }
 
 }

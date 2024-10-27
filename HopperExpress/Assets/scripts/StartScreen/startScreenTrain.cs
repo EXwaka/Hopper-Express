@@ -10,7 +10,7 @@ public class startScreenTrain : MonoBehaviour
     void Start()
     {
         trainArrived = false;
-        train_animation.SetTrigger("StartTrainAnimation");
+        //train_animation.SetTrigger("StartTrainAnimation");
     }
     private void Update()
     {

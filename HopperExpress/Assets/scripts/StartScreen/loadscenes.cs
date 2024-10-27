@@ -8,7 +8,7 @@ public class loadscreen : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadSceneAsync("FirstStory");
+        SceneManager.LoadSceneAsync("Story1");
     }
     public void QuitGame()
     {

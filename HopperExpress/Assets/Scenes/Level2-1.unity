@@ -5243,7 +5243,7 @@ PrefabInstance:
     - target: {fileID: 114267116959189454, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5259527326138985114}
     - target: {fileID: 114267116959189454, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: gameOverControl
       value: 
@@ -5297,6 +5297,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+--- !u!114 &5259527326138985114 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7115813271125563670, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
+  m_PrefabInstance: {fileID: 5259527326138985113}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310fdf0c4ac4dd540a73eaff6499506a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5662680676412508464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5608,6 +5619,14 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3303070234850304102, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303070234850304102, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 3736877362218933765, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5699,6 +5718,18 @@ PrefabInstance:
     - target: {fileID: 7874027803994190798, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257260749093783333, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_text
+      value: "\u524D\u5F80\u4E2D\u9014\u7AD9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257260749093783333, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_fontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257260749093783333, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8302010101645741317, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
