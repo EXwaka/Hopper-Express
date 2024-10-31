@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
-  duration: 0.1
+  duration: 0.05
 --- !u!114 &1439141380205443249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,8 +130,8 @@ MonoBehaviour:
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
   moveSpeed: 5
   moveSpeedMax: 0
-  maxHP: 25
-  m_HP: 25
+  maxHP: 35
+  m_HP: 35
   healthBar: {fileID: 6091802296114708134}
   MonsAttackPoint: {fileID: 8021723557747095666}
   AttackRange: 5
@@ -140,7 +140,7 @@ MonoBehaviour:
     m_Bits: 8
   MonsInRange: 0
   MonsDamage: 3
-  atkCooldown: 2
+  atkCooldown: 1
   Counter: 0
 --- !u!95 &6974265697061503012
 Animator:

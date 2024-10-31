@@ -146,8 +146,8 @@ MonoBehaviour:
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
   moveSpeed: 8
   moveSpeedMax: 0
-  maxHP: 15
-  m_HP: 15
+  maxHP: 20
+  m_HP: 20
   healthBar: {fileID: 1278937664382112190}
   MonsAttackPoint: {fileID: 1304609634405611177}
   AttackRange: 5
@@ -156,7 +156,7 @@ MonoBehaviour:
     m_Bits: 8
   MonsInRange: 0
   MonsDamage: 2
-  atkCooldown: 1
+  atkCooldown: 0.8
   Counter: 0
 --- !u!95 &9023242169555994704
 Animator:
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
-  duration: 0.1
+  duration: 0.05
 --- !u!1001 &6921564984130615300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -352,6 +352,10 @@ PrefabInstance:
     - target: {fileID: 7326571880724458530, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843955632789654156, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
+      propertyPath: m_Value
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8655557211037548136, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_LocalScale.x

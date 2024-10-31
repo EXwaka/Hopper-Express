@@ -21,9 +21,10 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             InitializeSounds();
         }
-
+        Play("MainMenu");
+        Play("LevelMusic");
     }
-    void InitializeSounds()//
+    void InitializeSounds()
     {
         foreach (Sound s in sounds)
         {
@@ -35,12 +36,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        Play("MainMenu");
-        Play("LevelMusic");
+    //void Start()
+    //{
+    //    Play("MainMenu");
+    //    Play("LevelMusic");
 
-    }
+    //}
 
     public void Play(string name)
     {

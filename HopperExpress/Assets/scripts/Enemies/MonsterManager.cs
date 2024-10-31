@@ -21,7 +21,6 @@ public class MonsterManager : MonoBehaviour
     public int MonsDamage = 1;
     public float atkCooldown = 1;
     public float Counter = 0;
-    private bool isAttacking = false;
     bool isDead=false;
     private Animator animator;
  
@@ -48,16 +47,16 @@ public class MonsterManager : MonoBehaviour
         //Debug.Log("HP: " + m_HP);
         //Debug.Log("monster in range:" + MonsInRange);
         MoveToTarget();
-        if (MonsInRange == true)
+        if (MonsInRange)
         {
             Counter += Time.deltaTime;
+
+            // 檢查冷卻計時器是否已達冷卻時間
             if (Counter >= atkCooldown)
             {
-                //play "MonsterAttack" animation
                 MonsterAttack(MonsDamage);
-                Counter = 0;
+                Counter = 0; // 重置計時器
             }
-
         }
 
     }
@@ -108,27 +107,19 @@ public class MonsterManager : MonoBehaviour
 
     public void MonsterAttack(int damageAmount)
     {
-        if (!isAttacking) 
+        Collider[] HitAny = Physics.OverlapSphere(MonsAttackPoint.position, AttackRange, enemy);
+
+        foreach (Collider enemy in HitAny)
         {
-            isAttacking = true; 
-
-            Collider[] HitAny = Physics.OverlapSphere(MonsAttackPoint.position, AttackRange, enemy);
-
-            foreach (Collider enemy in HitAny)
+            Core core = enemy.GetComponent<Core>();
+            if (core != null)
             {
-                //Debug.Log("Target gets hit:" + enemy.name);
-                Core core = enemy.GetComponent<Core>();
-                if (core != null)
-                {
-                    core.GetHit(damageAmount);
-                }
+                core.GetHit(damageAmount);
             }
-
-            isAttacking = false; 
         }
     }
 
-    public void Shock(float shockTime)
+        public void Shock(float shockTime)
     {
         moveSpeed = 0;
         StartCoroutine(RecoverSpeed(shockTime));

@@ -20,7 +20,7 @@ public class HandGunBullet : MonoBehaviour
         clear += Time.deltaTime;
         damageReductionTimer += Time.deltaTime;
 
-        if (clear >= 0.25f)
+        if (clear >= 0.2f)
         {
             Destroy(this.gameObject);
             clear = 0;
