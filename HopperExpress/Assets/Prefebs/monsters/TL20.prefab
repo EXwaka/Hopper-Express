@@ -75,6 +75,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &354807721774277351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6082707036489979841}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6082707036489979841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354807721774277351}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.092, y: -0.278, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2204344006507876568}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &491346863895956307
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 1477123245123301576}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 0.01, z: 0.18}
+  m_LocalPosition: {x: -0.46, y: 0.01, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -256,10 +287,10 @@ GameObject:
   - component: {fileID: 2204344006507876568}
   - component: {fileID: 8702140332511634159}
   - component: {fileID: 7926328953214650456}
-  - component: {fileID: 2623805763715828936}
   - component: {fileID: 6582918337441970274}
   - component: {fileID: 5271867055268506374}
   - component: {fileID: 4489627194928009894}
+  - component: {fileID: -8988603361251798913}
   - component: {fileID: 994174178336443265}
   m_Layer: 6
   m_Name: TL20
@@ -277,12 +308,13 @@ Transform:
   m_GameObject: {fileID: 5782303876713237354}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.44, y: 2.9, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 435490855733948387}
   - {fileID: 4589294868368269244}
+  - {fileID: 6082707036489979841}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8702140332511634159
@@ -333,18 +365,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6271086, y: 0.4306385, z: 12.66}
   m_Center: {x: -0.018043041, y: 0.0441055, z: 0}
---- !u!114 &2623805763715828936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5782303876713237354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcf09eed1120fe246aca711b2467b729, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6582918337441970274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +384,7 @@ MonoBehaviour:
   m_HP: 10
   healthBar: {fileID: 4480771083850908965}
   MonsAttackPoint: {fileID: 435490855733948387}
-  AttackRange: 0
+  AttackRange: 0.1
   enemy:
     serializedVersion: 2
     m_Bits: 8
@@ -445,6 +465,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8988603361251798913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782303876713237354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3162bde32fb39cb4e88357156775e0a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3456381558581376230, guid: 59432bd6bbbfd4045b6c9752e61b4a91, type: 3}
+  bulletSpeed: 15
+  FirePoint: {fileID: 6082707036489979841}
+  CDMax: 1
 --- !u!114 &994174178336443265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
-  duration: 0.1
+  duration: 0.05
 --- !u!1 &6104658079243120066
 GameObject:
   m_ObjectHideFlags: 0

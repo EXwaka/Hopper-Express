@@ -29,4 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2-1.unity
     guid: bb24649bd989dd2479c8764133d5d0d6
+  - enabled: 1
+    path: Assets/Scenes/Level2-2.unity
+    guid: 730d91f84dec3e340933ca82cd8da7f1
+  - enabled: 1
+    path: Assets/Scenes/Level2-3(boss).unity
+    guid: 5d14571d8da5038459c0a4910a99accb
+  - enabled: 1
+    path: Assets/Scenes/TrainStation3.unity
+    guid: afeebc2d1c9259d4a97307f21aff2bd7
+  - enabled: 1
+    path: Assets/Scenes/Level3-1.unity
+    guid: 1e0d31b4df0d1cd4eb9972dbaed879d9
   m_configObjects: {}

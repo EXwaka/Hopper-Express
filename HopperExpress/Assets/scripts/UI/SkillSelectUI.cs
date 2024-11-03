@@ -47,9 +47,9 @@ public class SkillSelectUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("CH1" + SkillSelectUI.Chapter1Done);
         //Debug.Log("TimeScale" + Time.timeScale);
-        Debug.Log("MonsLeft" + Wavespawner.monsCount);
+
+        //Debug.Log($"Timer.timeLeft: {Timer.timeLeft}, Wavespawner.monsCount: {Wavespawner.monsCount}");
         if (Timer.timeLeft <= 1 && Wavespawner.monsCount <= 0)
         {
             SkillMenu.SetActive(true);
@@ -59,11 +59,7 @@ public class SkillSelectUI : MonoBehaviour
                 slideIn = true;
             }
         }
-
-        //else if (okButton == false)
-        //{
-        //    Time.timeScale = 1f; 
-        //}
+ 
 
     }
 

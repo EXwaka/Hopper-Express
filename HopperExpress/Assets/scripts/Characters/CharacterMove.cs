@@ -14,7 +14,7 @@ public class CharacterMove : MonoBehaviour
     private KeyCode moveRKey;
     private KeyCode moveLKey;
     private SpriteRenderer spriteRenderer;
-
+    private bool ableToMove = true;
     public static CharacterMove instance;
 
     //private void Awake()
@@ -32,6 +32,7 @@ public class CharacterMove : MonoBehaviour
 
     private void Start()
     {
+        ableToMove = true;
         UpdateKeyBindings();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -41,12 +42,13 @@ public class CharacterMove : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(jumpKey) && isGrounded)
+        if (Input.GetKeyDown(jumpKey) && isGrounded&& ableToMove)
         {
             Jump();
         }
         if (TrainMoneAnim.TrainGo)
         {
+            ableToMove=false;
             // 獲取當前物件及其所有子物件的 SpriteRenderer
             SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
 
@@ -61,24 +63,28 @@ public class CharacterMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(moveRKey))
+        if(ableToMove)
         {
-            moveRight = true;
-            Move(Vector3.right);
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else if (Input.GetKey(moveLKey))
-        {
-            moveRight = false;
-            Move(Vector3.left);
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else
-        {
-            StopMove();
+            if (Input.GetKey(moveRKey))
+            {
+                moveRight = true;
+                Move(Vector3.right);
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else if (Input.GetKey(moveLKey))
+            {
+                moveRight = false;
+                Move(Vector3.left);
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                StopMove();
+            }
+
+            GetComponent<Rigidbody>().AddForce(Vector3.down * 50f);
         }
 
-        GetComponent<Rigidbody>().AddForce(Vector3.down * 50f);
     }
 
     void Move(Vector3 direction)

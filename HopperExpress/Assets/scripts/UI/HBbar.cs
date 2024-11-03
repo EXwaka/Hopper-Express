@@ -11,16 +11,16 @@ public class HBbar : MonoBehaviour
     private void Awake()
     {
         Transform rootObject = transform.root;  // 找到當前物件的根物件
-        DontDestroyOnLoad(rootObject.gameObject);
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        //DontDestroyOnLoad(rootObject.gameObject);
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //    DontDestroyOnLoad(gameObject);
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
     }
     public void SetMaxHealth(int health)
     {
