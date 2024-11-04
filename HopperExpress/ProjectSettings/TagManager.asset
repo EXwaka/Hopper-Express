@@ -21,6 +21,7 @@ TagManager:
   - Enemy
   - AnimationStop
   - AttackArea
+  - background
   layers:
   - Default
   - TransparentFX
@@ -57,4 +58,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: effect
+    uniqueID: 3581885259
+    locked: 0
+  - name: turret
+    uniqueID: 781042549
     locked: 0

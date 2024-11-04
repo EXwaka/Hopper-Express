@@ -12,24 +12,32 @@ public class Core : MonoBehaviour
     private bool dead;
     public GameOverControl gameOverControl;
 
+    public GameObject healingSFX;
+
     private FlashDam flashDam;
     // Start is called before the first frame update
     void Start()
     {
-        ////
-        if (healthBar != null)
-        {
-            healthBar.SetMaxHealth(HPmax_core);
-        }
-        else
-        {
-            Debug.LogError("HealthBar is not assigned in the inspector.");
-        }
-        ////
+        healingSFX.SetActive(false);
+        //if (healthBar != null)
+        //{
+        //    healthBar.SetMaxHealth(HPmax_core);
+        //}
+        //else
+        //{
+        //    Debug.LogError("HealthBar is not assigned in the inspector.");
+        //}
         flashDam = GetComponent<FlashDam>();
         dead = false;
         HPcurrent_core = HPmax_core;
         healthBar.SetMaxHealth(HPmax_core);
+
+        if (Skills.skill_corehealing)
+        {
+            InvokeRepeating("Healing", 0, 5f);
+            healingSFX.SetActive(true);
+
+        }
     }
 
     // Update is called once per frame
@@ -46,6 +54,8 @@ public class Core : MonoBehaviour
 
     public void GetHit(int damage)
     {
+        FindObjectOfType<AudioManager>().Play("coreHit");
+
         HPcurrent_core -= damage;
         healthBar.SetHealth(HPcurrent_core);
         flashDam.Flash();
@@ -59,5 +69,21 @@ public class Core : MonoBehaviour
         gameOverControl.SlideIn();
         Time.timeScale = 0;
 
+    }
+
+    void Healing()
+    {
+        if (HPcurrent_core < HPmax_core) 
+        {
+            FindObjectOfType<AudioManager>().Play("coreHealing");
+            HPcurrent_core += 10;
+            healthBar.SetHealth(HPcurrent_core);
+            healingSFX.SetActive(true);
+
+        }
+        else
+        {
+            healingSFX.SetActive(false); 
+        }
     }
 }

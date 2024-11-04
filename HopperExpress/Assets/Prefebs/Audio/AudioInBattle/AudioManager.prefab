@@ -105,3 +105,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: coreHealing
+    clip: {fileID: 8300000, guid: 210693e265c4a9c49975ce683a1c8157, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: coreHit
+    clip: {fileID: 8300000, guid: 67f1963e8619ab8418b73b62230f590c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
