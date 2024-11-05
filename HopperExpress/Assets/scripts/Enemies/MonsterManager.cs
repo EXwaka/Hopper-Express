@@ -23,7 +23,9 @@ public class MonsterManager : MonoBehaviour
     public float Counter = 0;
     bool isDead=false;
     private Animator animator;
- 
+
+    private Rigidbody rb;
+    private float knockbackForce = 800f;
 
     private Wavespawner waveSpawner;
 
@@ -39,6 +41,8 @@ public class MonsterManager : MonoBehaviour
         moveSpeedMax = moveSpeed;
         waveSpawner = GetComponentInParent<Wavespawner>();
         animator = GetComponent<Animator>();
+
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -119,7 +123,7 @@ public class MonsterManager : MonoBehaviour
         }
     }
 
-        public void Shock(float shockTime)
+    public void Shock(float shockTime)
     {
         moveSpeed = 0;
         StartCoroutine(RecoverSpeed(shockTime));
@@ -145,6 +149,16 @@ public class MonsterManager : MonoBehaviour
         TakeDamage(2f);
     }
 
+    public void HitByCore()
+    {
+        Invoke("CoreAttack", 0.5f);
+
+    }
+    private void CoreAttack()
+    {
+        rb.AddForce(Vector3.up * knockbackForce);
+        TakeDamage(15);
+    }
     private IEnumerator RecoverSpeed(float Time)
     {
         yield return new WaitForSeconds(Time);
@@ -187,7 +201,6 @@ public class MonsterManager : MonoBehaviour
         }
 
     }
-
 
 
 }

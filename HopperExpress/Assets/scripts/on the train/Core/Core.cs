@@ -13,6 +13,8 @@ public class Core : MonoBehaviour
     public GameOverControl gameOverControl;
 
     public GameObject healingSFX;
+    public GameObject heatSFX;
+    public float SkillDamage = 20;
 
     private FlashDam flashDam;
     // Start is called before the first frame update
@@ -59,6 +61,13 @@ public class Core : MonoBehaviour
         HPcurrent_core -= damage;
         healthBar.SetHealth(HPcurrent_core);
         flashDam.Flash();
+
+        //過熱技能
+        if (Skills.skill_coreheat && Random.Range(0f, 1f) <= 0.2f)//20%機率觸發技能
+        {
+            SkillHeat();
+        }
+
     }
 
     IEnumerator DeadAnim()
@@ -84,6 +93,19 @@ public class Core : MonoBehaviour
         else
         {
             healingSFX.SetActive(false); 
+        }
+    }
+
+    void SkillHeat()
+    {
+        FindObjectOfType<AudioManager>().Play("coreHeat");
+        Instantiate(heatSFX,transform.position,transform.rotation);
+        MonsterManager[] monsters = FindObjectsOfType<MonsterManager>();
+
+        // 對每個找到的怪物調用 TakeDamage 方法
+        foreach (MonsterManager monster in monsters)
+        {
+            monster.HitByCore();
         }
     }
 }

@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1304609634405611177}
@@ -79,7 +79,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5070964644595726317}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -117,7 +117,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 12.66}
+  m_Size: {x: 0.6, y: 0.6, z: 13}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &818307097302179944
 MonoBehaviour:
@@ -150,12 +150,12 @@ MonoBehaviour:
   m_HP: 20
   healthBar: {fileID: 1278937664382112190}
   MonsAttackPoint: {fileID: 1304609634405611177}
-  AttackRange: 5
+  AttackRange: 2
   enemy:
     serializedVersion: 2
     m_Bits: 8
   MonsInRange: 0
-  MonsDamage: 2
+  MonsDamage: 3
   atkCooldown: 0.8
   Counter: 0
 --- !u!95 &9023242169555994704
@@ -220,7 +220,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 766515381, guid: 3d8693952b1af9342908272c38a06abb, type: 3}
+  m_Sprite: {fileID: -43125976, guid: 8e9b733ee5640f74bacf452a2bec446e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -359,19 +359,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8655557211037548136, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8655557211037548136, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8655557211037548136, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8655557211037548136, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 40
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 9047178515561323346, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_Name

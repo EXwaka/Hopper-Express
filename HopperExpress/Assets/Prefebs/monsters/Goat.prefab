@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.45, y: 0, z: 0}
-  m_LocalScale: {x: 0.73042, y: 0.73042, z: 0.73042}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8021723557747095666}
@@ -86,8 +86,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.8836331, y: 3.8506536, z: 13.5}
-  m_Center: {x: 0.04694295, y: -0.39566135, z: -0.42000008}
+  m_Size: {x: 0.6, y: 0.8, z: 13}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5469162211198738112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,12 +134,12 @@ MonoBehaviour:
   m_HP: 35
   healthBar: {fileID: 6091802296114708134}
   MonsAttackPoint: {fileID: 8021723557747095666}
-  AttackRange: 5
+  AttackRange: 2
   enemy:
     serializedVersion: 2
     m_Bits: 8
   MonsInRange: 0
-  MonsDamage: 3
+  MonsDamage: 6
   atkCooldown: 1
   Counter: 0
 --- !u!95 &6974265697061503012
@@ -152,7 +152,7 @@ Animator:
   m_GameObject: {fileID: 4373350818202400889}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 632ab384f418b41439dfc18df0d106ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: 61a9a9f8cb43c024eb63894aaade5462, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -204,7 +204,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 1265e9dc1289be341a2cd622111d654f, type: 3}
+  m_Sprite: {fileID: -1113143127, guid: 09942fe619bd3f9449e65f8a2e46629c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -376,15 +376,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8655557211037548136, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8655557211037548136, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8655557211037548136, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 150
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 9047178515561323346, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_Name
