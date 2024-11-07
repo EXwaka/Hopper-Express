@@ -23,6 +23,7 @@ public class MonsterManager : MonoBehaviour
     public float Counter = 0;
     bool isDead=false;
     private Animator animator;
+    public GameObject explosion;
 
     private Rigidbody rb;
     private float knockbackForce = 800f;
@@ -104,6 +105,7 @@ public class MonsterManager : MonoBehaviour
     }
     public void Death()
     {
+        DeadAnimation();
         Destroy(gameObject);
         Wavespawner.monsCount--;
         MonsterSpawn.monsCount--;
@@ -164,6 +166,14 @@ public class MonsterManager : MonoBehaviour
         yield return new WaitForSeconds(Time);
         moveSpeed = moveSpeedMax;
     }
+
+    private void DeadAnimation()
+    {
+        GameObject explosionInstance = Instantiate(explosion,transform.position,transform.rotation);
+
+        Destroy(explosionInstance, 0.5f);
+    }
+
     void OnDrawGizmosSelected()
     {
         if(MonsAttackPoint == null)

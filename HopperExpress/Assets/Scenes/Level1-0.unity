@@ -278,11 +278,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1616731260781245893, guid: b4a0687e98df2bb4ab0018a672b0c8c9, type: 3}
   m_PrefabInstance: {fileID: 8532819855809009529}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &268252748 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2298913440418643116, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
-  m_PrefabInstance: {fileID: 5259527326138985113}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &273872459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4213,7 +4208,7 @@ PrefabInstance:
     - target: {fileID: 114267116959189454, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: healingSFX
       value: 
-      objectReference: {fileID: 268252748}
+      objectReference: {fileID: 1342293298257808222, guid: 27652bc9997556d48acda7f4d3ec0921, type: 3}
     - target: {fileID: 114267116959189454, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: gameOverControl
       value: 

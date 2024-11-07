@@ -142,6 +142,7 @@ MonoBehaviour:
   MonsDamage: 6
   atkCooldown: 1
   Counter: 0
+  explosion: {fileID: 4094739207793770646, guid: 5fb362f2158a76d49bb8b3494f37cc01, type: 3}
 --- !u!95 &6974265697061503012
 Animator:
   serializedVersion: 5
