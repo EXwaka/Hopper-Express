@@ -123,3 +123,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Eagle
+    clip: {fileID: 8300000, guid: fb89d2f1fd0789e48868ac59ae45b95b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

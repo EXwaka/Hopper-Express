@@ -1714,7 +1714,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 775886676455396638, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_text
-      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E1\u500B\n\u6703\u653B\u64CA\u7D93\u904E\u6575\u4EBA\u7684\u96FB\u7DB2"
+      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E1\u9762\n\u6703\u653B\u64CA\u7D93\u904E\u6575\u4EBA\u7684\u96FB\u7DB2"
       objectReference: {fileID: 0}
     - target: {fileID: 2132178899075222248, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1764,6 +1764,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4157228422562927530, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1563481277, guid: 54aace7a0af570944a88e54b9d15cbe3, type: 3}
+    - target: {fileID: 4727990546503594642, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727990546503594642, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727990546503594642, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727990546503594642, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5823988100763856448, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1782,7 +1802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6773394629720310780, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_text
-      value: "\u5728\u89D2\u8272\u5468\u570D\u5275\u9020\u4E00\u500B\u6703\n\u5C0D\u6575\u4EBA\u9020\u6210\u50B7\u5BB3\u7684\u529B\u5834"
+      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E\u4E00\u5EA7\n\u81EA\u52D5\u7832\u81FA"
       objectReference: {fileID: 0}
     - target: {fileID: 6773394629720310780, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_lineSpacing
@@ -1846,12 +1866,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7746166045999175400, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_text
-      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E1\u500B\n\u6703\u653B\u64CA\u7D93\u904E\u6575\u4EBA\u7684\u5730\u523A"
+      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E1\u5EA7\n\u6703\u653B\u64CA\u7D93\u904E\u6575\u4EBA\u7684\u5730\u523A"
       objectReference: {fileID: 0}
     - target: {fileID: 7816068834147130611, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: TimeLeft
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7864408033128171172, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 824189679, guid: 435deda396b919f47b2b369a3717e97d, type: 3}
     - target: {fileID: 7874027803994190798, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChooseSkill6

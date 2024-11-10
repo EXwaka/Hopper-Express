@@ -29,6 +29,9 @@ public class MonsterManager : MonoBehaviour
     private float knockbackForce = 800f;
 
     private Wavespawner waveSpawner;
+    CrabControl crabControl;
+    EagleControl eagleControl;
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +47,9 @@ public class MonsterManager : MonoBehaviour
         animator = GetComponent<Animator>();
 
         rb = GetComponent<Rigidbody>();
+
+        crabControl = GetComponent<CrabControl>();
+        eagleControl = GetComponentInParent<EagleControl>();
     }
 
     // Update is called once per frame
@@ -69,12 +75,27 @@ public class MonsterManager : MonoBehaviour
     {
         if (target != null)
         {
-            
+
             Vector3 currentPosition = transform.position;
-
             Vector3 targetPosition = new Vector3(target.transform.position.x, 0f, 0f);
+            transform.position = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);//一般怪物移動
 
-            transform.position = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
+
+            if (eagleControl != null)//老鷹移動方法
+            {
+
+                if (eagleControl.AttackRange)
+                {
+                    transform.position = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed *2* Time.deltaTime);//一般怪物移動
+                }
+                else
+                {
+                    Vector3 EagletargetPosition = new Vector3(target.transform.position.x, currentPosition.y, 0f);
+                    transform.position = Vector3.MoveTowards(currentPosition, EagletargetPosition, moveSpeed * Time.deltaTime);
+                }
+            }
+
+
             if(targetPosition.x>currentPosition.x)
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -87,8 +108,16 @@ public class MonsterManager : MonoBehaviour
         if (isDead) return;  // 如果怪物已經死亡，則不執行後續邏輯
         flashDam.Flash();
 
-        currentHP -= (float)damageAmount;
+        //寄居蟹判斷
+        if (crabControl != null && currentHP <= 0.3f * maxHP)
+        {
+            damageAmount *= 0.7f; 
+        }
+        
+
+        currentHP -= (float)damageAmount;//一般怪物受傷
         healthBar.SetHealth(currentHP);
+
 
 
         m_HP -= damageAmount;

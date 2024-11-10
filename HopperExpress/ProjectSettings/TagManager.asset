@@ -21,7 +21,7 @@ TagManager:
   - Enemy
   - AnimationStop
   - AttackArea
-  - background
+  - EagleAttackRange
   layers:
   - Default
   - TransparentFX

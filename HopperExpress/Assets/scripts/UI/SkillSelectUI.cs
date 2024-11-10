@@ -105,7 +105,7 @@ public class SkillSelectUI : MonoBehaviour
     {
         Skills.skill_throwfire = true;
         Skills.skill_throwice = false;
-        Skills.skill_airattack = false;
+        Skills.skill_throwpoison = false;
         NextButton.SetActive(true);
 
 
@@ -114,23 +114,22 @@ public class SkillSelectUI : MonoBehaviour
     {
         Skills.skill_throwfire = false;
         Skills.skill_throwice = true;
-        Skills.skill_airattack = false;
+        Skills.skill_throwpoison = false;
         NextButton.SetActive(true);
-        Chapter1Done = true;
 
     }
     public void ChooseSkill3()
     {
         Skills.skill_throwfire = false;
         Skills.skill_throwice = false;
-        Skills.skill_airattack = true;
-        NextButton.SetActive(true);
+        Skills.skill_throwpoison = true;
+
 
 
     }
     public void ChooseSkill4()
     {
-        Skills.skill_forcefield = true;
+        Skills.skill_turrets = true;
         Skills.skill_electricfance = false;
         Skills.skill_floorspike = false;
         NextButton.SetActive(true);
@@ -141,7 +140,7 @@ public class SkillSelectUI : MonoBehaviour
     public void ChooseSkill5()
     {
 
-        Skills.skill_forcefield = false;
+        Skills.skill_turrets = false;
         Skills.skill_electricfance = true;
         Skills.skill_floorspike = false;
         NextButton.SetActive(true);
@@ -151,13 +150,34 @@ public class SkillSelectUI : MonoBehaviour
     }
     public void ChooseSkill6()
     {
-        Skills.skill_forcefield = false;
+        Skills.skill_turrets = false;
         Skills.skill_electricfance = false;
         Skills.skill_floorspike = true;
         NextButton.SetActive(true);
 
         Chapter1Done = true;
 
+    }
+    public void ChooseSkill7()
+    {
+        Skills.skill_forcefield = true;
+        Skills.skill_corehealing = false;
+        Skills.skill_coreheat = false;
+        NextButton.SetActive(true);
+    }
+    public void ChooseSkill8()
+    {
+        Skills.skill_forcefield = false;
+        Skills.skill_corehealing = true;
+        Skills.skill_coreheat = false;
+        NextButton.SetActive(true);
+    }
+    public void ChooseSkill9()
+    {
+        Skills.skill_forcefield = false;
+        Skills.skill_corehealing = false;
+        Skills.skill_coreheat = true;
+        NextButton.SetActive(true);
     }
 
 }

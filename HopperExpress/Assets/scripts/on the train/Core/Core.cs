@@ -21,14 +21,6 @@ public class Core : MonoBehaviour
     void Start()
     {
         healingSFX.SetActive(false);
-        //if (healthBar != null)
-        //{
-        //    healthBar.SetMaxHealth(HPmax_core);
-        //}
-        //else
-        //{
-        //    Debug.LogError("HealthBar is not assigned in the inspector.");
-        //}
         flashDam = GetComponent<FlashDam>();
         dead = false;
         HPcurrent_core = HPmax_core;
