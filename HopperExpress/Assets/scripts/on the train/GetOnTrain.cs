@@ -60,6 +60,11 @@ public class GetOnTrain : MonoBehaviour
         SceneManager.LoadSceneAsync("Level2-1");
 
     }
+    void Chapter3()
+    {
+        SceneManager.LoadSceneAsync("Level3-1");
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Character"))
