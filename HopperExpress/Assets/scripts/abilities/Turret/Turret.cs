@@ -12,11 +12,12 @@ public class AutoTurret : MonoBehaviour
     public Transform firePoint;           // 子彈的發射點
     public float fireRate = 1f;           // 每秒發射的頻率
     private float fireCountdown = 0f;     // 發射的倒數計時
-
+    public Animator Turretfire;
     private Transform target;             // 目標敵人的 Transform
 
     void Start()
     {
+        Turretfire = GetComponent<Animator>();
         // 定時檢測目標
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
@@ -72,13 +73,31 @@ public class AutoTurret : MonoBehaviour
 
     void Shoot()
     {
-        // 實例化子彈
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        FindObjectOfType<AudioManager>().Play("turretFire");
+
+        Vector3 direction = (target.position - firePoint.position).normalized;
+
+        Quaternion bulletRotation = Quaternion.LookRotation(Vector3.forward, direction);
+
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, bulletRotation);
+
+
         TurretBullet bullet = bulletGO.GetComponent<TurretBullet>();
 
         if (bullet != null)
         {
-            bullet.Seek(target); // 將子彈的目標設置為鎖定的敵人
+            bullet.Seek(target);
+        }
+
+        //Fire animation
+        Transform headTransform = transform.Find("head");
+        if (headTransform != null)
+        {
+            Animator headAnimator = headTransform.GetComponent<Animator>();
+            if (headAnimator != null)
+            {
+                headAnimator.SetTrigger("TurretFire");
+            }
         }
     }
 

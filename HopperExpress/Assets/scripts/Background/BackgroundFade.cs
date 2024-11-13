@@ -15,7 +15,7 @@ public class BackgroundFade : MonoBehaviour
     }
 
 
-    private IEnumerator FadeOut()
+    public IEnumerator FadeOut()
     {
         float elapsed = 0f;
         while (elapsed < fadeDuration)

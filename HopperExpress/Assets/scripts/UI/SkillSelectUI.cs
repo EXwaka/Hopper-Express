@@ -21,12 +21,14 @@ public class SkillSelectUI : MonoBehaviour
     private CinemachineBrain cinemachineBrain;
     private bool slideIn=false;
 
+    public GameOverControl gameOverControl;
+
     static public bool Chapter1Done=false;
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1f;
-        SkillMenu.SetActive(false);
+        //SkillMenu.SetActive(false);
         okButton = false;
         NextButton.SetActive(false); 
         slideIn = false;
@@ -35,21 +37,18 @@ public class SkillSelectUI : MonoBehaviour
         skills=GetComponent<SkillsList>();
     }
 
-    private void Awake()
-    {
-        //DontDestroyOnLoad(gameObject);
 
-        //if (FindObjectsOfType<SkillSelectUI>().Length > 1)
-        //{
-        //    Destroy(gameObject);
-        //}
-    }
     // Update is called once per frame
     void Update()
     {
         //Debug.Log("TimeScale" + Time.timeScale);
 
         //Debug.Log($"Timer.timeLeft: {Timer.timeLeft}, Wavespawner.monsCount: {Wavespawner.monsCount}");
+        if(Timer.timeLeft<=0&& Wavespawner.monsCount >= 1)
+        {
+            StartCoroutine(Fail());
+        }
+
         if (Timer.timeLeft <= 1 && Wavespawner.monsCount <= 0)
         {
             SkillMenu.SetActive(true);
@@ -100,6 +99,13 @@ public class SkillSelectUI : MonoBehaviour
 
     }
 
+    IEnumerator Fail()
+    {
+        Time.timeScale = 0.2f;
+        yield return new WaitForSecondsRealtime(1f);
+        gameOverControl.SlideIn();
+        Time.timeScale = 0;
+    }
 
     public void ChooseSkill1()
     {

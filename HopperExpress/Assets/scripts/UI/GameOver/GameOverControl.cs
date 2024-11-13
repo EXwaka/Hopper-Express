@@ -31,6 +31,7 @@ public class GameOverControl : MonoBehaviour
         rectTransform.DOAnchorPosY(middlePosY, tweenDuration).SetUpdate(true);
         mainCanvas.SetActive(true);
 
+
     }
 
 

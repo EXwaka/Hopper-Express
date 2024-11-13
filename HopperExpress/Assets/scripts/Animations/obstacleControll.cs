@@ -6,12 +6,13 @@ using UnityEngine;
 public class obstacleControll : MonoBehaviour
 {
     public Animator animator;
-    private float CD=20;
-    private float CDmax = 20;
+    private float CD;
+    public float CDmax = 20;
     public GameObject sign;
 
     void Start()
     {
+        CD = CDmax;
         sign.SetActive(false);
         if (animator == null)
         {

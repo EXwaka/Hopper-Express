@@ -16,19 +16,10 @@ public class CharacterMove : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool ableToMove = true;
     public static CharacterMove instance;
+    public bool flying;
+    public GameObject jetpack;
+    public bool activeJet;
 
-    //private void Awake()
-    //{
-    //    if (instance == null)
-    //    {
-    //        instance = this;
-    //        DontDestroyOnLoad(gameObject);
-    //    }
-    //    else
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
 
     private void Start()
     {
@@ -38,13 +29,25 @@ public class CharacterMove : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = true;
 
+        activeJet = false;
+        if (Skills.skill_jetpack)
+        {
+            jetpack.SetActive(true);
+            flying = true;
+        }
+        else
+        {
+            jetpack.SetActive(false);
+            flying = false;
+        }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(jumpKey) && isGrounded&& ableToMove)
+        if (Input.GetKeyDown(jumpKey) && ableToMove)
         {
             Jump();
+            Fly();
         }
         if (TrainMoneAnim.TrainGo)
         {
@@ -58,39 +61,80 @@ public class CharacterMove : MonoBehaviour
                 spriteRenderer.enabled = false;
             }
         }
-
+  
     }
 
     void FixedUpdate()
     {
         if(ableToMove)
         {
+
+            float currentSpeed = onsTacleControl3.Storming ? 1.5f : 10f;  // 如果風暴啟動 速度為1.5 否則為10
             if (Input.GetKey(moveRKey))
             {
+
                 moveRight = true;
-                Move(Vector3.right);
+                if (flying && !isGrounded)
+                {
+
+                    GetComponent<Rigidbody>().AddForce(Vector3.right * 30f);
+
+                }
+                else if (onsTacleControl3.Storming)
+                {
+
+                    Move(Vector3.right, currentSpeed);
+
+                }
+                Move(Vector3.right, currentSpeed);
                 GetComponent<SpriteRenderer>().flipX = false;
+
+                jetpack.GetComponent<SpriteRenderer>().flipX = false;//jetpack
+                jetpack.transform.localPosition = new Vector3(-0.32f, jetpack.transform.localPosition.y, jetpack.transform.localPosition.z);
             }
             else if (Input.GetKey(moveLKey))
             {
                 moveRight = false;
-                Move(Vector3.left);
+                if (flying && !isGrounded)
+                {
+                    //Move(Vector3.left, 4.5f);
+                    GetComponent<Rigidbody>().AddForce(Vector3.left * 30f);
+                }
+                else if (onsTacleControl3.Storming)
+                {
+
+                    Move(Vector3.left, 10 + currentSpeed);
+                }
+
+                Move(Vector3.left,moveSpeed);
                 GetComponent<SpriteRenderer>().flipX = true;
+
+                jetpack.GetComponent<SpriteRenderer>().flipX = true;//jetpack
+                jetpack.transform.localPosition = new Vector3(0.32f, jetpack.transform.localPosition.y, jetpack.transform.localPosition.z);
+
             }
             else
             {
                 StopMove();
             }
 
-            GetComponent<Rigidbody>().AddForce(Vector3.down * 50f);
+            if(Input.GetKey(KeyCode.S))
+            {
+                Down();
+            }
+            if (!flying)
+            {
+                GetComponent<Rigidbody>().AddForce(Vector3.down * 50f);
+            }
         }
 
     }
 
-    void Move(Vector3 direction)
+    void Move(Vector3 direction, float speed)
     {
+
         animator.SetBool("IsWalking", true);
-        transform.Translate(direction * moveSpeed * Time.fixedDeltaTime);
+        transform.Translate(direction * speed * Time.fixedDeltaTime);
     }
 
     void StopMove()
@@ -100,17 +144,60 @@ public class CharacterMove : MonoBehaviour
 
     void Jump()
     {
-        GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        isGrounded = false;
+        if(isGrounded)
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
+    }
+
+    void Fly()
+    {
+        if (flying&&!isGrounded)
+        {
+            StartCoroutine(Jeting());
+            GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce / 1.5f, ForceMode.Impulse);
+        }
+
+
+    }
+    private IEnumerator Jeting()
+    {
+        activeJet = true;
+        yield return new WaitForSeconds(2);
+
+        // 停止效果
+        activeJet = false;
+    }
+    void Down()
+    {
+        if (flying)
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.down * jumpForce*2, ForceMode.Acceleration);
+
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        Rigidbody rb = GetComponent<Rigidbody>();
+
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
 
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -129,3 +129,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: turretFire
+    clip: {fileID: 8300000, guid: a7b1100fe24ccf44a9c47e51eedc9f2c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

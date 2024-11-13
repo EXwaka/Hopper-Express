@@ -29,9 +29,9 @@ public class Timer : MonoBehaviour
         TimeCounter.text = string.Format("在時間內保護核心! {0:00}:{1:00}", min, sec);
         if (TimeLeft <= 1)
         {
-            TimeCounter.color = Color.green;
+            TimeCounter.color = Color.red;
 
-            TimeCounter.text="殺死全部敵人以完成任務";
+            TimeCounter.text="任務失敗";
             EndCount = true;
 
         }
