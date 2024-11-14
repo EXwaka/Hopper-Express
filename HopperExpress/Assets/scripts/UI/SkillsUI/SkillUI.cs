@@ -12,18 +12,23 @@ public class SkillUI : MonoBehaviour
     public Text ThrowIceText;
     public GameObject ThrowIceImg;
 
+    public Text ThrowPoisionText;
+    public GameObject ThrowPoisionImg;
 
     private float GreekFireCD;
     private float ThrowIceCD;
+    private float ThrowPoisionCD;
 
     void Start()
     {
         GreekFireImg.SetActive(false);
         ThrowIceImg.SetActive(false);
+        ThrowPoisionImg.SetActive(false);
 
 
         CheckGreekFire();
         CheckThrowIce();
+        CheckThrowPoision();
     }
 
     // Update is called once per frame
@@ -31,6 +36,7 @@ public class SkillUI : MonoBehaviour
     {
         GreekFire();
         Throwice();
+        ThrowPoision();
     }
 
     void CheckGreekFire()
@@ -47,8 +53,18 @@ public class SkillUI : MonoBehaviour
     {
         if (Skills.skill_throwice)
         {
-            ThrowIceImg.SetActive(true) ;
+            ThrowIceImg.SetActive(true);
             ThrowIceText.text = "";
+            ThrowIceCD = ThrowIce.iceBombCD;
+        }
+    }
+
+    void CheckThrowPoision()
+    {
+        if (Skills.skill_throwpoison)
+        {
+            ThrowPoisionImg.SetActive(true);
+            ThrowPoisionText.text = "";
             ThrowIceCD = ThrowIce.iceBombCD;
         }
     }
@@ -79,6 +95,20 @@ public class SkillUI : MonoBehaviour
         {
             ThrowIceText.text = "";
             ThrowIceCD = ThrowIce.iceBombCD;
+        }
+    }
+
+    void ThrowPoision()
+    {
+        if (PoisionBomb.CDactivated)
+        {
+            ThrowPoisionCD -= Time.deltaTime;
+            ThrowPoisionText.text = ThrowPoisionCD.ToString("F0");
+        }
+        else if (!PoisionBomb.CDactivated)
+        {
+            ThrowPoisionText.text = "";
+            ThrowPoisionCD = PoisionBomb.poisionBombCD;
         }
     }
 }

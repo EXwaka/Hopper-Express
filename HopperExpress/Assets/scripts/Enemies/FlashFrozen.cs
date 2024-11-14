@@ -1,19 +1,18 @@
 using System.Collections;
-
+using System.Collections.Generic;
 using UnityEngine;
 
+public class FlashFrozen : MonoBehaviour
+{
+    #region Datamembers
 
-    public class FlashDam : MonoBehaviour
-    {
-        #region Datamembers
+    #region Editor Settings
 
-        #region Editor Settings
-
-        [Tooltip("Material to switch to during the flash.")]
-        [SerializeField] private Material flashMaterial;
+    [Tooltip("Material to switch to during the flash.")]
+    [SerializeField] private Material flashMaterial;
 
     [Tooltip("Duration of the flash.")]
-        [SerializeField] private float duration;
+    [SerializeField] private float duration;
 
     #endregion
     #region Private Fields
@@ -21,31 +20,31 @@ using UnityEngine;
     // The SpriteRenderer that should flash.
     private SpriteRenderer spriteRenderer;
 
-        // The material that was in use, when the script started.
-        private Material originalMaterial;
+    // The material that was in use, when the script started.
+    private Material originalMaterial;
 
-        // The currently running coroutine.
-        private Coroutine flashRoutine;
+    // The currently running coroutine.
+    private Coroutine flashRoutine;
 
-        #endregion
+    #endregion
 
-        #endregion
+    #endregion
 
 
-        #region Methods
+    #region Methods
 
-        #region Unity Callbacks
+    #region Unity Callbacks
 
-        void Start()
-        {
-            // Get the SpriteRenderer to be used,
-            // alternatively you could set it from the inspector.
-            spriteRenderer = GetComponent<SpriteRenderer>();
+    void Start()
+    {
+        // Get the SpriteRenderer to be used,
+        // alternatively you could set it from the inspector.
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
-            // Get the material that the SpriteRenderer uses, 
-            // so we can switch back to it after the flash ended.
-            originalMaterial = spriteRenderer.material;
-        }
+        // Get the material that the SpriteRenderer uses, 
+        // so we can switch back to it after the flash ended.
+        originalMaterial = spriteRenderer.material;
+    }
 
     #endregion
 
@@ -64,7 +63,6 @@ using UnityEngine;
     }
 
 
-
     private IEnumerator FlashRoutine()
     {
         // Swap to the flashMaterial.
@@ -79,7 +77,6 @@ using UnityEngine;
         // Set the routine to null, signaling that it's finished.
         flashRoutine = null;
     }
-
-
     #endregion
+
 }

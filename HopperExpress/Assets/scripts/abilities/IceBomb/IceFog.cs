@@ -5,7 +5,7 @@ using UnityEngine;
 public class IceFog : MonoBehaviour
 {
     public float destroyAfterSec = 5f;
-    public float slowDownTime = 5f;
+    public float slowDownTime = 7f;
     // Start is called before the first frame update
     void Start()
     {

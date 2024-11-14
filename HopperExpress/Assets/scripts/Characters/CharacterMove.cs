@@ -20,6 +20,7 @@ public class CharacterMove : MonoBehaviour
     public GameObject jetpack;
     public bool activeJet;
 
+    Rigidbody rb;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class CharacterMove : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = true;
 
+        rb = GetComponent<Rigidbody>();
         activeJet = false;
         if (Skills.skill_jetpack)
         {
@@ -69,7 +71,7 @@ public class CharacterMove : MonoBehaviour
         if(ableToMove)
         {
 
-            float currentSpeed = onsTacleControl3.Storming ? 1.5f : 10f;  // 如果風暴啟動 速度為1.5 否則為10
+            float currentSpeed = onsTacleControl3.Storming ? 1.5f : moveSpeed;  // 如果風暴啟動 速度為1.5 否則為10
             if (Input.GetKey(moveRKey))
             {
 
@@ -77,12 +79,16 @@ public class CharacterMove : MonoBehaviour
                 if (flying && !isGrounded)
                 {
 
-                    GetComponent<Rigidbody>().AddForce(Vector3.right * 30f);
+                    rb.velocity=new Vector3(15,0,0);
 
                 }
-                else if (onsTacleControl3.Storming)
+                if (onsTacleControl3.Storming)
                 {
+                    if(flying)
+                    {
+                        rb.velocity = new Vector3(15, 0, 0);
 
+                    }
                     Move(Vector3.right, currentSpeed);
 
                 }
@@ -97,8 +103,9 @@ public class CharacterMove : MonoBehaviour
                 moveRight = false;
                 if (flying && !isGrounded)
                 {
-                    //Move(Vector3.left, 4.5f);
-                    GetComponent<Rigidbody>().AddForce(Vector3.left * 30f);
+
+                    rb.velocity = new Vector3(-15, 0, 0);
+
                 }
                 else if (onsTacleControl3.Storming)
                 {
@@ -106,7 +113,7 @@ public class CharacterMove : MonoBehaviour
                     Move(Vector3.left, 10 + currentSpeed);
                 }
 
-                Move(Vector3.left,moveSpeed);
+                Move(Vector3.left,currentSpeed);
                 GetComponent<SpriteRenderer>().flipX = true;
 
                 jetpack.GetComponent<SpriteRenderer>().flipX = true;//jetpack
@@ -173,7 +180,7 @@ public class CharacterMove : MonoBehaviour
     {
         if (flying)
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.down * jumpForce*2, ForceMode.Acceleration);
+            GetComponent<Rigidbody>().AddForce(Vector3.down * jumpForce*3, ForceMode.Acceleration);
 
         }
     }

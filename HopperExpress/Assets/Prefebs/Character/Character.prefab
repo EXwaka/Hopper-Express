@@ -1293,6 +1293,7 @@ GameObject:
   - component: {fileID: 7561938647352368138}
   - component: {fileID: 1744631019346746372}
   - component: {fileID: 1375662732854073282}
+  - component: {fileID: 7192233723008283684}
   - component: {fileID: 7613680171968586996}
   m_Layer: 8
   m_Name: Character
@@ -1488,6 +1489,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a2765c5c653c404ea5872b294652133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7192233723008283684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080835978989397180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f591a354b4ca9b6418d8257a075f36f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 4796412066796264386}
+  SpawnPoint: {fileID: 1307008908636114697}
+  projectile: {fileID: 1935135463003591481, guid: e03d2704f72a48d45a8bc7f56f404ad3, type: 3}
+  speedx: 10
+  speedy: 3
 --- !u!95 &7613680171968586996
 Animator:
   serializedVersion: 5
@@ -1672,12 +1690,7 @@ MonoBehaviour:
   mainCam: {fileID: 4796412066796264386}
   flipX: 0.02
   flipY: 0.75
-  ang1: -30
-  ang2: 30
-  ang3: 140
-  ang4: 180
-  ang5: -179
-  ang6: -140
+  rotationSpeed: 15
 --- !u!1 &7695878362263205227
 GameObject:
   m_ObjectHideFlags: 0

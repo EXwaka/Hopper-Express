@@ -5,6 +5,8 @@ using UnityEngine;
 public class MonsterManager : MonoBehaviour
 {
     private FlashDam flashDam;
+    private FlashFrozen flashfrozen;
+    public bool Freeze=false;
     public GameObject target;
     public float moveSpeed=1;
     public float moveSpeedMax;
@@ -37,6 +39,7 @@ public class MonsterManager : MonoBehaviour
     void Start()
     {
         flashDam = GetComponent<FlashDam>();
+        flashfrozen = GetComponent<FlashFrozen>();
 
         currentHP = maxHP;
         healthBar.SetMaxHealth(maxHP);
@@ -142,16 +145,20 @@ public class MonsterManager : MonoBehaviour
 
     public void MonsterAttack(int damageAmount)
     {
-        Collider[] HitAny = Physics.OverlapSphere(MonsAttackPoint.position, AttackRange, enemy);
-
-        foreach (Collider enemy in HitAny)
+        if(!Freeze)
         {
-            Core core = enemy.GetComponent<Core>();
-            if (core != null)
+            Collider[] HitAny = Physics.OverlapSphere(MonsAttackPoint.position, AttackRange, enemy);
+
+            foreach (Collider enemy in HitAny)
             {
-                core.GetHit(damageAmount);
+                Core core = enemy.GetComponent<Core>();
+                if (core != null)
+                {
+                    core.GetHit(damageAmount);
+                }
             }
         }
+
     }
 
     public void Shock(float shockTime)
@@ -161,12 +168,19 @@ public class MonsterManager : MonoBehaviour
     }
     public void Frozen(float frozenTime)
     {
+        Freeze=true;
+        flashfrozen.Flash();
+
         moveSpeed = 0;
         StartCoroutine(RecoverSpeed(frozenTime));
+
     }
     public void ColdSlow(float slowDownTime)
     {
-        moveSpeed *= 0.6f;
+        Freeze = true;
+        flashfrozen.Flash();
+
+        moveSpeed *= 0.3f;
         StartCoroutine(RecoverSpeed(slowDownTime));
     }
     public void Burning(float slowDownTime)
@@ -193,6 +207,7 @@ public class MonsterManager : MonoBehaviour
     private IEnumerator RecoverSpeed(float Time)
     {
         yield return new WaitForSeconds(Time);
+        Freeze = false;
         moveSpeed = moveSpeedMax;
     }
 

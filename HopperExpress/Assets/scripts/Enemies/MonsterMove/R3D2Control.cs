@@ -54,14 +54,15 @@ public class R3D2Control : MonoBehaviour
         {
             //Debug.Log("HitWall");
             monsterManager.moveSpeed = 0;
-            Attacking=true;
+            monsterManager.moveSpeedMax = 0;
+            Attacking =true;
         }
 
     }
 
     void Shoot()
     {
-        if (target != null)
+        if (target != null&&!monsterManager.Freeze)
         {
             GameObject newBullet = Instantiate(bullet, FirePoint.transform.position, Quaternion.identity);
 

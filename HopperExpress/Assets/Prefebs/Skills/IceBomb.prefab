@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3243604292702268869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 765086646557331010}
+  m_Layer: 0
+  m_Name: spawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &765086646557331010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243604292702268869}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4635635012959584268}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5775266590805880045
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +44,7 @@ GameObject:
   - component: {fileID: 1651795437259864131}
   - component: {fileID: 2860013229317105011}
   - component: {fileID: 9123407470966102897}
+  - component: {fileID: 3972432581017346849}
   m_Layer: 0
   m_Name: IceBomb
   m_TagString: Untagged
@@ -30,9 +62,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.35, y: 1.31, z: 0}
-  m_LocalScale: {x: 0.51386, y: 0.51386, z: 0.51386}
+  m_LocalScale: {x: 6, y: 6, z: 0.51386}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 765086646557331010}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3600690153313171275
@@ -75,8 +108,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: effd45715b1ac074a90b8df249b35eed, type: 3}
+  m_SortingOrder: 80
+  m_Sprite: {fileID: -895232816, guid: f69260cc10501154ab5d566eca130c3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +166,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.08, y: 2.08, z: 15.23}
+  m_Size: {x: 0.14, y: 0.14, z: 15.23}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9123407470966102897
 MonoBehaviour:
@@ -150,4 +183,25 @@ MonoBehaviour:
   jumpForce: 0.1
   iceArea: {fileID: 1347997939805454863, guid: 87f1e863b871ea840b34dff7c4ea2ca0, type: 3}
   iceFog: {fileID: 4467438264726478943, guid: f16b784c98836a5418fb630a0e2765bc, type: 3}
-  SpawnPoint: {fileID: 4635635012959584268}
+  SpawnPoint: {fileID: 765086646557331010}
+--- !u!95 &3972432581017346849
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5775266590805880045}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6915cb6b9e27ba84fbf53ab5e800dd97, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

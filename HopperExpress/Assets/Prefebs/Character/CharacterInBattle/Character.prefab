@@ -637,12 +637,7 @@ MonoBehaviour:
   mainCam: {fileID: 4468484125747873039}
   flipX: 0.02
   flipY: 0.75
-  ang1: -30
-  ang2: 30
-  ang3: 140
-  ang4: 180
-  ang5: -179
-  ang6: -140
+  rotationSpeed: 15
 --- !u!1 &1050148368293297739
 GameObject:
   m_ObjectHideFlags: 0

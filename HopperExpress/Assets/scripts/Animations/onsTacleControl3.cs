@@ -33,7 +33,7 @@ public class onsTacleControl3 : MonoBehaviour
 
             Invoke("StormStart", 4);
             CD = CDmax;
-            Invoke("StormStop", 9);
+            Invoke("StormStop", 10);
 
         }
     }

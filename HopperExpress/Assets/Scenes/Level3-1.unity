@@ -4972,7 +4972,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 145293300340128988, guid: 2d99f9686c64cf74b89bc926116c41e2, type: 3}
       propertyPath: CDmax
-      value: 20
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2363655934498141941, guid: 2d99f9686c64cf74b89bc926116c41e2, type: 3}
       propertyPath: m_Pivot.x

@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowIce : MonoBehaviour
+public class PoisionBomb : MonoBehaviour
 {
     [SerializeField] private Camera mainCam;
 
     public Transform SpawnPoint;
     public GameObject projectile;
     public float speedx = 3;
-    public float speedy = 3;
+    public float speedy = 5;
     bool readyToThrow;
-    static public float iceBombCD = 10;
-    static public bool CDactivated=false;
+    static public float poisionBombCD = 8;
+    static public bool CDactivated = false;
     float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        timer = iceBombCD;
+        timer = poisionBombCD;
         readyToThrow = true;
     }
 
@@ -29,27 +29,15 @@ public class ThrowIce : MonoBehaviour
         Vector3 targetPosition = mainCam.ScreenToWorldPoint(mousePosition);
         targetPosition.z = 0f;
         Vector3 directionToMouse = targetPosition - transform.position;
-        float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;//ºË·Ç¤è¦V
+        float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
 
-        //Debug.Log(timer);
-        if (Input.GetKeyDown(KeyCode.Q) && Skills.skill_throwice == true && readyToThrow == true)
+
+        if (Input.GetKeyDown(KeyCode.Q) && Skills.skill_throwpoison == true && readyToThrow == true)
         {
-            FindObjectOfType<AudioManager>().Play("greekFire");
-
-            CDactivated = true;
             readyToThrow = false;
-            //if (CharacterMove.moveRight == true)
-            //{
-            //    Vector3 spawnPosition = new Vector3(0.8f + SpawnPoint.position.x, 1f + SpawnPoint.position.y, SpawnPoint.position.z);
-            //    var _projectile = Instantiate(projectile, spawnPosition, transform.rotation);
-            //    _projectile.GetComponent<Rigidbody>().velocity = new Vector3(speedx, speedy, 0);
-            //}
-            //else
-            //{
-            //    Vector3 spawnPosition = new Vector3(-0.8f + SpawnPoint.position.x, 1f + SpawnPoint.position.y, SpawnPoint.position.z);
-            //    var _projectile = Instantiate(projectile, spawnPosition, transform.rotation);
-            //    _projectile.GetComponent<Rigidbody>().velocity = new Vector3(-speedx, speedy, 0);
-            //}
+            CDactivated = true;
+            FindObjectOfType<AudioManager>().Play("poisionBomb");
+
             if (directionToMouse.x < 0)
             {
                 Vector3 spawnPosition = new Vector3(-0.8f + SpawnPoint.position.x, 1f + SpawnPoint.position.y, SpawnPoint.position.z);
@@ -67,7 +55,9 @@ public class ThrowIce : MonoBehaviour
                 _projectile.GetComponent<Rigidbody>().velocity = new Vector3(speedx, speedy, 0);
 
 
+
             }
+
         }
         if (readyToThrow == false)
         {
@@ -75,9 +65,11 @@ public class ThrowIce : MonoBehaviour
             if (timer <= 0)
             {
                 readyToThrow = true;
-                timer = iceBombCD;
+                timer = poisionBombCD;
                 CDactivated = false;
+
             }
         }
     }
+
 }
