@@ -962,12 +962,7 @@ MonoBehaviour:
   mainCam: {fileID: 154313896245311952}
   flipX: 0.02
   flipY: 0.75
-  ang1: -30
-  ang2: 30
-  ang3: 140
-  ang4: 180
-  ang5: -179
-  ang6: -140
+  rotationSpeed: 10
 --- !u!1 &432317936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,7 +3229,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -93
-  m_Sprite: {fileID: 21300000, guid: bc711be9a1a376548aa05f3c1db613ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a0ffeda9da252743af5da7889966367, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0

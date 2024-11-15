@@ -5,15 +5,19 @@ using UnityEngine;
 public class Electric : MonoBehaviour
 {
     public GameObject electric;
-    public float cooldown = 3;
+    public float cooldown = 2;
     public float duration = 1;
 
     private float startTime;
+
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         electric.SetActive(false);
-        startTime = Time.time; 
+        startTime = Time.time;
+        Invoke("StartAnimation", 5f);
     }
 
     // Update is called once per frame
@@ -35,5 +39,9 @@ public class Electric : MonoBehaviour
             electric.SetActive(false);
         }
     }
+    void StartAnimation()
+    {
+        animator.SetBool("Attack", true);
 
+    }
 }

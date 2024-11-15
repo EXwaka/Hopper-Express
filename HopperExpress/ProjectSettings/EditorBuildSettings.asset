@@ -18,14 +18,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1-0.unity
     guid: b68fbbc96ba49294f9beac730235d0b5
   - enabled: 1
-    path: Assets/Scenes/Finish1-0.unity
+    path: Assets/Scenes/MapScenes/Finish1-0.unity
     guid: 88f67a5776ad6624283e1374afa85dbe
   - enabled: 1
     path: Assets/Scenes/Level1-1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/MapScenes/Finish1-1.unity
+    guid: 8d753142840d1d947960ef61bded3cde
+  - enabled: 1
     path: Assets/Scenes/Level1-2(boss).unity
     guid: 4f8cb6e1b96cd194aaee151f48b190e1
+  - enabled: 1
+    path: Assets/Scenes/MapScenes/Finish1-2.unity
+    guid: 019ed761a16166b488ba01990c776e50
   - enabled: 1
     path: Assets/Scenes/TrainStation2.unity
     guid: cd79c3fcc8b779049a514bce98841e41
@@ -33,15 +39,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2-1.unity
     guid: bb24649bd989dd2479c8764133d5d0d6
   - enabled: 1
+    path: Assets/Scenes/MapScenes/Finish2-1.unity
+    guid: bc48fa2802178f2458710d2446f68715
+  - enabled: 1
     path: Assets/Scenes/Level2-2.unity
     guid: 730d91f84dec3e340933ca82cd8da7f1
   - enabled: 1
+    path: Assets/Scenes/MapScenes/Finish2-2.unity
+    guid: e11bd16da5ae4ee488f6d65a82496441
+  - enabled: 1
     path: Assets/Scenes/Level2-3(boss).unity
     guid: 5d14571d8da5038459c0a4910a99accb
+  - enabled: 1
+    path: Assets/Scenes/MapScenes/Finish2-3.unity
+    guid: 3cb821dc8276279408fc000c172879cb
   - enabled: 1
     path: Assets/Scenes/TrainStation3.unity
     guid: afeebc2d1c9259d4a97307f21aff2bd7
   - enabled: 1
     path: Assets/Scenes/Level3-1.unity
     guid: 1e0d31b4df0d1cd4eb9972dbaed879d9
+  - enabled: 1
+    path: Assets/Scenes/MapScenes/Finish3-1.unity
+    guid: cfea000c25addd24d96b8a9df4a66d1b
   m_configObjects: {}

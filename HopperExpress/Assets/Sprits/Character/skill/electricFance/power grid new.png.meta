@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 435deda396b919f47b2b369a3717e97d
+guid: 812414cd2e9363945bb6187730f3dd05
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: power grid all-Sheet_0
+      name: power grid new_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dfa288f34b64dd4589dd6dc926bbf76
-      internalID: -1992315580
+      spriteID: 9c3c9f2910ab9ed4fbc023e2f8051f45
+      internalID: -585139248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: power grid all-Sheet_1
+      name: power grid new_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8df2e410150cd5448207c11f76ee269
+      internalID: 1941421033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16b1a792c834f442b23c3e827fabf5d
+      internalID: 1195681691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63734b848dae00f458ff522a9657460d
+      internalID: 1735038790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_4
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 512
-        height: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +208,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69b6cca68e227134b948232ca1c45408
-      internalID: -39014469
+      spriteID: c8efe6553d379894cbfd545b1f61a7d6
+      internalID: -949447486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: power grid all-Sheet_2
+      name: power grid new_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0b130528c6e3841b7e0f19594d8bbf
+      internalID: 431970769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0e44b2041807b489ba366217ab7f95
+      internalID: -478788429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e267d730b67028949afadec3d720e214
+      internalID: -468519155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_8
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
-        width: 512
-        height: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +292,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6554d1f5d8a5ec94c92316141ac63999
-      internalID: 540654222
+      spriteID: 1fefca71631c6fb409d17de3b80d86cc
+      internalID: -595688296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: power grid all-Sheet_3
+      name: power grid new_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d39ea2d7eb61714fbb40f3dc5bc7537
+      internalID: 331212893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc55833fa8ad0a4cb7d27965fff2995
+      internalID: 59423896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0662a378f0dd8944181ffa99676f67b9
+      internalID: 1967402700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_12
       rect:
         serializedVersion: 2
         x: 1536
         y: 0
-        width: 512
-        height: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +376,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0bfcd591a512fb44950c08b5d191d51
-      internalID: 860145378
+      spriteID: b2821a6fe211d9743a76136af974323c
+      internalID: -317011383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: power grid all-Sheet_4
+      name: power grid new_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6adccbab74eba4881ce9d099080ec5
+      internalID: 1664776384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46b5dbc559679b4097b732a1268b704
+      internalID: 1023709645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1daf10f2a487dbe4693108d3199ea46d
+      internalID: 704826696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_16
       rect:
         serializedVersion: 2
         x: 2048
         y: 0
-        width: 512
-        height: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +460,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0c923e860178d44890482febceeee64
-      internalID: 277983374
+      spriteID: cc47dde50153777448c8b5dc68159483
+      internalID: -1364796418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: power grid all-Sheet_5
+      name: power grid new_17
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3196dd448f5706b4790edc7fa9c5ad6f
+      internalID: 1424041694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_18
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab9466fdf9f2c043870f4767ef1ebb9
+      internalID: -159531150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_19
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126a94c91a2d4a84db270ec0177113af
+      internalID: 1274103004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_20
       rect:
         serializedVersion: 2
         x: 2560
         y: 0
-        width: 512
-        height: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +544,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39749d1c9a4ab5d468a827ee590bd682
-      internalID: 1985595605
+      spriteID: f24c5784b7220124ea28da5b1d2099e9
+      internalID: 1285356495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: power grid all-Sheet_6
+      name: power grid new_21
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea4a98efecb1e44184df20ce0e68ac1
+      internalID: -1085854895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_22
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc33ca642c12f3248943daf5a4182ed8
+      internalID: -1713622783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_23
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e5c0b35ad850143a6c5adc9181d51c
+      internalID: 2012467936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power grid new_24
       rect:
         serializedVersion: 2
         x: 3072
         y: 0
-        width: 512
-        height: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +628,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e9dab75b2f86d642bc9af20ec5e8750
-      internalID: 617968279
+      spriteID: 1ece95ae3f04fc349901008f743f2506
+      internalID: -656810668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: power grid all-Sheet_7
+      name: power grid new_25
       rect:
         serializedVersion: 2
-        x: 3584
+        x: 3200
         y: 0
-        width: 512
-        height: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,260 +649,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67b2224ad51b86f47ba9f77413ea3cdd
-      internalID: -265383551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5247b34e053e2614d853d783574c8dbd
-      internalID: -1539299899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 4608
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3387d499289b0bb4daf0faa4b3902f3a
-      internalID: -2091199305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 5120
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2796c251b6719648a0573642bf01ce4
-      internalID: 1181231685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 5632
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2eaf7ab33eaaa1445be279345279eba4
-      internalID: 444212757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 6144
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9224d54e7654b2d4b9d6c1920ff4b392
-      internalID: -1168771603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 6656
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d706bc036d1171141b277544090007fc
-      internalID: -1340479270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 7168
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edd946861b15f0741bbbdd9139541610
-      internalID: -1791176223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d34a3731f0bd8644bbee5c4a62ec7bc
-      internalID: 824189679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 8192
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1142b7c3b3229a446afb48ca1d9d27c1
-      internalID: 587729465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 8704
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 156f200560a7a614f8a6cc31cc33d72c
-      internalID: 1728667228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 9216
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1704f5b874dd1346a7668db74ad13cf
-      internalID: 19481075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: power grid all-Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 9728
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d27ffa6a230b4e84d952aff7d64fa8d2
-      internalID: 1706053463
+      spriteID: ae065ac1d091e984ba8816044cab88cb
+      internalID: 1220477868
       vertices: []
       indices: 
       edges: []
@@ -532,7 +658,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: a82e8d7b01fb00d44a50a938598cf3c3
     internalID: 0
     vertices: []
     indices: 
@@ -540,26 +666,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      power grid all-Sheet_0: -1992315580
-      power grid all-Sheet_1: -39014469
-      power grid all-Sheet_10: 1181231685
-      power grid all-Sheet_11: 444212757
-      power grid all-Sheet_12: -1168771603
-      power grid all-Sheet_13: -1340479270
-      power grid all-Sheet_14: -1791176223
-      power grid all-Sheet_15: 824189679
-      power grid all-Sheet_16: 587729465
-      power grid all-Sheet_17: 1728667228
-      power grid all-Sheet_18: 19481075
-      power grid all-Sheet_19: 1706053463
-      power grid all-Sheet_2: 540654222
-      power grid all-Sheet_3: 860145378
-      power grid all-Sheet_4: 277983374
-      power grid all-Sheet_5: 1985595605
-      power grid all-Sheet_6: 617968279
-      power grid all-Sheet_7: -265383551
-      power grid all-Sheet_8: -1539299899
-      power grid all-Sheet_9: -2091199305
+      power grid new_0: -585139248
+      power grid new_1: 1941421033
+      power grid new_10: 59423896
+      power grid new_11: 1967402700
+      power grid new_12: -317011383
+      power grid new_13: 1664776384
+      power grid new_14: 1023709645
+      power grid new_15: 704826696
+      power grid new_16: -1364796418
+      power grid new_17: 1424041694
+      power grid new_18: -159531150
+      power grid new_19: 1274103004
+      power grid new_2: 1195681691
+      power grid new_20: 1285356495
+      power grid new_21: -1085854895
+      power grid new_22: -1713622783
+      power grid new_23: 2012467936
+      power grid new_24: -656810668
+      power grid new_25: 1220477868
+      power grid new_3: 1735038790
+      power grid new_4: -949447486
+      power grid new_5: 431970769
+      power grid new_6: -478788429
+      power grid new_7: -468519155
+      power grid new_8: -595688296
+      power grid new_9: 331212893
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

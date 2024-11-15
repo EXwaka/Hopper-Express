@@ -44,10 +44,10 @@ public class SkillSelectUI : MonoBehaviour
         //Debug.Log("TimeScale" + Time.timeScale);
 
         //Debug.Log($"Timer.timeLeft: {Timer.timeLeft}, Wavespawner.monsCount: {Wavespawner.monsCount}");
-        if(Timer.timeLeft<=0&& Wavespawner.monsCount >= 1)
-        {
-            StartCoroutine(Fail());
-        }
+        //if(Timer.timeLeft<=0&& Wavespawner.monsCount >= 1)
+        //{
+        //    StartCoroutine(Fail());
+        //}
 
         if (Timer.timeLeft <= 1 && Wavespawner.monsCount <= 0)
         {

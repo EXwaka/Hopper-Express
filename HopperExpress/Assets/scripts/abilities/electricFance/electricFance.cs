@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class electricFance : MonoBehaviour
 {
-    public Animator animator;
     public float electricDamage = 5;
     public float cooldown = 0.5f;
     public float Timer = 1;
@@ -17,15 +16,8 @@ public class electricFance : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        attack();
-    }
-    void attack()
-    {
-        animator.SetTrigger("IsAttacking");
-    }
+
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))

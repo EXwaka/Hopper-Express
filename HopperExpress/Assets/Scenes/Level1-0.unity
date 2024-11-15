@@ -2380,7 +2380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4181ac861ee014cbce9a6219618398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1862751449}
   electricDamage: 5
   cooldown: 0.5
   Timer: 1
@@ -2876,7 +2875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6550746634148823987, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7287312281148516260, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_SortingOrder
@@ -4054,7 +4053,7 @@ PrefabInstance:
     - target: {fileID: 114267116959189454, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: gameOverControl
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1201164952}
     - target: {fileID: 2298913440418643116, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
       propertyPath: m_IsActive
       value: 1

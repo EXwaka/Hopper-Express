@@ -223,6 +223,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 751336449173128593, guid: 5956841b38b876a4c87ccb8e7a725e40, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 185065fbc3e774548862a5c6041f151b, type: 2}
+    - target: {fileID: 3773136785899027917, guid: 5956841b38b876a4c87ccb8e7a725e40, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773136785899027917, guid: 5956841b38b876a4c87ccb8e7a725e40, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773136785899027917, guid: 5956841b38b876a4c87ccb8e7a725e40, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773136785899027917, guid: 5956841b38b876a4c87ccb8e7a725e40, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -140
+      objectReference: {fileID: 0}
     - target: {fileID: 3997962345790638051, guid: 5956841b38b876a4c87ccb8e7a725e40, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -303,6 +323,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4187372668183186906, guid: 5956841b38b876a4c87ccb8e7a725e40, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bc711be9a1a376548aa05f3c1db613ec, type: 3}
     - target: {fileID: 5797217899833408500, guid: 5956841b38b876a4c87ccb8e7a725e40, type: 3}
       propertyPath: m_Name
       value: Map
@@ -315,6 +339,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7353380182249681148, guid: 5956841b38b876a4c87ccb8e7a725e40, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ab39efca53839c045ab30cdd939fa4e1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

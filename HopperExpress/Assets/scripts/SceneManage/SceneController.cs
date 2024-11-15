@@ -9,6 +9,8 @@ public class SceneController : MonoBehaviour
     public static SceneController instance;
     private void Awake()
     {
+        Time.timeScale = 1;
+
         if (instance == null)
         {
             instance=this;
@@ -22,8 +24,8 @@ public class SceneController : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1);
         Time.timeScale = 1;
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1);
 
 
     }

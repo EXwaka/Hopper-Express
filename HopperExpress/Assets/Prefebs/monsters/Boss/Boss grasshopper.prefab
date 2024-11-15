@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122e3dcfc72be1a4faeadfed60f249e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Freeze: 0
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
   moveSpeed: 3
   moveSpeedMax: 0
@@ -197,6 +198,7 @@ MonoBehaviour:
   MonsDamage: 15
   atkCooldown: 1
   Counter: 0
+  explosion: {fileID: 7794133439963608324, guid: 3682788d61749f443ac04a312c987cfc, type: 3}
 --- !u!114 &8747437233692121608
 MonoBehaviour:
   m_ObjectHideFlags: 0
