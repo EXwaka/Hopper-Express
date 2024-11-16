@@ -19,7 +19,7 @@ public class Skills : MonoBehaviour
     public static bool skill_berserk = false;//9*
 
     public static bool skill_airattack = false;//10*
-    public static bool skill_automissile = false;//11*
+    public static bool skill_automissile = true;//11*
     public static bool skill_turrets = false;//12
 
     //CP3

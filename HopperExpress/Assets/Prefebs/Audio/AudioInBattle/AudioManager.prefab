@@ -135,3 +135,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: launching
+    clip: {fileID: 8300000, guid: 768d846de5421a047b986a7fea676701, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
