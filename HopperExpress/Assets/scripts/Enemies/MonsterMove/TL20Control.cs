@@ -57,7 +57,7 @@ public class TL20Control : MonoBehaviour
 
     void Shoot()
     {
-        if (target != null)
+        if (target != null&&!monsterManager.Freeze)
         {
             GameObject newBullet = Instantiate(bullet, FirePoint.transform.position, Quaternion.identity);
 

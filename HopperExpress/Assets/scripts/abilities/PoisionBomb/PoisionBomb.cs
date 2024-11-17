@@ -36,7 +36,8 @@ public class PoisionBomb : MonoBehaviour
         {
             readyToThrow = false;
             CDactivated = true;
-            FindObjectOfType<AudioManager>().Play("poisionBomb");
+            FindObjectOfType<AudioManager>().Play("greekFire");
+
 
             if (directionToMouse.x < 0)
             {

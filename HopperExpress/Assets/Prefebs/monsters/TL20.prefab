@@ -292,7 +292,6 @@ GameObject:
   - component: {fileID: 4489627194928009894}
   - component: {fileID: -8988603361251798913}
   - component: {fileID: 994174178336443265}
-  - component: {fileID: -1732023042542188582}
   m_Layer: 6
   m_Name: TL20
   m_TagString: Enemy
@@ -379,6 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Freeze: 0
+  Poision: 0
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
   moveSpeed: 8
   moveSpeedMax: 0
@@ -395,6 +395,8 @@ MonoBehaviour:
   atkCooldown: 1
   Counter: 0
   explosion: {fileID: 7794133439963608324, guid: 3682788d61749f443ac04a312c987cfc, type: 3}
+  poisionMaterial: {fileID: 2100000, guid: f189f0f6ea3e3f5489dea7f315b6ff08, type: 2}
+  frozenMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
 --- !u!95 &5271867055268506374
 Animator:
   serializedVersion: 5
@@ -498,20 +500,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
   duration: 0.05
---- !u!114 &-1732023042542188582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5782303876713237354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ad01b4b67dbce48b751ebff0d12428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
-  duration: 4
 --- !u!1 &6104658079243120066
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,8 +5,9 @@ using UnityEngine;
 public class MonsterManager : MonoBehaviour
 {
     private FlashDam flashDam;
-    private FlashFrozen flashfrozen;
+    //private FlashFrozen flashfrozen;
     public bool Freeze=false;
+    public bool Poision=false;
     public GameObject target;
     public float moveSpeed=1;
     public float moveSpeedMax;
@@ -34,12 +35,17 @@ public class MonsterManager : MonoBehaviour
     CrabControl crabControl;
     EagleControl eagleControl;
 
+    [SerializeField] private Material poisionMaterial;
+    [SerializeField] private Material frozenMaterial;
+    private SpriteRenderer spriteRenderer;
+
+    private Material originalMaterial;
 
     // Start is called before the first frame update
     void Start()
     {
         flashDam = GetComponent<FlashDam>();
-        flashfrozen = GetComponent<FlashFrozen>();
+        //flashfrozen = GetComponent<FlashFrozen>();
 
         currentHP = maxHP;
         healthBar.SetMaxHealth(maxHP);
@@ -53,6 +59,9 @@ public class MonsterManager : MonoBehaviour
 
         crabControl = GetComponent<CrabControl>();
         eagleControl = GetComponentInParent<EagleControl>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalMaterial = spriteRenderer.material;
     }
 
     // Update is called once per frame
@@ -116,9 +125,12 @@ public class MonsterManager : MonoBehaviour
         {
             damageAmount *= 0.7f; 
         }
-        
 
-        currentHP -= (float)damageAmount;//一般怪物受傷
+        if (Poision)
+        {
+            damageAmount *= 2;
+        }
+        currentHP -= (float)damageAmount;
         healthBar.SetHealth(currentHP);
 
 
@@ -127,9 +139,8 @@ public class MonsterManager : MonoBehaviour
 
         if (m_HP <= 0)
         {
-            //play "dead" animation
 
-            isDead = true;  // 標記怪物已經死亡
+            isDead = true;
             FindObjectOfType<AudioManager>().Play("MonsterDeath");
             Death();
         }
@@ -141,6 +152,12 @@ public class MonsterManager : MonoBehaviour
         Destroy(gameObject);
         Wavespawner.monsCount--;
         MonsterSpawn.monsCount--;
+    }
+    private void DeadAnimation()
+    {
+        GameObject explosionInstance = Instantiate(explosion, transform.position, transform.rotation);
+
+        Destroy(explosionInstance, 0.5f);
     }
 
     public void MonsterAttack(int damageAmount)
@@ -169,7 +186,7 @@ public class MonsterManager : MonoBehaviour
     public void Frozen(float frozenTime)
     {
         Freeze=true;
-        flashfrozen.Flash();
+        spriteRenderer.material = frozenMaterial;
 
         moveSpeed = 0;
         StartCoroutine(RecoverSpeed(frozenTime));
@@ -178,10 +195,18 @@ public class MonsterManager : MonoBehaviour
     public void ColdSlow(float slowDownTime)
     {
         Freeze = true;
-        flashfrozen.Flash();
+        spriteRenderer.material = frozenMaterial;
+
 
         moveSpeed *= 0.3f;
         StartCoroutine(RecoverSpeed(slowDownTime));
+    }
+    public void Poisioned(float PoisionDuration)
+    {
+        Poision = true;
+        spriteRenderer.material = poisionMaterial;
+
+        StartCoroutine(RecoverSpeed(PoisionDuration));
     }
     public void Burning(float slowDownTime)
     {
@@ -208,15 +233,11 @@ public class MonsterManager : MonoBehaviour
     {
         yield return new WaitForSeconds(Time);
         Freeze = false;
+        Poision = false;
+        spriteRenderer.material = originalMaterial;
         moveSpeed = moveSpeedMax;
     }
 
-    private void DeadAnimation()
-    {
-        GameObject explosionInstance = Instantiate(explosion,transform.position,transform.rotation);
-
-        Destroy(explosionInstance, 0.5f);
-    }
 
     void OnDrawGizmosSelected()
     {

@@ -469,7 +469,6 @@ GameObject:
   - component: {fileID: 3506020613991887675}
   - component: {fileID: 4757112479612936495}
   - component: {fileID: 6562823098402858556}
-  - component: {fileID: 786746697061742714}
   m_Layer: 6
   m_Name: R3D2
   m_TagString: Enemy
@@ -556,6 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Freeze: 0
+  Poision: 0
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
   moveSpeed: 3
   moveSpeedMax: 0
@@ -572,6 +572,8 @@ MonoBehaviour:
   atkCooldown: 2
   Counter: 0
   explosion: {fileID: 7794133439963608324, guid: 3682788d61749f443ac04a312c987cfc, type: 3}
+  poisionMaterial: {fileID: 2100000, guid: f189f0f6ea3e3f5489dea7f315b6ff08, type: 2}
+  frozenMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
 --- !u!95 &1274041603183158878
 Animator:
   serializedVersion: 5
@@ -675,17 +677,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
   duration: 0.05
---- !u!114 &786746697061742714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6789499518246287659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ad01b4b67dbce48b751ebff0d12428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
-  duration: 4

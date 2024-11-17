@@ -1503,7 +1503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 4796412066796264386}
   SpawnPoint: {fileID: 1307008908636114697}
-  projectile: {fileID: 1935135463003591481, guid: e03d2704f72a48d45a8bc7f56f404ad3, type: 3}
+  projectile: {fileID: 1641546413880081245, guid: cab4a4ddb34efd240bd3148913b60e23, type: 3}
   speedx: 10
   speedy: 3
 --- !u!95 &7613680171968586996

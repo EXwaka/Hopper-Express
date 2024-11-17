@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 7112806896715880085}
   - component: {fileID: 1760421376018657726}
   - component: {fileID: 6395282714376992845}
-  - component: {fileID: -5064570146206909106}
   m_Layer: 6
   m_Name: scorpion
   m_TagString: Enemy
@@ -190,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Freeze: 0
+  Poision: 0
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
   moveSpeed: 3
   moveSpeedMax: 0
@@ -206,6 +206,8 @@ MonoBehaviour:
   atkCooldown: 3
   Counter: 0
   explosion: {fileID: 7316940976409795911, guid: 1136e8688a78fe84db9cf563cfcd77da, type: 3}
+  poisionMaterial: {fileID: 2100000, guid: f189f0f6ea3e3f5489dea7f315b6ff08, type: 2}
+  frozenMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
 --- !u!95 &7112806896715880085
 Animator:
   serializedVersion: 5
@@ -293,20 +295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
   duration: 0.05
---- !u!114 &-5064570146206909106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787533910083073244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ad01b4b67dbce48b751ebff0d12428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
-  duration: 4
 --- !u!1 &4472169425945572547
 GameObject:
   m_ObjectHideFlags: 0

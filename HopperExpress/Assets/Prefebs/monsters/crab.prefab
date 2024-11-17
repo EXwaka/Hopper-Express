@@ -336,7 +336,6 @@ GameObject:
   - component: {fileID: 2304759651901460621}
   - component: {fileID: 3966303418354478543}
   - component: {fileID: 3231562107492451507}
-  - component: {fileID: 2496731827833225368}
   m_Layer: 6
   m_Name: crab
   m_TagString: Enemy
@@ -422,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Freeze: 0
+  Poision: 0
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
   moveSpeed: 6
   moveSpeedMax: 0
@@ -438,6 +438,8 @@ MonoBehaviour:
   atkCooldown: 2
   Counter: 0
   explosion: {fileID: 7316940976409795911, guid: 1136e8688a78fe84db9cf563cfcd77da, type: 3}
+  poisionMaterial: {fileID: 2100000, guid: f189f0f6ea3e3f5489dea7f315b6ff08, type: 2}
+  frozenMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
 --- !u!114 &3194316257294526790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,20 +539,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
   duration: 0.05
---- !u!114 &2496731827833225368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6517474160330421042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ad01b4b67dbce48b751ebff0d12428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
-  duration: 4
 --- !u!1 &7968243948884118027
 GameObject:
   m_ObjectHideFlags: 0

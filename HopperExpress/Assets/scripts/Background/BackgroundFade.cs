@@ -33,7 +33,7 @@ public class BackgroundFade : MonoBehaviour
         finalColor.a = 0f;
         spriteRenderer.color = finalColor;
     }
-    private IEnumerator FadeIn()
+    public IEnumerator FadeIn()
     {
         float elapsed = 0f;
         while (elapsed < fadeDuration)
