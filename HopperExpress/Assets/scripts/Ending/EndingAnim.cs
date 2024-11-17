@@ -22,6 +22,7 @@ public class EndingAnim : MonoBehaviour
         if (Ebutton.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
             Fade.SetActive (true);
+            Invoke("Ending", 2.5f);
         }
 
     }

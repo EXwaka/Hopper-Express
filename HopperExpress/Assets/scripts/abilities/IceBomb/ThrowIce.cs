@@ -11,7 +11,7 @@ public class ThrowIce : MonoBehaviour
     public float speedx = 3;
     public float speedy = 3;
     bool readyToThrow;
-    static public float iceBombCD = 10;
+    static public float iceBombCD = 6;
     static public bool CDactivated=false;
     float timer = 0;
     // Start is called before the first frame update

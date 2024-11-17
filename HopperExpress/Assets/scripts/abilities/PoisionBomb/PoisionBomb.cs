@@ -11,7 +11,7 @@ public class PoisionBomb : MonoBehaviour
     public float speedx = 3;
     public float speedy = 5;
     bool readyToThrow;
-    static public float poisionBombCD = 8;
+    static public float poisionBombCD = 9;
     static public bool CDactivated = false;
     float timer = 0;
     // Start is called before the first frame update

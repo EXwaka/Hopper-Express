@@ -11,7 +11,7 @@ public class ThrowFire : MonoBehaviour
     public float speedx=3;
     public float speedy=5;
     bool readyToThrow;
-    static public float greekFireCD=10;
+    static public float greekFireCD=12;
     static public bool CDactivated = false;
     float timer=0;
     // Start is called before the first frame update

@@ -1518,7 +1518,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -60
+  m_SortingOrder: -90
   m_Sprite: {fileID: 21300000, guid: 0b8eb8a78d75ca248acca13e3ffe06c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2269,8 +2269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca133879d58feb94db62b53f5bea5fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 733978989}
-  Ebutton: {fileID: 384684024}
 --- !u!65 &1670829751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3565,7 +3563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1307008908636114697, guid: 5a05876b532f10f468e50a685e611781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.69
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 1307008908636114697, guid: 5a05876b532f10f468e50a685e611781, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3705,7 +3703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5819569935837993671, guid: 5a05876b532f10f468e50a685e611781, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.427193
       objectReference: {fileID: 0}
     - target: {fileID: 5819569935837993671, guid: 5a05876b532f10f468e50a685e611781, type: 3}
       propertyPath: m_LocalPosition.y

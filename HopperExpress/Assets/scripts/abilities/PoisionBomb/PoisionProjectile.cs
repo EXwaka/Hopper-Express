@@ -26,7 +26,6 @@ public class PoisionProjectile : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            animator.SetBool("HitOnFloor", true);
             Instantiate(poisionArea, SpawnPoint.position, Quaternion.identity);
             Destroy(gameObject);
         }
