@@ -100,4 +100,6 @@ public class Core : MonoBehaviour
             monster.HitByCore();
         }
     }
+
+
 }

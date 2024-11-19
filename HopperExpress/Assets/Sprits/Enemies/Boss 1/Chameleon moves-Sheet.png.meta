@@ -1,0 +1,727 @@
+fileFormatVersion: 2
+guid: 966dab8c3e43b5640b1b136f8bc21421
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e394178f3a0114eba3bcd2fdb15160
+      internalID: -1259119352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67dca2f2b9789aa4596e428390471a4f
+      internalID: 1888661165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e856552f789626b449f897debe8fa491
+      internalID: -1054517570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96d570d86765fe498a0d7c7aec8ec18
+      internalID: 384608371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f074df19aec349479d18244077db91e
+      internalID: -49927623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff65239dc96fec64ea0cc0e42822e97f
+      internalID: -843827285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c95d86eb339ea7459e0a8ab698f116d
+      internalID: -517373709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e80a97d6d93dff4da8ebe0f06b8bd0b
+      internalID: 777141399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24636333596d5214cbf805abe7c56d26
+      internalID: -551026611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d253e1ee27d09342b4ee1903e87047d
+      internalID: -1376054041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018f725d1ca6b424e8b68c4f572661d7
+      internalID: -714670014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278fa91a0b9fb2a4abd402a1c9bf4796
+      internalID: 1958520436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367681544f1f25346a7d11a271da4e72
+      internalID: 1610957994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc11da21403e0eb4dbdd9049988e74a0
+      internalID: -1894257363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109bd1ed80475054a98b9d148fce7dd7
+      internalID: -367247513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae518472840ae9d4f8dee0dd8f207c15
+      internalID: 1560352305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e383cb07e8f80746b81c11ba6ead38e
+      internalID: -1489094170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b97bcd336180d4bbd2f7e17dc573ca
+      internalID: 887154640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a885ddc9601537e42a92f1df93bc669f
+      internalID: -860646489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chameleon moves-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      physicsShape:
+      - - {x: 0, y: -64}
+        - {x: 64, y: 0}
+        - {x: 0, y: 64}
+        - {x: -64, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b47533abbe20a041832942b6174f96a
+      internalID: -286398248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 57c3e53a43e47df4c8a299bfd2694be7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Chameleon moves-Sheet_0: -1259119352
+      Chameleon moves-Sheet_1: 1888661165
+      Chameleon moves-Sheet_10: -714670014
+      Chameleon moves-Sheet_11: 1958520436
+      Chameleon moves-Sheet_12: 1610957994
+      Chameleon moves-Sheet_13: -1894257363
+      Chameleon moves-Sheet_14: -367247513
+      Chameleon moves-Sheet_15: 1560352305
+      Chameleon moves-Sheet_16: -1489094170
+      Chameleon moves-Sheet_17: 887154640
+      Chameleon moves-Sheet_18: -860646489
+      Chameleon moves-Sheet_19: -286398248
+      Chameleon moves-Sheet_2: -1054517570
+      Chameleon moves-Sheet_3: 384608371
+      Chameleon moves-Sheet_4: -49927623
+      Chameleon moves-Sheet_5: -843827285
+      Chameleon moves-Sheet_6: -517373709
+      Chameleon moves-Sheet_7: 777141399
+      Chameleon moves-Sheet_8: -551026611
+      Chameleon moves-Sheet_9: -1376054041
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

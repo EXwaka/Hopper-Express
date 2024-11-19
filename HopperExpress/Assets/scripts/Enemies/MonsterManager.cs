@@ -14,7 +14,7 @@ public class MonsterManager : MonoBehaviour
 
     public float maxHP;
     public float m_HP = 5f;
-    private float currentHP;
+    public float currentHP;
     public MonsterHP healthBar;
 
     public Transform MonsAttackPoint;
@@ -152,6 +152,7 @@ public class MonsterManager : MonoBehaviour
         Destroy(gameObject);
         Wavespawner.monsCount--;
         MonsterSpawn.monsCount--;
+
     }
     private void DeadAnimation()
     {

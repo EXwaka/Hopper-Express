@@ -38,6 +38,7 @@ public class GameOverControl : MonoBehaviour
 
     public void Restart()
     {
+        Wavespawner.monsCount = 0;
         Time.timeScale = 1;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

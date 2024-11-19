@@ -386,7 +386,7 @@ MonoBehaviour:
   m_HP: 10
   healthBar: {fileID: 4480771083850908965}
   MonsAttackPoint: {fileID: 435490855733948387}
-  AttackRange: 0.1
+  AttackRange: 0
   enemy:
     serializedVersion: 2
     m_Bits: 8

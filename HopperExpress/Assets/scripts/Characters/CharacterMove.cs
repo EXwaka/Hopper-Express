@@ -46,6 +46,7 @@ public class CharacterMove : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(Wavespawner.monsCount);
         if (Input.GetKeyDown(jumpKey) && ableToMove)
         {
             Jump();
@@ -210,7 +211,6 @@ public class CharacterMove : MonoBehaviour
     {
         if (other.CompareTag("AnimationStop"))
         {
-            Debug.Log("HitWall");
             TrainMoneAnim.TrainGo = false;
 
         }
