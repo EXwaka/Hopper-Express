@@ -5,30 +5,65 @@ using UnityEngine.UI;
 
 public class SkillUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //1
     public Text GreekFireText;
     public GameObject GreekFireImg; 
-
+    //2
     public Text ThrowIceText;
     public GameObject ThrowIceImg;
-
+    //3
     public Text ThrowPoisionText;
     public GameObject ThrowPoisionImg;
+    //4
+    public Text forceFieldText;
+    public GameObject forceFieldImg;
+    //5
+    public Text fanceText;
+    public GameObject fanceImg;
+    //6
+    public Text spikeText;
+    public GameObject spikeImg;
+    //7
+    public Text P2Text;
+    public GameObject P2Img;
+    //8
+    public Text jetText;
+    public GameObject jetImg;
+    //9
+    public Text turretText;
+    public GameObject turretImg;
+    //10
+    public Text airAttackText;
+    public GameObject airAttackImg;    
+    //11
+    public Text missileText;
+    public GameObject missileImg;
+    //12
+    public Text berserkText;
+    public GameObject berserkImg;
 
     private float GreekFireCD;
     private float ThrowIceCD;
     private float ThrowPoisionCD;
+    private float airAttackCD;
+    private float missileCD;
+    private float berserkCD;
 
     void Start()
     {
-        GreekFireImg.SetActive(false);
-        ThrowIceImg.SetActive(false);
-        ThrowPoisionImg.SetActive(false);
-
 
         CheckGreekFire();
         CheckThrowIce();
         CheckThrowPoision();
+        CheckForceField();
+        CheckFance();
+        Checkspike();
+        CheckP2();
+        CheckJet();
+        CheckTurret();
+        CheckAirAttack();
+        CheckBerserk();
+        CheckMissile();
     }
 
     // Update is called once per frame
@@ -37,6 +72,9 @@ public class SkillUI : MonoBehaviour
         GreekFire();
         Throwice();
         ThrowPoision();
+        AirAttack();
+        Berserk();
+        Missile();  
     }
 
     void CheckGreekFire()
@@ -47,8 +85,27 @@ public class SkillUI : MonoBehaviour
             GreekFireText.text = "";
             GreekFireCD = ThrowFire.greekFireCD;
         }
+        else
+        {
+            GreekFireImg.SetActive(false);
+
+        }
 
     }
+    void GreekFire()
+    {
+        if (ThrowFire.CDactivated)
+        {
+            GreekFireCD -= Time.deltaTime;
+            GreekFireText.text = GreekFireCD.ToString("F0");
+        }
+        else if (!ThrowFire.CDactivated)
+        {
+            GreekFireText.text = "";
+            GreekFireCD = ThrowFire.greekFireCD;
+        }
+    }
+
     void CheckThrowIce()
     {
         if (Skills.skill_throwice)
@@ -57,30 +114,10 @@ public class SkillUI : MonoBehaviour
             ThrowIceText.text = "";
             ThrowIceCD = ThrowIce.iceBombCD;
         }
-    }
-
-    void CheckThrowPoision()
-    {
-        if (Skills.skill_throwpoison)
+        else
         {
-            ThrowPoisionImg.SetActive(true);
-            ThrowPoisionText.text = "";
-            ThrowIceCD = ThrowIce.iceBombCD;
-        }
-    }
+            ThrowIceImg.SetActive(false);
 
-
-    void GreekFire()
-    {
-        if(ThrowFire.CDactivated)
-        {
-            GreekFireCD -= Time.deltaTime;
-            GreekFireText.text = GreekFireCD.ToString("F0");
-        }
-        else if(!ThrowFire.CDactivated)
-        {
-            GreekFireText.text = "";
-            GreekFireCD = ThrowFire.greekFireCD;
         }
     }
     void Throwice()
@@ -98,6 +135,19 @@ public class SkillUI : MonoBehaviour
         }
     }
 
+    void CheckThrowPoision()
+    {
+        if (Skills.skill_throwpoison)
+        {
+            ThrowPoisionImg.SetActive(true);
+            ThrowPoisionText.text = "";
+            ThrowIceCD = ThrowIce.iceBombCD;
+        }
+        else
+        {
+            ThrowPoisionImg.SetActive(false);
+        }
+    }
     void ThrowPoision()
     {
         if (PoisionBomb.CDactivated)
@@ -109,6 +159,209 @@ public class SkillUI : MonoBehaviour
         {
             ThrowPoisionText.text = "";
             ThrowPoisionCD = PoisionBomb.poisionBombCD;
+        }
+    }
+
+    void CheckForceField()
+    {
+        if (Skills.skill_forcefield)
+        {
+            forceFieldImg.SetActive(true);
+            forceFieldText.text = "啟用中";
+
+            spikeText.fontSize = 25;
+            spikeText.color = Color.yellow;
+        }
+        else
+        {
+            forceFieldImg.SetActive(false);
+
+        }
+    }
+
+    void CheckFance()
+    {
+        if (Skills.skill_electricfance)
+        {
+            fanceImg.SetActive(true);
+            fanceText.text = "啟用中";
+
+            spikeText.fontSize = 25;
+            spikeText.color = Color.yellow;
+        }
+        else
+        {
+            fanceImg.SetActive(false);
+        }
+
+    }
+
+    void Checkspike()
+    {
+        if (Skills.skill_floorspike)
+        {
+            spikeImg.SetActive(true);
+            spikeText.text = "啟用中";
+
+            spikeText.fontSize = 25;
+            spikeText.color = Color.yellow;
+        }
+        else
+        {
+            spikeImg.SetActive(false);
+        }
+
+    }
+
+    void CheckP2()
+    {
+        if (Skills.skill_player2)
+        {
+            P2Img.SetActive(true);
+            P2Text.text = "啟用中";
+
+            P2Text.fontSize = 25;
+            P2Text.color = Color.yellow;
+        }
+        else { P2Img.SetActive(false); }
+
+    }
+
+    void CheckJet()
+    {
+        if (Skills.skill_jetpack)
+        {
+            jetImg.SetActive(true);
+            jetText.text = "啟用中";
+
+            jetText.fontSize = 25;
+            jetText.color = Color.yellow;
+        }
+        else
+        {
+            jetImg.SetActive(false) ;
+        }
+
+    }
+
+    void CheckTurret()
+    {
+        if (Skills.skill_turrets)
+        {
+            turretImg.SetActive(true);
+            turretText.text = "啟用中";
+
+            turretText.fontSize = 25;
+            turretText.color = Color.yellow;
+        }
+        else
+        {
+            turretImg.SetActive(false);
+        }
+
+    }
+
+    void CheckAirAttack()
+    {
+        if (Skills.skill_airattack)
+        {
+            airAttackImg.SetActive(true);
+            airAttackText.text = "";
+            airAttackCD = AirAttackControl.CD;
+        }
+        else
+        {
+            airAttackImg.SetActive(false);
+
+        }
+
+    }
+    void AirAttack()
+    {
+        if (AirAttackControl.isOnCooldown)
+        {
+            airAttackCD -= Time.deltaTime;
+            airAttackText.text = airAttackCD.ToString("F0");
+        }
+        else if (!AirAttackControl.isOnCooldown)
+        {
+            airAttackText.text = "";
+            airAttackCD = AirAttackControl.CD;
+        }
+    }
+
+    void CheckBerserk()
+    {
+        if (Skills.skill_berserk)
+        {
+            berserkImg.SetActive(true);
+            berserkText.text = "";
+            berserkCD = BerserkControl.CD;
+
+        }
+        else
+        {
+            berserkImg.SetActive(false);
+
+        }
+
+    }
+    void Berserk()
+    {
+
+        if (BerserkControl.UIActivated)
+        {
+            berserkText.text = "啟用中";
+
+            berserkText.fontSize = 25;
+            berserkText.color = Color.yellow;
+
+        }
+        else if (BerserkControl.isOnCooldown)
+        {
+            berserkCD -= Time.deltaTime;
+            berserkText.text = berserkCD.ToString("F0");
+
+            berserkText.fontSize = 50;
+            berserkText.color = Color.black;
+
+        }
+        else if (!BerserkControl.isOnCooldown)
+        {
+            berserkText.text = "已準備";
+            berserkCD = BerserkControl.CD;
+            berserkText.fontSize = 25;
+
+            berserkText.color = Color.green;
+        }
+    }
+
+    void CheckMissile()
+    {
+        if (Skills.skill_automissile)
+        {
+            missileImg.SetActive(true);
+            missileText.text = "";
+            missileCD = AutoMissileControl.CD;
+        }
+        else
+        {
+            missileImg.SetActive(false);
+
+        }
+
+    }
+    void Missile()
+    {
+        if (AutoMissileControl.UILaunching)
+        {
+            missileCD -= Time.deltaTime;
+            missileText.text = missileCD.ToString("F0");
+        }
+        else if (!AutoMissileControl.UILaunching)
+        {
+            missileText.text = "";
+            missileCD = AutoMissileControl.CD;
         }
     }
 }

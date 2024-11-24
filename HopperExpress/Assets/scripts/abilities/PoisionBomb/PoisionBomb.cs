@@ -32,7 +32,7 @@ public class PoisionBomb : MonoBehaviour
         float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
 
 
-        if (Input.GetKeyDown(KeyCode.Q) && Skills.skill_throwpoison == true && readyToThrow == true)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && Skills.skill_throwpoison == true && readyToThrow == true)
         {
             readyToThrow = false;
             CDactivated = true;

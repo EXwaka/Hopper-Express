@@ -141,3 +141,21 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Berserk
+    clip: {fileID: 8300000, guid: b94423bef58775040b0969aefd814929, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Plane
+    clip: {fileID: 8300000, guid: d41cbb145715df749b5e9902270a09ae, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bombard
+    clip: {fileID: 8300000, guid: 0835fd0ddd5b3464aa529a87bd1984dd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

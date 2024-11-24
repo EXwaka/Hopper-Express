@@ -17,10 +17,12 @@ public class DialogueManager : MonoBehaviour
     public RectTransform TalkBox;
     public float topPosY, middlePosY;
     public float tweenDuration;
+    public GameObject DiaBox;
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        DiaBox.SetActive(true);
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -40,7 +42,8 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
@@ -64,6 +67,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         TalkBox.DOAnchorPosY(-middlePosY, tweenDuration).SetUpdate(true);
+        DiaBox.SetActive(false);
 
     }
 }

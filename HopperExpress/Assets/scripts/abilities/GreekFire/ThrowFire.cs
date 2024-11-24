@@ -32,7 +32,7 @@ public class ThrowFire : MonoBehaviour
         float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
 
 
-        if (Input.GetKeyDown(KeyCode.Q)&&Skills.skill_throwfire==true&&readyToThrow==true)
+        if (Input.GetKeyDown(KeyCode.Alpha1)&&Skills.skill_throwfire==true&&readyToThrow==true)
         {
             readyToThrow = false;
             CDactivated = true;

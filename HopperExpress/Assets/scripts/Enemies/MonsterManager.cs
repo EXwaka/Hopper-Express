@@ -153,6 +153,9 @@ public class MonsterManager : MonoBehaviour
         Wavespawner.monsCount--;
         MonsterSpawn.monsCount--;
 
+        BerserkControl berserk=FindObjectOfType<BerserkControl>();
+        berserk.berserkDuration += 0.5f;
+
     }
     private void DeadAnimation()
     {

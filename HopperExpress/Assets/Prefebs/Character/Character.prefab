@@ -1294,6 +1294,7 @@ GameObject:
   - component: {fileID: 1744631019346746372}
   - component: {fileID: 1375662732854073282}
   - component: {fileID: 7192233723008283684}
+  - component: {fileID: 7766556482671300736}
   - component: {fileID: 7613680171968586996}
   m_Layer: 8
   m_Name: Character
@@ -1323,6 +1324,7 @@ Transform:
   - {fileID: 9087956496723028717}
   - {fileID: 3865471091625312436}
   - {fileID: 787902317964925779}
+  - {fileID: 982561886685749944}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4209398951737229310
@@ -1506,6 +1508,23 @@ MonoBehaviour:
   projectile: {fileID: 1641546413880081245, guid: cab4a4ddb34efd240bd3148913b60e23, type: 3}
   speedx: 10
   speedy: 3
+--- !u!114 &7766556482671300736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080835978989397180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6473c17853b8f45a52d80d85615175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  berserkEF: {fileID: 6835629334808857470}
+  CD: 10
+  berserkDuration: 5
+  berserkDamageMultiplier: 1.2
+  fireRateMultiplier: 0.5
 --- !u!95 &7613680171968586996
 Animator:
   serializedVersion: 5
@@ -6821,3 +6840,70 @@ MonoBehaviour:
   ForceDamage: 2
   cooldown: 0.3
   Timer: 0
+--- !u!1001 &4305906539222148537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1307008908636114697}
+    m_Modifications:
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891290592161479, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+      propertyPath: m_Name
+      value: BerserkEF
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+--- !u!4 &982561886685749944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3919088231800620801, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+  m_PrefabInstance: {fileID: 4305906539222148537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6835629334808857470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7285891290592161479, guid: 62fe4ff00d0c6ce4bb4540fd48a53b35, type: 3}
+  m_PrefabInstance: {fileID: 4305906539222148537}
+  m_PrefabAsset: {fileID: 0}

@@ -1,83 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class AirAttackControl : MonoBehaviour
 {
-    Camera cam;
-    bool aimimg = false;
-    public GameObject AttackAim;
     public GameObject AttackArea;
-    public float CDMax = 30f;
-    float CD;
-    bool readyToAttack = false;
+    Animator animator;
+    static public float CD = 20f;  
+    static public bool isOnCooldown = false;  
 
-    
-    // Start is called before the first frame update
     void Start()
     {
-        CD = CDMax;
-        readyToAttack = true;
-        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
-        aimimg =  false;
-        AttackAim.SetActive(false);
-        if(Skills.skill_airattack)
+        AttackArea.SetActive(false);
+        if (Skills.skill_airattack)
         {
             gameObject.SetActive(true);
+
         }
         else
         {
             gameObject.SetActive(false);
+
         }
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (readyToAttack == false)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && !isOnCooldown)
         {
-            CD -= Time.deltaTime;
-            if (CD <= 0)
-            {
-                CD = CDMax;
-                readyToAttack = true;
-            }
+            FindObjectOfType<AudioManager>().Play("Plane");
+            FindObjectOfType<AudioManager>().Play("Bombard");
+
+            AttackArea.SetActive(true);
+            animator.SetTrigger("Attack");
+
+            StartCoroutine(HandleCooldown());
         }
-
-        //Debug.Log("Aiming" + aimimg);
-        if (Input.GetKeyDown(KeyCode.Q)&&readyToAttack==true)
-        {
-            aimimg = !aimimg;
-
-            if (aimimg == true && Skills.skill_airattack == true)
-            {
-                AttackAim.SetActive(true);
-            }
-            else
-            {
-                AttackAim.SetActive(false);
-            }
-        }
-
-        if (aimimg)
-        {
-            Vector3 mousePosition = Input.mousePosition;
-            mousePosition.z = 10;
-            mousePosition.y = 450;
-            transform.position = cam.ScreenToWorldPoint(mousePosition);
-            if(Input.GetMouseButtonDown(0))
-            {
-                Instantiate(AttackArea, transform.position, transform.rotation);
-
-                aimimg = false;
-                AttackAim.SetActive(false);
-                readyToAttack = false;
-
-            }
-        }
-
     }
 
+    IEnumerator HandleCooldown()
+    {
+        isOnCooldown = true;  
 
+        yield return new WaitForSeconds(CD);
+
+        AttackArea.SetActive(false);
+        isOnCooldown = false;  
+    }
 }

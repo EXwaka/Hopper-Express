@@ -7,12 +7,14 @@ public class AutoMissileControl : MonoBehaviour
     public GameObject AutoMissile;
     public GameObject missile;
     public Transform launchPoint;
-    public float CD = 3;
+    static public float CD = 8;
     private bool Ready=true;
+    static public bool UILaunching=true;
 
     void Start()
     {
         Ready = true;
+        UILaunching = false;
         if (!Skills.skill_automissile)
         {
             AutoMissile.SetActive(false);
@@ -22,7 +24,7 @@ public class AutoMissileControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q)&&Ready)
+        if(Input.GetKeyDown(KeyCode.Alpha2)&&Ready)
         {
             FindObjectOfType<AudioManager>().Play("launching");
             LaunchMissile();
@@ -34,10 +36,12 @@ public class AutoMissileControl : MonoBehaviour
         Vector3 LaunchPoint = new Vector3(-0.8f + launchPoint.position.x, 1f + launchPoint.position.y, launchPoint.position.z);
         Instantiate(missile,LaunchPoint,transform.rotation);
         Ready = false;
+        UILaunching=true;
         Invoke("Reload", CD);
     }
     void Reload()
     {
         Ready = true;
+        UILaunching = false;
     }
 }

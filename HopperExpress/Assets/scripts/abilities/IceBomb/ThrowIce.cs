@@ -32,7 +32,7 @@ public class ThrowIce : MonoBehaviour
         float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;//ºË·Ç¤è¦V
 
         //Debug.Log(timer);
-        if (Input.GetKeyDown(KeyCode.Q) && Skills.skill_throwice == true && readyToThrow == true)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && Skills.skill_throwice == true && readyToThrow == true)
         {
             FindObjectOfType<AudioManager>().Play("greekFire");
 

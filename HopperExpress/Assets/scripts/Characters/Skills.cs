@@ -7,7 +7,7 @@ public class Skills : MonoBehaviour
     //CP1
     public static bool skill_throwfire = false;//1
     public static bool skill_throwice = false;//2
-    public static bool skill_throwpoison = true;//3
+    public static bool skill_throwpoison = false;//3
 
     public static bool skill_forcefield = false;//4*icon
     public static bool skill_electricfance = false;//5*icon

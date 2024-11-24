@@ -14,11 +14,14 @@ public class ChameleonBossControl : MonoBehaviour
     private bool Spawned2 = false;
     private bool Spawned3 = false;
     private bool StartAttack = false;
-    private float attackInterval = 1.5f;  
+    private float attackInterval = 2f;
+
+    Animator animator;
     void Start()
     {
         Wavespawner.monsCount += 1;
         monsterManager = GetComponent<MonsterManager>();
+        animator=GetComponent<Animator>();
     }
 
     void Update()
@@ -48,6 +51,7 @@ public class ChameleonBossControl : MonoBehaviour
     public void Attack()
     {
         Instantiate(ShockWave, SpawnPoint.position, Quaternion.identity);
+        animator.SetBool("Attacking", true);
     }
     void Spawn1()
     {

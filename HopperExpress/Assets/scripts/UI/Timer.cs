@@ -6,7 +6,7 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    public Text TimeCounter;
+    //public Text TimeCounter;
     public float TimeLeft;
     public static float timeLeft;
     public static bool EndCount = false;
@@ -24,14 +24,14 @@ public class Timer : MonoBehaviour
         //Debug.Log("Timeleft" + timeLeft);
         timeLeft-=Time.deltaTime;
         TimeLeft-=Time.deltaTime;
-        int min= Mathf.FloorToInt(TimeLeft/60);
-        int sec= Mathf.FloorToInt(TimeLeft%60);
-        TimeCounter.text = string.Format("在時間內保護核心! {0:00}:{1:00}", min, sec);
+        //int min= Mathf.FloorToInt(TimeLeft/60);
+        //int sec= Mathf.FloorToInt(TimeLeft%60);
+        //TimeCounter.text = string.Format("在時間內保護核心! {0:00}:{1:00}", min, sec);
         if (TimeLeft <= 1)
         {
-            TimeCounter.color = Color.red;
+            //TimeCounter.color = Color.red;
 
-            TimeCounter.text="任務失敗";
+            //TimeCounter.text="任務失敗";
             EndCount = true;
 
         }

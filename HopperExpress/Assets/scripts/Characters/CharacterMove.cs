@@ -46,7 +46,7 @@ public class CharacterMove : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Wavespawner.monsCount);
+        //Debug.Log(Wavespawner.monsCount);
         if (Input.GetKeyDown(jumpKey) && ableToMove)
         {
             Jump();

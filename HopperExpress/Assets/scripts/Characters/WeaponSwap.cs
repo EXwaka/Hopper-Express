@@ -15,7 +15,7 @@ public class WeaponSwap : MonoBehaviour
     void Update()
     {
         if (reloading) return;
-        if (Input.GetKeyDown(KeyCode.E)) 
+        if (Input.GetKeyDown(KeyCode.E)&&!BerserkControl.UIActivated) 
         {
             FindObjectOfType<AudioManager>().Play("weapon_swap");
             selectedWeapon++;
