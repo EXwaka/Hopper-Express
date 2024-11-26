@@ -41,7 +41,7 @@ public class Player2 : MonoBehaviour
             StopMove();
         }
 
-        if (Input.GetKeyDown(KeyCode.L)|| Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.L)|| Input.GetKeyDown(KeyCode.Keypad0))
         {
             Attack();
         }
@@ -58,6 +58,7 @@ public class Player2 : MonoBehaviour
     }
     void Attack()
     {
+        FindObjectOfType<AudioManager>().Play("CatAttack");
 
         SpawnBullet();
 

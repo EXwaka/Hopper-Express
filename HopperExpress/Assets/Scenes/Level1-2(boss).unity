@@ -742,9 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf8a1f8abf29c34da8425894d76ce43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackAim: {fileID: 2071066567}
   AttackArea: {fileID: 2287434434120904196, guid: e5ba8fdb41274d84eb1425a68ed39e1f, type: 3}
-  CDMax: 30
 --- !u!4 &520079144
 Transform:
   m_ObjectHideFlags: 0
@@ -1520,13 +1518,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 201901095459113602, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_text
+      value: "\u5C0D\u5730\u9762\u4E0A\u7D93\u904E\u7684\u6575\u4EBA\u9020\u6210\u50B7\u5BB3\u4E26\u4F7F\u5176\u6E1B\u901F"
+      objectReference: {fileID: 0}
     - target: {fileID: 775886676455396638, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_text
-      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E1\u9762\n\u6703\u653B\u64CA\u7D93\u904E\u6575\u4EBA\u7684\u96FB\u7DB2"
+      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E1\u9762\u96FB\u7DB2"
       objectReference: {fileID: 0}
     - target: {fileID: 901455977493211466, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 61.19995
+      objectReference: {fileID: 0}
+    - target: {fileID: 931880962218802117, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_text
+      value: "\u5C0D\u9032\u5165\u529B\u5834\u7684\u602A\u7269\u9020\u6210\u4E00\u4E9B\u50B7\u5BB3"
+      objectReference: {fileID: 0}
+    - target: {fileID: 931880962218802117, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 931880962218802117, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118862199807955046, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_text
+      value: "\u6BCF\u6B21\u96FB\u64CA\u9700\u8981\u4E00\u5C0F\u6BB5\u6642\u9593\u91CD\u65B0\u5145\u80FD,\u5C0D\u64CA\u4E2D\u7684\u602A\u7269\u9020\u6210\u50B7\u5BB3\u4E26\u4F7F\u5176\u66AB\u6642\u7121\u6CD5\u79FB\u52D5"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118862199807955046, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_fontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118862199807955046, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2132178899075222248, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1576,6 +1602,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 3542114717789112820, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4157228422562927530, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1595,6 +1625,10 @@ PrefabInstance:
     - target: {fileID: 4727990546503594642, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649884108984477543, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5691738886748976961, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1618,11 +1652,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6773394629720310780, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_text
-      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E\u4E00\u5EA7\n\u81EA\u52D5\u7832\u81FA"
+      value: "\u5728\u73A9\u5BB6\u5468\u570D\u5275\u9020\u4E00\u500B\u80FD\u91CF\u529B\u5834"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773394629720310780, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_fontSize
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6773394629720310780, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_lineSpacing
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773394629720310780, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819286614826324487, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7538631982240749203, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1682,7 +1728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7746166045999175400, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_text
-      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E1\u5EA7\n\u6703\u653B\u64CA\u7D93\u904E\u6575\u4EBA\u7684\u5730\u523A"
+      value: "\u5728\u6838\u5FC3\u5169\u5074\u5404\u653E2\u5EA7\u5730\u523A"
       objectReference: {fileID: 0}
     - target: {fileID: 7816068834147130611, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: TimeLeft

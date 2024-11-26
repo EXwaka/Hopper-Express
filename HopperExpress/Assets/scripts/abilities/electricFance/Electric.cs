@@ -17,7 +17,7 @@ public class Electric : MonoBehaviour
         animator = GetComponent<Animator>();
         electric.SetActive(false);
         startTime = Time.time;
-        Invoke("StartAnimation", 5f);
+        Invoke("StartAnimation", 4.3f);
     }
 
     // Update is called once per frame

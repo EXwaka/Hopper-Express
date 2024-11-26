@@ -23,8 +23,9 @@ public class rifle : MonoBehaviour
     public GameObject reloadAnim;
     private void Start()
     {
-        reloadAnim.SetActive(false);
-        reloading = false;
+        //reloadAnim.SetActive(false);
+                StartCoroutine(Reload());
+        //reloading = false;
         isShooting = false;
         firstShot = false;
         shootTimer = 0; 

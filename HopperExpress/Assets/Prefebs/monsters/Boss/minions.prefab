@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2012952551701910351}
@@ -58,8 +58,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6906512, y: 1.5670462, z: 16.05}
-  m_Center: {x: -0.03159249, y: -0.022281647, z: 0}
+  m_Size: {x: 2, y: 1.5670462, z: 16.05}
+  m_Center: {x: -0.1, y: -0.022281647, z: 0}
 --- !u!54 &4302854811331072653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -99,11 +99,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122e3dcfc72be1a4faeadfed60f249e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  Freeze: 0
+  Poision: 0
+  target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
   moveSpeed: 1
   moveSpeedMax: 0
   maxHP: 8
   m_HP: 8
+  currentHP: 0
   healthBar: {fileID: 2720263302795186162}
   MonsAttackPoint: {fileID: 2012952551701910351}
   AttackRange: 0
@@ -115,6 +118,8 @@ MonoBehaviour:
   atkCooldown: 1
   Counter: 0
   explosion: {fileID: 7794133439963608324, guid: 3682788d61749f443ac04a312c987cfc, type: 3}
+  poisionMaterial: {fileID: 0}
+  frozenMaterial: {fileID: 0}
 --- !u!114 &8989753079541050427
 MonoBehaviour:
   m_ObjectHideFlags: 0

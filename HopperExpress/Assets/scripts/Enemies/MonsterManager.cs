@@ -184,6 +184,8 @@ public class MonsterManager : MonoBehaviour
 
     public void Shock(float shockTime)
     {
+        FindObjectOfType<AudioManager>().Play("Electric");
+
         moveSpeed = 0;
         StartCoroutine(RecoverSpeed(shockTime));
     }

@@ -135,7 +135,7 @@ public class SkillSelectUI : MonoBehaviour
     }
     public void ChooseSkill4()
     {
-        Skills.skill_turrets = true;
+        Skills.skill_forcefield = true;
         Skills.skill_electricfance = false;
         Skills.skill_floorspike = false;
         NextButton.SetActive(true);
@@ -146,7 +146,7 @@ public class SkillSelectUI : MonoBehaviour
     public void ChooseSkill5()
     {
 
-        Skills.skill_turrets = false;
+        Skills.skill_forcefield = false;
         Skills.skill_electricfance = true;
         Skills.skill_floorspike = false;
         NextButton.SetActive(true);
@@ -156,7 +156,7 @@ public class SkillSelectUI : MonoBehaviour
     }
     public void ChooseSkill6()
     {
-        Skills.skill_turrets = false;
+        Skills.skill_forcefield = false;
         Skills.skill_electricfance = false;
         Skills.skill_floorspike = true;
         NextButton.SetActive(true);
@@ -166,24 +166,65 @@ public class SkillSelectUI : MonoBehaviour
     }
     public void ChooseSkill7()
     {
-        Skills.skill_forcefield = true;
-        Skills.skill_corehealing = false;
-        Skills.skill_coreheat = false;
+        Skills.skill_player2 = true;
+        Skills.skill_jetpack = false;
+        Skills.skill_turrets = false;
         NextButton.SetActive(true);
     }
     public void ChooseSkill8()
     {
-        Skills.skill_forcefield = false;
-        Skills.skill_corehealing = true;
-        Skills.skill_coreheat = false;
+        Skills.skill_player2 = false;
+        Skills.skill_jetpack = true;
+        Skills.skill_turrets = false;
         NextButton.SetActive(true);
     }
     public void ChooseSkill9()
     {
-        Skills.skill_forcefield = false;
+        Skills.skill_player2 = false;
+        Skills.skill_jetpack = false;
+        Skills.skill_turrets = true;
+        NextButton.SetActive(true);
+    }
+    public void ChooseSkill10()
+    {
+        Skills.skill_airattack = true;
+        Skills.skill_automissile = false;
+        Skills.skill_berserk = false;
+        NextButton.SetActive(true);
+    }
+    public void ChooseSkill11()
+    {
+        Skills.skill_airattack = false;
+        Skills.skill_automissile = true;
+        Skills.skill_berserk = false;
+        NextButton.SetActive(true);
+    }
+    public void ChooseSkill12()
+    {
+        Skills.skill_airattack = false;
+        Skills.skill_automissile = false;
+        Skills.skill_berserk = true;
+        NextButton.SetActive(true);
+    }
+    public void ChooseSkill13()
+    {
+        Skills.skill_obstacle = true;
+        Skills.skill_corehealing = false;
+        Skills.skill_coreheat = false;
+        NextButton.SetActive(true);
+    }
+    public void ChooseSkill14()
+    {
+        Skills.skill_obstacle = false;
+        Skills.skill_corehealing = true;
+        Skills.skill_coreheat = false;
+        NextButton.SetActive(true);
+    }
+    public void ChooseSkill15()
+    {
+        Skills.skill_obstacle = false;
         Skills.skill_corehealing = false;
         Skills.skill_coreheat = true;
         NextButton.SetActive(true);
     }
-
 }

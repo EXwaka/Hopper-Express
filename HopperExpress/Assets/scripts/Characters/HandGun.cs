@@ -22,9 +22,11 @@ public class HandGun : MonoBehaviour
     void Start()
     {
         reloadAnim.SetActive(false);
+        reloading = false;
+
         animator = GetComponent<Animator>();
         UpdateAmmoUI();
-        reloading = false;
+        //StartCoroutine(Reload());
 
     }
 

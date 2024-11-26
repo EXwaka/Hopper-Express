@@ -26,7 +26,7 @@ public class floorSpikesControl : MonoBehaviour
     {
         if (other.TryGetComponent<MonsterManager>(out MonsterManager enemyComponent))
         {
-            Debug.Log("Monster enter");
+            //Debug.Log("Monster enter");
             cooldown -= Time.deltaTime;
             if (cooldown <= 0)
             {

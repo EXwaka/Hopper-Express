@@ -159,3 +159,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: CatAttack
+    clip: {fileID: 8300000, guid: 21f7729ac4d7545428125f381bf0f868, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Electric
+    clip: {fileID: 8300000, guid: bf2b0a620e5e38d4193a1c63c21474fd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
