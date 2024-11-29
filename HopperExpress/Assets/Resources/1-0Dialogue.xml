@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dialogues>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>遭遇敵襲! 你應該還記得要怎麼應戰吧</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>那當然，你以為我是靠什麼成績畢業的!</Say>
+	</Dialogue>
+	
+	<Dialogue>
+		<Role1>提示</Role1>
+		<Say>
+			使用鍵盤ad進行左右移動，空格鍵可跳躍
+			並移動滑鼠進行瞄準，點擊左鍵並射擊
+		</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>專心在保護動力核心! 要是火車停下那一切都結束了!</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>一旦火車停下那些怪物就會一口氣湧上來。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>知道了!</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>提示</Role1>
+		<Say>
+			一旦動力核心血量歸零，遊戲就會失敗
+		</Say>
+	</Dialogue>
+
+</Dialogues>

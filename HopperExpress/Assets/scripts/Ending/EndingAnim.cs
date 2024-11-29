@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class EndingAnim : MonoBehaviour
 {
     public GameObject Ebutton;
+    public GameObject warn;
     public GameObject Character;
     public GameObject Train;
     public GameObject Fade;
     // Start is called before the first frame update
     void Start()
     {
+        warn.SetActive(false);
         Fade.SetActive(false);
         Ebutton.SetActive(false);
     }
@@ -21,9 +23,19 @@ public class EndingAnim : MonoBehaviour
     {
         if (Ebutton.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            Fade.SetActive (true);
-            Invoke("Ending", 2.5f);
+            if (!LightenUpCore.LightUp)
+            {
+                Ebutton.SetActive(false);
+                warn.SetActive(true);
+            }
+            else
+            {
+                Fade.SetActive(true);
+                Invoke("Ending", 2.5f);
+            }
+
         }
+
 
     }
     private void OnTriggerEnter(Collider other)
@@ -38,6 +50,7 @@ public class EndingAnim : MonoBehaviour
         if (other.CompareTag("Character"))
         {
             Ebutton.SetActive(false);
+            warn.SetActive(false);
         }
     }
     void Ending()

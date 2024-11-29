@@ -46,7 +46,7 @@ public class rifle : MonoBehaviour
     {
         //Debug.Log(" rifle" + reloading);
 
-        if (Input.GetMouseButtonDown(0) && firstShot == false && bulletLeft > 0&& !reloading)
+        if (Input.GetMouseButtonDown(0) && firstShot == false && bulletLeft > 0&& !reloading && CharacterMove.ableToMove)
         {
             Shoot(bulletPrefab, bulletSpawnPoint);
             firstShot = true;
@@ -58,7 +58,7 @@ public class rifle : MonoBehaviour
             firstShot = false;
         }
 
-        if (Input.GetMouseButton(0) && bulletLeft > 0&& !reloading)
+        if (Input.GetMouseButton(0) && bulletLeft > 0&& !reloading && CharacterMove.ableToMove)
         {
             isShooting = true;
 
@@ -96,7 +96,7 @@ public class rifle : MonoBehaviour
 
     public void Shoot(GameObject bulletPrefab, Transform bulletSpawnPoint)
     {
-        if (bulletPrefab != null && bulletSpawnPoint != null)
+        if (bulletPrefab != null && bulletSpawnPoint != null&&CharacterMove.ableToMove)
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = bulletSpawnPoint.position.z - Camera.main.transform.position.z;
@@ -179,6 +179,7 @@ public class rifle : MonoBehaviour
             }
             else
             {
+
                 ammoText.fontSize = 30;
                 ammoText.text = "子彈用盡!\n按下滑鼠左鍵填裝!";
                 ammoText.gameObject.SetActive(true);

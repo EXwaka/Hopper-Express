@@ -20,7 +20,14 @@ public class GetOnTrain : MonoBehaviour
     {
         if (Ebutton.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            if (SkillSelectUI.Chapter1Done)
+            if (SkillSelectUI.Chapter2Done)
+            {
+                TrainMoneAnim.TrainGo = true;
+                Invoke("Chapter3", 5f);
+                Invoke("TrainNoGo", 5f);
+
+            }
+            else if (SkillSelectUI.Chapter1Done)
             {
                 TrainMoneAnim.TrainGo = true;
                 Invoke("Chapter2", 5f);

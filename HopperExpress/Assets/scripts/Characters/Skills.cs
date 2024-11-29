@@ -18,7 +18,7 @@ public class Skills : MonoBehaviour
     public static bool skill_jetpack = false;//8*icon
     public static bool skill_turrets = false;//9*icon
 
-    public static bool skill_airattack = false;//10*
+    public static bool skill_airattack = true;//10*
     public static bool skill_automissile = false;//11*
     public static bool skill_berserk = false;//12*
 

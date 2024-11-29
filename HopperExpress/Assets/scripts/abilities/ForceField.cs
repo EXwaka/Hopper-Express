@@ -6,7 +6,7 @@ public class ForceField : MonoBehaviour
 {
     public GameObject forcefield;
 
-    public float ForceDamage = 2f;
+    private float ForceDamage = 8f;
     public float cooldown = 0.3f;
     public float Timer = 0;
     // Start is called before the first frame update

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dialogues>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>...要讓其他人等多久啊</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>列車上的其他人都已經準備好要出發了，就差你一個。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>嘿嘿早上出門的時候瀏海一直翹起來，花了我不少時間整理...</Say>
+	</Dialogue>
+	
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>出門後還順手救了一隻困在樹上的小貓咪，欸欸而且傑可你知道嗎</Say>
+	</Dialogue>
+	
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>怎樣?</Say>
+	</Dialogue>
+	
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>今天的奶油麵包......買一送一!</Say>
+	</Dialogue>
+	
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>真不知道該怎麼說你...</Say>
+	</Dialogue>
+	
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>等等肚子餓了可別說你想吃麵包!</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>總之時間也差不多該出發了，該帶上的東西都帶著了嗎</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>帶了帶了! 但是...</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>任務內容昨天在聽的時候不小心睡著了嘿嘿，你可以再和我說一次嗎?</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>從學校到現在你聽課睡覺的老毛病還是沒改掉，都已經加入軍隊了還敢這樣散漫。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>聽好了，我只再說一次。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>耶利哥城近期失聯了，不論是電報或者交通，全都是有去無回，我們此行的任務就是要調查失聯的原因並將證據帶回來。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>前陣子在耶利哥城附近聽說動物因不明原因變得異常兇猛，不知道和這件事有沒有關聯?</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>剩下的我們邊走邊講吧。</Say>
+	</Dialogue>
+
+</Dialogues>

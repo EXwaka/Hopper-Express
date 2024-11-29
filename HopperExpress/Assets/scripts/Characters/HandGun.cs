@@ -11,7 +11,7 @@ public class HandGun : MonoBehaviour
     public Transform bulletSpawnPoint;
     public int ammo = 10;
     public int bulletLeft = 10;
-    public float reloadTime = 3;
+    public float reloadTime = 4.5f;
     public TextMeshProUGUI ammoText;
     public Animator animator;
     bool reloading =false;
@@ -21,6 +21,7 @@ public class HandGun : MonoBehaviour
 
     void Start()
     {
+        reloadTime = 4.5f;
         reloadAnim.SetActive(false);
         reloading = false;
 
@@ -71,7 +72,7 @@ public class HandGun : MonoBehaviour
 
     public void Shoot(GameObject bulletPrefab, Transform bulletSpawnPoint)
     {
-        if (bulletPrefab != null && bulletSpawnPoint != null)
+        if (bulletPrefab != null && bulletSpawnPoint != null && CharacterMove.ableToMove)
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = bulletSpawnPoint.position.z - Camera.main.transform.position.z;
@@ -113,6 +114,7 @@ public class HandGun : MonoBehaviour
 
     IEnumerator Reload()
     {
+
         FindObjectOfType<AudioManager>().Play("reloading1");
 
         reloading = true;
@@ -146,6 +148,7 @@ public class HandGun : MonoBehaviour
             }
             else
             {
+
                 ammoText.fontSize = 30;
                 ammoText.text = "¤l¼u¥ÎºÉ!\n«ö¤U·Æ¹«¥ªÁä¶ñ¸Ë!";
                 ammoText.gameObject.SetActive(true);

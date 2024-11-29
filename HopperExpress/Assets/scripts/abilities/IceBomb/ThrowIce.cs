@@ -17,6 +17,7 @@ public class ThrowIce : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CDactivated = false;
         timer = iceBombCD;
         readyToThrow = true;
     }

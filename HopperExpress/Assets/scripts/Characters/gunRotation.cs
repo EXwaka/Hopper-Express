@@ -36,12 +36,12 @@ public class MouseRotation : MonoBehaviour
         if (directionToMouse.x < 0)
         {
             spriteRenderer.flipY = true;
-            transform.localPosition = new Vector3(flipX, flipY,0);
+            transform.localPosition = new Vector3(flipX, 0.5f, 0);
         }
         else
         {
             spriteRenderer.flipY = false;
-            transform.localPosition = new Vector3(-flipX, flipY,0);
+            transform.localPosition = new Vector3(-flipX, 0.5f, 0);
         }
     }
 }

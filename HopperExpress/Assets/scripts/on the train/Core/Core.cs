@@ -48,6 +48,7 @@ public class Core : MonoBehaviour
 
     public void GetHit(int damage)
     {
+        BattleDia2.FirstCoreHit = true;
         FindObjectOfType<AudioManager>().Play("coreHit");
 
         HPcurrent_core -= damage;

@@ -6,7 +6,7 @@ public class onsTacleControl3 : MonoBehaviour
 {
     public Animator animator;
     private float CD;
-    public float CDmax = 20;
+    private float CDmax = 20;
     public GameObject sign;
     public GameObject snowEF;
 

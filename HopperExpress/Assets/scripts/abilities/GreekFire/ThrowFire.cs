@@ -17,6 +17,7 @@ public class ThrowFire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CDactivated = false;
         timer = greekFireCD;
         readyToThrow = true;
     }

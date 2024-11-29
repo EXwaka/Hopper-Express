@@ -63,6 +63,18 @@ EditorBuildSettings:
     path: Assets/Scenes/MapScenes/Finish3-1.unity
     guid: cfea000c25addd24d96b8a9df4a66d1b
   - enabled: 1
+    path: Assets/Scenes/Level3-2.unity
+    guid: 9b0c7c1868a05a64b9cf55ca057c306c
+  - enabled: 1
+    path: Assets/Scenes/MapScenes/Finish3-2.unity
+    guid: 723d8c1a8f2113f4981cfb22a0881dd0
+  - enabled: 1
+    path: Assets/Scenes/Level3-3(boss).unity
+    guid: 0e2af223c17b8ed48b20da17244e6399
+  - enabled: 1
+    path: Assets/Scenes/TrainStation4.unity
+    guid: 8c3b4f48f39ae674caffc89fd5a9e2f9
+  - enabled: 1
     path: Assets/Scenes/Ending1.unity
     guid: 1c63f044797c6a64290085015c3c8a85
   m_configObjects: {}

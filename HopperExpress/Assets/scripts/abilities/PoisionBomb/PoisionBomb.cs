@@ -17,6 +17,7 @@ public class PoisionBomb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CDactivated = false;
         timer = poisionBombCD;
         readyToThrow = true;
     }

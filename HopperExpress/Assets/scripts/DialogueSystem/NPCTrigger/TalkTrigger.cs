@@ -7,14 +7,13 @@ public class TalkTrigger : MonoBehaviour
 {
     public GameObject Ebuttom;
     private bool CanTalk;
-    DialogueTrigger dialogueTrigger;
-    //public RectTransform TalkBox;
-    //public float topPosY, middlePosY;
-    //public float tweenDuration;
-    // Start is called before the first frame update
+    private bool Talked;
+    DialogueAnimation dialogueAnimation;
+
     void Start()
     {
-        dialogueTrigger = GetComponentInParent<DialogueTrigger>();
+        Talked = false;
+        dialogueAnimation = FindObjectOfType<DialogueAnimation>();
         Ebuttom.SetActive(false);
         CanTalk = false ;
     }
@@ -26,11 +25,14 @@ public class TalkTrigger : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                //TalkBox.DOAnchorPosY(middlePosY, tweenDuration).SetUpdate(true);
+                if(!Talked)
+                {
+                    dialogueAnimation.SlideIn();
+                    CanTalk = false;
+                    Ebuttom.SetActive(false);
+                    Talked = true;
+                }
 
-                dialogueTrigger.TriggerDialogue();
-                CanTalk = false ;
-                Ebuttom.SetActive(false);
 
             }
         }
@@ -38,10 +40,10 @@ public class TalkTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Character"))
+        if (other.CompareTag("Character")&&!Talked)
         {
             Ebuttom.SetActive(true);
-            CanTalk=true ;
+            CanTalk=true;
 
         }
     }

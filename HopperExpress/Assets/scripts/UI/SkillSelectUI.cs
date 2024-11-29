@@ -24,6 +24,7 @@ public class SkillSelectUI : MonoBehaviour
     public GameOverControl gameOverControl;
 
     static public bool Chapter1Done=false;
+    static public bool Chapter2Done=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -191,6 +192,8 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_automissile = false;
         Skills.skill_berserk = false;
         NextButton.SetActive(true);
+        Chapter2Done = true;
+
     }
     public void ChooseSkill11()
     {
@@ -198,6 +201,8 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_automissile = true;
         Skills.skill_berserk = false;
         NextButton.SetActive(true);
+        Chapter2Done = true;
+
     }
     public void ChooseSkill12()
     {
@@ -205,6 +210,8 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_automissile = false;
         Skills.skill_berserk = true;
         NextButton.SetActive(true);
+        Chapter2Done = true;
+
     }
     public void ChooseSkill13()
     {
@@ -212,6 +219,7 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_corehealing = false;
         Skills.skill_coreheat = false;
         NextButton.SetActive(true);
+
     }
     public void ChooseSkill14()
     {
@@ -219,6 +227,7 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_corehealing = true;
         Skills.skill_coreheat = false;
         NextButton.SetActive(true);
+
     }
     public void ChooseSkill15()
     {
@@ -226,5 +235,6 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_corehealing = false;
         Skills.skill_coreheat = true;
         NextButton.SetActive(true);
+
     }
 }

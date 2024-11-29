@@ -12,10 +12,10 @@ public class startScreenTrain : MonoBehaviour
         trainArrived = false;
         //train_animation.SetTrigger("StartTrainAnimation");
     }
-    private void Update()
-    {
-        Debug.Log(trainArrived);
-    }
+    //private void Update()
+    //{
+    //    Debug.Log(trainArrived);
+    //}
 
     // This method should be called from the animation event
     public void OnTrainAnimationEnd()

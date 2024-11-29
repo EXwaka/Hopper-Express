@@ -14,7 +14,7 @@ public class CharacterMove : MonoBehaviour
     private KeyCode moveRKey;
     private KeyCode moveLKey;
     private SpriteRenderer spriteRenderer;
-    private bool ableToMove = true;
+    static public bool ableToMove = true;
     public static CharacterMove instance;
     public bool flying;
     public GameObject jetpack;
@@ -24,7 +24,7 @@ public class CharacterMove : MonoBehaviour
 
     private void Start()
     {
-        ableToMove = true;
+        ableToMove = false;
         UpdateKeyBindings();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -42,6 +42,7 @@ public class CharacterMove : MonoBehaviour
             jetpack.SetActive(false);
             flying = false;
         }
+        Invoke("StartMove", 5.5f);
     }
 
     void Update()
@@ -185,7 +186,10 @@ public class CharacterMove : MonoBehaviour
 
         }
     }
-
+    void StartMove()
+    {
+        ableToMove = true;
+    }
     private void OnCollisionEnter(Collision collision)
     {
         Rigidbody rb = GetComponent<Rigidbody>();

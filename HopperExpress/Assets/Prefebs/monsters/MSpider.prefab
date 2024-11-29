@@ -134,7 +134,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -195,6 +195,7 @@ MonoBehaviour:
   moveSpeedMax: 0
   maxHP: 10
   m_HP: 10
+  currentHP: 0
   healthBar: {fileID: 4725582988919812661}
   MonsAttackPoint: {fileID: 8190685897963830401}
   AttackRange: 2
