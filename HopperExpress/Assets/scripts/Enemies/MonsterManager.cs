@@ -34,6 +34,7 @@ public class MonsterManager : MonoBehaviour
     private Wavespawner waveSpawner;
     CrabControl crabControl;
     EagleControl eagleControl;
+    IceBirdControl iceBird;
 
     [SerializeField] private Material poisionMaterial;
     [SerializeField] private Material frozenMaterial;
@@ -59,6 +60,7 @@ public class MonsterManager : MonoBehaviour
 
         crabControl = GetComponent<CrabControl>();
         eagleControl = GetComponentInParent<EagleControl>();
+        iceBird = FindObjectOfType<IceBirdControl>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMaterial = spriteRenderer.material;
@@ -108,7 +110,7 @@ public class MonsterManager : MonoBehaviour
             }
 
 
-            if(targetPosition.x>currentPosition.x)
+            if(targetPosition.x>currentPosition.x && (iceBird == null))
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
 

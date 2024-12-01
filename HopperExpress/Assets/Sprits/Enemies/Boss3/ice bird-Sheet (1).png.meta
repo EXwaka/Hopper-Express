@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 27e7bf5418021ac439dcd8fd4a8241b8
+guid: b3a5ff4baa1fb58458cbf032df627fc3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ice bird-Sheet_0
+      name: ice bird-Sheet (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ee110559d2527d41a93c2635fb8305f
-      internalID: -319156607
+      spriteID: c1a679505a24c8441bb290cffd3050d0
+      internalID: 1824481515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ice bird-Sheet_1
+      name: ice bird-Sheet (1)_1
       rect:
         serializedVersion: 2
         x: 256
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f037ed8d31094f49b07a36c4374068f
-      internalID: 187444414
+      spriteID: 8de93c12e546b284ebb214ed307bd355
+      internalID: -121019501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ice bird-Sheet_2
+      name: ice bird-Sheet (1)_2
       rect:
         serializedVersion: 2
         x: 512
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 545b13d7c7616ad4abb4a5dd88fd8d2b
-      internalID: -163062257
+      spriteID: ff68a60ffdb4e7d41aa11f4727d94aeb
+      internalID: 1794236299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ice bird-Sheet_3
+      name: ice bird-Sheet (1)_3
       rect:
         serializedVersion: 2
         x: 768
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff419df446daf9341a12dd023108823d
-      internalID: 1542282129
+      spriteID: 421a61cf5a8a2664384476c76fe99615
+      internalID: 1420539728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ice bird-Sheet_4
+      name: ice bird-Sheet (1)_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b8012025e55cb94385f8e433764a102
-      internalID: -1801657516
+      spriteID: 0937ad7bab96f264182b4c8ce614c39f
+      internalID: -1759666711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ice bird-Sheet_5
+      name: ice bird-Sheet (1)_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07429eef69834dd4cbd1e04dddfb195b
-      internalID: -877385993
+      spriteID: b1f132aa8b5b496408d117551927c4eb
+      internalID: -1659165970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ice bird-Sheet_6
+      name: ice bird-Sheet (1)_6
       rect:
         serializedVersion: 2
         x: 1536
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d60c779b8d7d07b4fb8932042f59ad0f
-      internalID: -811970360
+      spriteID: 1f528ae81c72faf41972d359a7a3249b
+      internalID: 631558851
       vertices: []
       indices: 
       edges: []
@@ -259,7 +259,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 294202950a401ed44a51ed92dda45b55
     internalID: 0
     vertices: []
     indices: 
@@ -267,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ice bird-Sheet_0: -319156607
-      ice bird-Sheet_1: 187444414
-      ice bird-Sheet_2: -163062257
-      ice bird-Sheet_3: 1542282129
-      ice bird-Sheet_4: -1801657516
-      ice bird-Sheet_5: -877385993
-      ice bird-Sheet_6: -811970360
+      ice bird-Sheet (1)_0: 1824481515
+      ice bird-Sheet (1)_1: -121019501
+      ice bird-Sheet (1)_2: 1794236299
+      ice bird-Sheet (1)_3: 1420539728
+      ice bird-Sheet (1)_4: -1759666711
+      ice bird-Sheet (1)_5: -1659165970
+      ice bird-Sheet (1)_6: 631558851
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

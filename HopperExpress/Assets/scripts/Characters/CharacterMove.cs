@@ -19,11 +19,14 @@ public class CharacterMove : MonoBehaviour
     public bool flying;
     public GameObject jetpack;
     public bool activeJet;
+    private Coroutine reverseCoroutine; 
 
     Rigidbody rb;
+    static public bool inChaos;
 
     private void Start()
     {
+        inChaos = false;
         ableToMove = false;
         UpdateKeyBindings();
         animator = GetComponent<Animator>();
@@ -55,7 +58,7 @@ public class CharacterMove : MonoBehaviour
         }
         if (TrainMoneAnim.TrainGo)
         {
-            ableToMove=false;
+            ableToMove = false;
             // 獲取當前物件及其所有子物件的 SpriteRenderer
             SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
 
@@ -65,34 +68,30 @@ public class CharacterMove : MonoBehaviour
                 spriteRenderer.enabled = false;
             }
         }
-  
+
     }
 
     void FixedUpdate()
     {
-        if(ableToMove)
+        if (ableToMove)
         {
 
             float currentSpeed = onsTacleControl3.Storming ? 1.5f : moveSpeed;  // 如果風暴啟動 速度為1.5 否則為10
             if (Input.GetKey(moveRKey))
             {
-
                 moveRight = true;
                 if (flying && !isGrounded)
                 {
-
-                    rb.velocity=new Vector3(15,0,0);
-
+                    rb.velocity = new Vector3(15, 0, 0);
                 }
                 if (onsTacleControl3.Storming)
                 {
-                    if(flying)
+                    if (flying)
                     {
                         rb.velocity = new Vector3(15, 0, 0);
 
                     }
                     Move(Vector3.right, currentSpeed);
-
                 }
                 Move(Vector3.right, currentSpeed);
                 GetComponent<SpriteRenderer>().flipX = false;
@@ -105,17 +104,14 @@ public class CharacterMove : MonoBehaviour
                 moveRight = false;
                 if (flying && !isGrounded)
                 {
-
                     rb.velocity = new Vector3(-15, 0, 0);
-
                 }
                 else if (onsTacleControl3.Storming)
                 {
-
-                    Move(Vector3.left, 10 + currentSpeed);
+                    Move(Vector3.left, 15 + currentSpeed);
                 }
 
-                Move(Vector3.left,currentSpeed);
+                Move(Vector3.left, currentSpeed);
                 GetComponent<SpriteRenderer>().flipX = true;
 
                 jetpack.GetComponent<SpriteRenderer>().flipX = true;//jetpack
@@ -127,7 +123,7 @@ public class CharacterMove : MonoBehaviour
                 StopMove();
             }
 
-            if(Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
                 Down();
             }
@@ -153,7 +149,7 @@ public class CharacterMove : MonoBehaviour
 
     void Jump()
     {
-        if(isGrounded)
+        if (isGrounded)
         {
             GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
@@ -162,7 +158,7 @@ public class CharacterMove : MonoBehaviour
 
     void Fly()
     {
-        if (flying&&!isGrounded)
+        if (flying && !isGrounded)
         {
             StartCoroutine(Jeting());
             GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce / 1.5f, ForceMode.Impulse);
@@ -182,7 +178,7 @@ public class CharacterMove : MonoBehaviour
     {
         if (flying)
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.down * jumpForce*3, ForceMode.Acceleration);
+            GetComponent<Rigidbody>().AddForce(Vector3.down * jumpForce * 3, ForceMode.Acceleration);
 
         }
     }
@@ -219,6 +215,28 @@ public class CharacterMove : MonoBehaviour
 
         }
     }
+
+    public void ReverseControls(float duration)
+    {
+        if (reverseCoroutine != null)
+        {
+            StopCoroutine(reverseCoroutine); 
+        }
+        reverseCoroutine = StartCoroutine(ReverseDirectionCoroutine(duration)); 
+    }
+
+    private IEnumerator ReverseDirectionCoroutine(float duration)
+    {
+        inChaos = true;
+        moveSpeed = -Mathf.Abs(moveSpeed); 
+        yield return new WaitForSeconds(duration);
+        inChaos = false;
+
+        moveSpeed = Mathf.Abs(moveSpeed); 
+        reverseCoroutine = null; 
+    }
+
+
     public void UpdateKeyBindings()
     {
         jumpKey = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("JumpKey", KeyCode.Space.ToString()));

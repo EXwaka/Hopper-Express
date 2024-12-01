@@ -25,7 +25,7 @@ public class BerserkControl : MonoBehaviour
             berserkEF.transform.position = effectPosition;
             berserkEF.SetActive(false);
         }
-        //InvokeRepeating("count", 0f,1);
+       
 
     }
 

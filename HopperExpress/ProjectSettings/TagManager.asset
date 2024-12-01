@@ -23,6 +23,8 @@ TagManager:
   - AttackArea
   - EagleAttackRange
   - BossRange
+  - Player2
+  - iceBurst
   layers:
   - Default
   - TransparentFX

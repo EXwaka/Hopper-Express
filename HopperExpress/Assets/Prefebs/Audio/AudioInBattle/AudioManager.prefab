@@ -171,3 +171,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: slip
+    clip: {fileID: 8300000, guid: 613fee6d51edf844abffd7d369e1b637, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: iceBurst
+    clip: {fileID: 8300000, guid: 47fc4c5360adba742909df8709963d21, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

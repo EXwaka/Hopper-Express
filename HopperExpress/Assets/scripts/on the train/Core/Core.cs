@@ -80,13 +80,12 @@ public class Core : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("coreHealing");
             HPcurrent_core += 10;
             healthBar.SetHealth(HPcurrent_core);
-            healingSFX.SetActive(true);
+            Quaternion rotation = Quaternion.Euler(-90f, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+            Instantiate(healingSFX, transform.position, rotation);
+
 
         }
-        else
-        {
-            healingSFX.SetActive(false); 
-        }
+
     }
 
     void SkillHeat()

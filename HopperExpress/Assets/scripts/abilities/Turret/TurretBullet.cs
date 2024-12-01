@@ -35,8 +35,6 @@ public class TurretBullet : MonoBehaviour
         {
             enemyComponent.TakeDamage(Damage);
         }
-
-
             Destroy(gameObject); 
     }
 }

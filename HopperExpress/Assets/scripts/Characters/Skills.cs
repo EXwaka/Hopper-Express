@@ -18,14 +18,14 @@ public class Skills : MonoBehaviour
     public static bool skill_jetpack = false;//8*icon
     public static bool skill_turrets = false;//9*icon
 
-    public static bool skill_airattack = true;//10*
+    public static bool skill_airattack = false;//10*
     public static bool skill_automissile = false;//11*
     public static bool skill_berserk = false;//12*
 
 
     //CP3
     public static bool skill_obstacle = false;//13*
-    public static bool skill_corehealing = false;//14*icon
+    public static bool skill_corehealing = true;//14*icon
     public static bool skill_coreheat = false;//15*icon
 
     // Start is called before the first frame update
