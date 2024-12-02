@@ -158,6 +158,8 @@ public class MonsterManager : MonoBehaviour
         BerserkControl berserk=FindObjectOfType<BerserkControl>();
         berserk.berserkDuration += 0.5f;
 
+        typewriter.monsCount++;
+
     }
     private void DeadAnimation()
     {

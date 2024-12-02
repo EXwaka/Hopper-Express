@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SeflDestruction : MonoBehaviour
 {
+    public float sec=5;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DestroySelf", 5);
+        Invoke("DestroySelf", sec);
     }
     void DestroySelf()
     {

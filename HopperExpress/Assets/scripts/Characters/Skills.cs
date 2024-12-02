@@ -25,7 +25,7 @@ public class Skills : MonoBehaviour
 
     //CP3
     public static bool skill_obstacle = false;//13*
-    public static bool skill_corehealing = true;//14*icon
+    public static bool skill_corehealing = false;//14*icon
     public static bool skill_coreheat = false;//15*icon
 
     // Start is called before the first frame update

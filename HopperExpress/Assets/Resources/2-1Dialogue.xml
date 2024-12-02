@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dialogues>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>
+			欸傑可，你有看到那些樹嗎?
+			上面那些...是文字嗎?
+		</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			我們正在努力搞懂那些是什麼東西，你先專注在戰鬥上。
+			列車前方又出現了敵人的反應，務必小心。
+		</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>
+			知道了!
+		</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			況且...我也不認為你有時間吃東西
+		</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			前方出現了未知強大個體反應! 艾莉諾快準備好應戰!
+		</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>齁，我才剛坐下來欸! 怎麼爛事都要我來做啊，我都清理了這麼多隻，你怎麼不出來幫點忙。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			少廢話，目標接近火車了。
+		</Say>
+	</Dialogue>
+</Dialogues>

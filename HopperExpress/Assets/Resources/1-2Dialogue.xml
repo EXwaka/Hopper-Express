@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Dialogues>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>打了這麼久，總該告一段落了吧。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>傑可傑可! 先幫我拿一下我剛剛那塊麵包，我肚子都快餓扁拉。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			先別著急，我們就快到第一個目的地了，等等就有正餐吃了。
+		</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			況且...我也不認為你有時間吃東西
+		</Say>
+	</Dialogue>
+	
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			前方出現了未知強大個體反應! 艾莉諾快準備好應戰!
+		</Say>
+	</Dialogue>
+	
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>齁，我才剛坐下來欸! 怎麼爛事都要我來做啊，我都清理了這麼多隻，你怎麼不出來幫點忙。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			少廢話，目標接近火車了。
+		</Say>
+	</Dialogue>
+</Dialogues>

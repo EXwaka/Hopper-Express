@@ -5,14 +5,22 @@ using UnityEngine;
 
 public class textAnimation : MonoBehaviour
 {
-    public TextMeshProUGUI[] texts;      
-    public float animationDuration = 10f; 
-    public float delayBetweenTexts = 5f;  
-    public float startX = -1500f;         
-    public float endX = 1500f;           
+    public TextMeshProUGUI[] texts;
+    public float animationDuration = 10f;
+    public float delayBetweenTexts = 5f;
+    public float startX = -1500f;
+    public float endX = 1500f;
+    public float initialDelay = 10f;
 
     private void Start()
     {
+        StartCoroutine(StartAnimationAfterDelay());
+    }
+
+    private IEnumerator StartAnimationAfterDelay()
+    {
+        yield return new WaitForSeconds(initialDelay);
+
         for (int i = 0; i < texts.Length; i++)
         {
             StartCoroutine(AnimateTextWithDelay(texts[i], i * delayBetweenTexts));
@@ -21,10 +29,10 @@ public class textAnimation : MonoBehaviour
 
     private IEnumerator AnimateTextWithDelay(TextMeshProUGUI text, float delay)
     {
-        yield return new WaitForSeconds(delay); 
+        yield return new WaitForSeconds(delay);
 
         RectTransform rectTransform = text.GetComponent<RectTransform>();
-        rectTransform.anchoredPosition = new Vector2(startX, rectTransform.anchoredPosition.y); 
+        rectTransform.anchoredPosition = new Vector2(startX, rectTransform.anchoredPosition.y);
 
         float elapsedTime = 0f;
 

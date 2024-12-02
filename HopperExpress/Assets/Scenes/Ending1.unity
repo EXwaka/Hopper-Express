@@ -123,6 +123,29 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &37751552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6018375263492103431, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+  m_PrefabInstance: {fileID: 2140241806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &37751553 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 825713847358545951, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+  m_PrefabInstance: {fileID: 2140241806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &37751557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37751552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae16d5584b1cab409c52352a836083d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sec: 20.6
 --- !u!1 &73538074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &218281877
@@ -1238,7 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &260952136
@@ -1448,7 +1471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -1701,7 +1724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -1975,7 +1998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &375891696
@@ -2173,7 +2196,7 @@ MonoBehaviour:
   m_text: {fileID: 750285075}
   fadeDuration: 2
   fadeOut: {fileID: 460137049}
-  sec: 60
+  sec: 80
 --- !u!95 &382662944
 Animator:
   serializedVersion: 5
@@ -2972,7 +2995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &603417329
@@ -3103,7 +3126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &645474324
@@ -3462,7 +3485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &802963635
@@ -3672,7 +3695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -3803,7 +3826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -3929,6 +3952,7 @@ MonoBehaviour:
   delayBetweenTexts: 4
   startX: -2800
   endX: 2800
+  initialDelay: 20
 --- !u!4 &875574524
 Transform:
   m_ObjectHideFlags: 0
@@ -3944,6 +3968,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &916798769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 916798770}
+  - component: {fileID: 916798773}
+  - component: {fileID: 916798772}
+  - component: {fileID: 916798771}
+  m_Layer: 5
+  m_Name: Text (Legacy) (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &916798770
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916798769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37751553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1000, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &916798771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916798769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0fd95f3b523214dbc0d254bdb7d932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeFadeIn: 8
+  delayBeforeFadeOut: 20
+--- !u!114 &916798772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916798769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8e2979c12d53ab040a036d0e81a677b5, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 45
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u7D93\u904E\u4E86\u91CD\u91CD\u95DC\u5361\u5F8C\uFF0C\u706B\u8ECA\u7D42\u65BC\u99DB\u9032\u4E86\u8036\u5229\u54E5\u57CE"
+--- !u!222 &916798773
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916798769}
+  m_CullTransparentMesh: 1
 --- !u!1 &931673699
 GameObject:
   m_ObjectHideFlags: 0
@@ -4305,7 +4423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -4701,7 +4819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -5226,7 +5344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -5344,7 +5462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -5537,7 +5655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 54
+  fadeOutAt: 74
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -5589,7 +5707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &1170238703
@@ -5672,6 +5790,100 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1175292087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175292088}
+  - component: {fileID: 1175292091}
+  - component: {fileID: 1175292090}
+  - component: {fileID: 1175292089}
+  m_Layer: 5
+  m_Name: Text (Legacy) (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1175292088
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175292087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37751553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -150}
+  m_SizeDelta: {x: 1000, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1175292089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175292087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0fd95f3b523214dbc0d254bdb7d932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeFadeIn: 11
+  delayBeforeFadeOut: 20
+--- !u!114 &1175292090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175292087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8e2979c12d53ab040a036d0e81a677b5, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 45
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u7576\u6838\u5FC3\u88AB\u5B89\u5168\u9001\u5230\u57CE\u4E2D\uFF0C\u91CD\u65B0\u7167\u4EAE\u4E86\u6574\u5EA7\u57CE\u5E02"
+--- !u!222 &1175292091
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175292087}
+  m_CullTransparentMesh: 1
 --- !u!1 &1176348028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5772,6 +5984,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1177991429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4632015997858474141, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+  m_PrefabInstance: {fileID: 2140241806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1177991433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177991429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0fd95f3b523214dbc0d254bdb7d932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeFadeIn: 5
+  delayBeforeFadeOut: 20
 --- !u!1 &1189204760
 GameObject:
   m_ObjectHideFlags: 0
@@ -5820,7 +6051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &1189204763
@@ -6030,7 +6261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -6367,7 +6598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &1267750578
@@ -6640,7 +6871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 54
+  fadeOutAt: 74
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -6692,7 +6923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &1350963140
@@ -7272,7 +7503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -7390,6 +7621,100 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1495513121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495513122}
+  - component: {fileID: 1495513125}
+  - component: {fileID: 1495513124}
+  - component: {fileID: 1495513123}
+  m_Layer: 5
+  m_Name: Text (Legacy) (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1495513122
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495513121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37751553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -300}
+  m_SizeDelta: {x: 1000, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1495513123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495513121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0fd95f3b523214dbc0d254bdb7d932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeFadeIn: 14
+  delayBeforeFadeOut: 20
+--- !u!114 &1495513124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495513121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8e2979c12d53ab040a036d0e81a677b5, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 45
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u57CE\u5E02\u7684\u6A5F\u68B0\u904B\u4F5C\u6062\u5FA9\uFF0C\u5E36\u4F86\u4E45\u9055\u7684\u6D3B\u529B\u8207\u5E0C\u671B"
+--- !u!222 &1495513125
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495513121}
+  m_CullTransparentMesh: 1
 --- !u!1 &1514054611
 GameObject:
   m_ObjectHideFlags: 0
@@ -7801,7 +8126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &1542698214
@@ -7884,6 +8209,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1553720538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1558436633577421918, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+  m_PrefabInstance: {fileID: 2140241806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1553720542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553720538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0fd95f3b523214dbc0d254bdb7d932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeFadeIn: 2
+  delayBeforeFadeOut: 20
 --- !u!1 &1568202400
 GameObject:
   m_ObjectHideFlags: 0
@@ -7932,7 +8276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &1568202403
@@ -8244,7 +8588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -8430,7 +8774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeOutAt: 0
-  fadeInAt: 54
+  fadeInAt: 74
   ShouldFadeIn: 1
   ShouldFadeOut: 1
 --- !u!114 &1777200131
@@ -9181,7 +9525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -9388,7 +9732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -9536,7 +9880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 54
+  fadeOutAt: 74
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -9667,7 +10011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 55
+  fadeOutAt: 75
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -9679,29 +10023,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 715604315645610342, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 715604315645610342, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 1558436633577421918, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083319055705741033, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083319055705741033, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083319055705741033, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2196374395403545712, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      propertyPath: m_Text
+      value: "\u4F60\u7121\u754F\u5730\u634D\u885B\u8457\u6838\u5FC3\uFF0C\u4E0D\u8B93\u4EFB\u4F55\u5A01\u8105\u63A5\u8FD1\u706B\u8ECA"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196374395403545712, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8e2979c12d53ab040a036d0e81a677b5, type: 3}
+    - target: {fileID: 2649236064888791941, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_Text
       value: "\u970D\u666E\u865F\u56DE\u6B78"
       objectReference: {fileID: 0}
-    - target: {fileID: 2196374395403545712, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 8e2979c12d53ab040a036d0e81a677b5, type: 3}
-    - target: {fileID: 2649236064888791941, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
-      propertyPath: m_Text
-      value: "\u7D50\u5C40\u4E00"
-      objectReference: {fileID: 0}
     - target: {fileID: 2649236064888791941, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 8e2979c12d53ab040a036d0e81a677b5, type: 3}
+    - target: {fileID: 3695857234464355926, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 671f64a533810b742baaa728822abd86, type: 2}
     - target: {fileID: 4632015997858474141, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5212742841427432337, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_Pivot.x
@@ -9805,7 +10173,25 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5212742841427432337, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       insertIndex: 0
       addedObject: {fileID: 460137053}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: 825713847358545951, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 916798770}
+    - targetCorrespondingSourceObject: {fileID: 825713847358545951, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1175292088}
+    - targetCorrespondingSourceObject: {fileID: 825713847358545951, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1495513122}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6018375263492103431, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 37751557}
+    - targetCorrespondingSourceObject: {fileID: 1558436633577421918, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1553720542}
+    - targetCorrespondingSourceObject: {fileID: 4632015997858474141, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1177991433}
   m_SourcePrefab: {fileID: 100100000, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
 --- !u!4 &130305638862409750
 Transform:
@@ -10108,7 +10494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -10836,7 +11222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -10917,7 +11303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -11037,7 +11423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -11106,7 +11492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -11187,7 +11573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -11251,7 +11637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -11300,7 +11686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -11361,7 +11747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
@@ -11439,7 +11825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20495fab8a494a44d957b186dd3cff41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAt: 20
+  fadeOutAt: 40
   fadeInAt: 0
   ShouldFadeIn: 0
   ShouldFadeOut: 1
