@@ -62,7 +62,7 @@ public class GamePausePanel : MonoBehaviour
 
     public void Restart()
     {
-
+        Wavespawner.monsCount = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
 

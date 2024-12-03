@@ -130,6 +130,7 @@ public class SkillSelectUI : MonoBehaviour
         Skills.skill_throwfire = false;
         Skills.skill_throwice = false;
         Skills.skill_throwpoison = true;
+        NextButton.SetActive(true);
 
 
 

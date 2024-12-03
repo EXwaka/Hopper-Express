@@ -49,8 +49,9 @@ public class grasshopperBoss : MonoBehaviour
             float randomY = Random.Range(-3f, 3f);
             Vector3 spawnPosition = new Vector3(bossPosition.x + randomX, bossPosition.y + randomY, bossPosition.z);
             Instantiate(minions, spawnPosition, Quaternion.identity);
-            spawnRate = setSpawnRate;
             Wavespawner.monsCount++;
+
+            spawnRate = setSpawnRate;
         }
 
 

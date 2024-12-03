@@ -5,7 +5,7 @@ using UnityEngine;
 public class IceBirdControl : MonoBehaviour
 {
     Animator animator;
-    private int Damage = 20;
+    private int Damage = 30;
     private float idleMinTime = 5f;
     private float idleMaxTime = 8f;
     public GameObject iceBurstPrefab;  

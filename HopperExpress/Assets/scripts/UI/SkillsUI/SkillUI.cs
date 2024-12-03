@@ -41,6 +41,12 @@ public class SkillUI : MonoBehaviour
     //12
     public Text berserkText;
     public GameObject berserkImg;
+    //13
+    public Text corehealText;
+    public GameObject corehealImg;
+    //14
+    public Text corewaveText;
+    public GameObject corewaveImg;
 
     private float GreekFireCD;
     private float ThrowIceCD;
@@ -64,6 +70,8 @@ public class SkillUI : MonoBehaviour
         CheckAirAttack();
         CheckBerserk();
         CheckMissile();
+        CheckCoreHeal();
+        CheckCoreWave();
     }
 
     // Update is called once per frame
@@ -186,8 +194,8 @@ public class SkillUI : MonoBehaviour
             fanceImg.SetActive(true);
             fanceText.text = "啟用中";
 
-            spikeText.fontSize = 25;
-            spikeText.color = Color.yellow;
+            fanceText.fontSize = 25;
+            fanceText.color = Color.yellow;
         }
         else
         {
@@ -362,6 +370,38 @@ public class SkillUI : MonoBehaviour
         {
             missileText.text = "";
             missileCD = AutoMissileControl.CD;
+        }
+    }
+    void CheckCoreHeal()
+    {
+        if (Skills.skill_corehealing)
+        {
+            corehealImg.SetActive(true);
+            corehealText.text = "啟用中";
+
+            corehealText.fontSize = 25;
+            corehealText.color = Color.yellow;
+        }
+        else
+        {
+            corehealImg.SetActive(false);
+
+        }
+    }
+    void CheckCoreWave()
+    {
+        if (Skills.skill_coreheat)
+        {
+            corewaveImg.SetActive(true);
+            corewaveText.text = "啟用中";
+
+            corewaveText.fontSize = 25;
+            corewaveText.color = Color.yellow;
+        }
+        else
+        {
+            corewaveImg.SetActive(false);
+
         }
     }
 }

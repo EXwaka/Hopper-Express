@@ -29,22 +29,19 @@ public class headRotation : MonoBehaviour
         targetPosition.z = 0f;
         Vector3 directionToMouse = targetPosition - transform.position;
         float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
-        //if ((angle > ang1 && angle < ang2))
-        //{
-            Quaternion rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0f, 0f, angle)), Time.deltaTime * rotationSpeed);
 
-            transform.rotation = rotation;
+            //Quaternion rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0f, 0f, angle)), Time.deltaTime * rotationSpeed);
+
+            //transform.rotation = rotation;
 
             if (directionToMouse.x < 0)
             {
-                spriteRenderer.flipY = true;
-                //transform.localPosition = new Vector3(flipX, flipY, 0);
+                spriteRenderer.flipX = true;
                 transform.localPosition = new Vector3(0, flipY, 0);
         }
             else
             {
-                spriteRenderer.flipY = false;
-                //transform.localPosition = new Vector3(-flipX, flipY, 0);
+                spriteRenderer.flipX = false;
                 transform.localPosition = new Vector3(0, flipY, 0);
         }
         //}
