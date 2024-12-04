@@ -26,6 +26,7 @@ public class CharacterMove : MonoBehaviour
 
     private void Start()
     {
+        onsTacleControl3.Storming = false;
         inChaos = false;
         ableToMove = false;
         UpdateKeyBindings();
@@ -50,7 +51,6 @@ public class CharacterMove : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(Wavespawner.monsCount);
         if (Input.GetKeyDown(jumpKey) && ableToMove)
         {
             Jump();
@@ -59,10 +59,8 @@ public class CharacterMove : MonoBehaviour
         if (TrainMoneAnim.TrainGo)
         {
             ableToMove = false;
-            // 獲取當前物件及其所有子物件的 SpriteRenderer
             SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
 
-            // 遍歷所有 SpriteRenderer，並將它們的 enabled 設置為 false
             foreach (SpriteRenderer spriteRenderer in spriteRenderers)
             {
                 spriteRenderer.enabled = false;

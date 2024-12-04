@@ -43,6 +43,7 @@ public class DialogueControl : MonoBehaviour
             if (isTyping) 
             {
                 SkipTypingAnimation();
+
             }
             else if (nodeList.Count > 0 && n < nodeList.Count) 
             {
@@ -59,6 +60,7 @@ public class DialogueControl : MonoBehaviour
                 typingCoroutine = StartCoroutine(TypeDialogue(dialogue));
                 UpdateCharacterImage(role);
                 n++;
+
             }
             else
             {
@@ -73,6 +75,7 @@ public class DialogueControl : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f); 
         if (nodeList.Count > 0 && n < nodeList.Count)
         {
+
             string role = nodeList[n].FirstChild.InnerText;
             string dialogue = nodeList[n].LastChild.InnerText;
 
@@ -95,6 +98,7 @@ public class DialogueControl : MonoBehaviour
 
     IEnumerator TypeDialogue(string dialogue)
     {
+
         isTyping = true; 
         DialogueText.text = "";
 
@@ -139,6 +143,8 @@ public class DialogueControl : MonoBehaviour
 
     void EndConversation()
     {
+        CharacterMove.ableToMove = true;
+
         R1Image.color = new Color(1f, 1f, 1f, 0f);
         R2Image.color = new Color(1f, 1f, 1f, 0f);
         dialogueAnimation.SlideOut();

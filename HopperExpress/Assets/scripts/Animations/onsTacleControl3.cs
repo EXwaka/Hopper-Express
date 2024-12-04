@@ -40,6 +40,7 @@ public class onsTacleControl3 : MonoBehaviour
 
     void TriggerScrollGO()
     {
+        FindObjectOfType<AudioManager>().Play("storm");
 
         animator.SetTrigger("Storm");
         Vector3 spawnPosition = new Vector3(146f, 15.8f, 57f); 

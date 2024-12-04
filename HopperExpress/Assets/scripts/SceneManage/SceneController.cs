@@ -24,6 +24,7 @@ public class SceneController : MonoBehaviour
 
     public void NextLevel()
     {
+        Wavespawner.monsCount = 0;
         Time.timeScale = 1;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1);
 

@@ -22,7 +22,7 @@ public class grasshopperBoss : MonoBehaviour
     void Update()
     {
         MoveToTarget();
-        //Debug.Log("HP:" + monsterManager.m_HP);
+        Debug.Log(Wavespawner.monsCount);
 
         SpawnMinions();
 
@@ -36,7 +36,6 @@ public class grasshopperBoss : MonoBehaviour
 
         }
     }
-
 
 
     void SpawnMinions()

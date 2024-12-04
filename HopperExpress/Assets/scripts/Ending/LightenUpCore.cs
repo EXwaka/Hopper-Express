@@ -25,7 +25,7 @@ public class LightenUpCore : MonoBehaviour
             Activated = true;
             LightUp = true;
             coreLight.SetActive(true);
-
+            Ebutton.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)

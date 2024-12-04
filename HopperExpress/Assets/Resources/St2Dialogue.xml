@@ -13,22 +13,16 @@
 
 	<Dialogue>
 		<Role1>艾莉諾</Role1>
-		<Say>
-			...
-		</Say>
+		<Say>...</Say>
 	</Dialogue>
 	<Dialogue>
 		<Role1>傑可</Role1>
-		<Say>
-			怎麼了，一句話都不說，有什麼想法嗎?
-		</Say>
+		<Say>怎麼了，一句話都不說，有什麼想法嗎?</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>艾莉諾</Role1>
-		<Say>
-			...連機器都會被洗腦？
-		</Say>
+		<Say>...連機器都會被洗腦？</Say>
 	</Dialogue>
 
 	<Dialogue>
@@ -38,9 +32,7 @@
 
 	<Dialogue>
 		<Role1>傑可</Role1>
-		<Say>
-			而且每個樣本的洗腦程度，都不太一樣。
-		</Say>
+		<Say>而且每個樣本的洗腦程度，都不太一樣。</Say>
 	</Dialogue>
 
 	<Dialogue>
@@ -50,74 +42,53 @@
 
 	<Dialogue>
 		<Role1>艾莉諾</Role1>
-		<Say>
-			剛剛好幾次我都差點摔下車欸，你知道要擋在一群發瘋的機器人面前有多恐怖嗎!
-		</Say>
+		<Say>剛剛好幾次我都差點摔下車欸，你知道要擋在一群發瘋的機器人面前有多恐怖嗎!</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>傑可</Role1>
-		<Say>
-			好好好，又不是沒拿機器人訓練過。
-		</Say>
+		<Say>好好好，又不是沒拿機器人訓練過。</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>傑可</Role1>
-		<Say>
-			而且我們是搭檔，在開戰前我會幫你準備好你需要的資訊和裝備。
-			相對的戰場上的表現就交給你，所以這輛列車能不能抵達終點完成任務就靠你了。
-		</Say>
+		<Say>而且我們是搭檔，在開戰前我會幫你準備好你需要的資訊和裝備。
+相對的戰場上的表現就交給你，所以這輛列車能不能抵達終點完成任務就靠你了。</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>傑可</Role1>
-		<Say>
-			我相信你會獲得勝利，所以你也相信我就好，我會盡我所能的協助你。
-		</Say>
+		<Say>我相信你會獲得勝利，所以你也相信我就好，我會盡我所能的協助你。</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>艾莉諾</Role1>
-		<Say>
-			訓練的機器人和戰場上的哪能相提並論啊啊!
-		</Say>
+		<Say>訓練的機器人和戰場上的哪能相提並論啊啊!</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>艾莉諾</Role1>
-		<Say>
-			再怎麼說還是免不了緊張啊。
-		</Say>
+		<Say>再怎麼說還是免不了緊張啊。</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>傑可</Role1>
-		<Say>
-			唉，比起在那裡抱怨，不如去吃點東西填飽肚子趕緊休息，等等就要出發了。
-		</Say>
+		<Say>唉，比起在那裡抱怨，不如去吃點東西填飽肚子趕緊休息，等等就要出發了。</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>傑可</Role1>
-		<Say>
-			哼，你的麵包。
-		</Say>
+		<Say>哼，你的麵包。</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>艾莉諾</Role1>
-		<Say>
-			噢謝拉，嘿嘿，你怎麼知道我肚子餓了。
-		</Say>
+		<Say>噢謝拉，嘿嘿，你怎麼知道我肚子餓了。</Say>
 	</Dialogue>
 
 	<Dialogue>
 		<Role1>傑可</Role1>
-		<Say>
-			你以為我們搭檔多久了。
-		</Say>
+		<Say>你以為我們搭檔多久了。</Say>
 	</Dialogue>
-
 
 </Dialogues>

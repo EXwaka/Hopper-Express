@@ -189,3 +189,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: storm
+    clip: {fileID: 8300000, guid: 792a429046dbe0b4f9ebecc8b24d65b4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bush
+    clip: {fileID: 8300000, guid: 8366f8a3dd170bc4b963fb7649e653be, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

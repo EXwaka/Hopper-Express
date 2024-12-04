@@ -35,6 +35,7 @@ public class obstacleControll : MonoBehaviour
     void TriggerScrollGO()
     {
         animator.SetTrigger("ScrollGo");
+        FindObjectOfType<AudioManager>().Play("bush");
     }
 
     IEnumerator ToggleSign()

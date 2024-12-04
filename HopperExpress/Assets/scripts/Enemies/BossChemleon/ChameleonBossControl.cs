@@ -87,6 +87,7 @@ public class ChameleonBossControl : MonoBehaviour
         {
             StartAttack = true;
             monsterManager.moveSpeed = 0;
+            monsterManager.moveSpeedMax = 0;
         }
 
 

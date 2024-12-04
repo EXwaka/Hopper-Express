@@ -56,7 +56,7 @@ public class Core : MonoBehaviour
         flashDam.Flash();
 
         //過熱技能
-        if (Skills.skill_coreheat && Random.Range(0f, 1f) <= 0.2f)//20%機率觸發技能
+        if (Skills.skill_coreheat && Random.Range(0f, 1f) <= 0.25f)//25%機率觸發技能
         {
             SkillHeat();
         }

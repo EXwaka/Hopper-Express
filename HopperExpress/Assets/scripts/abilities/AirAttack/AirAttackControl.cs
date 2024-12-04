@@ -11,6 +11,8 @@ public class AirAttackControl : MonoBehaviour
 
     void Start()
     {
+        CD = 20;
+        isOnCooldown=false;
         AttackArea.SetActive(false);
         if (Skills.skill_airattack)
         {
@@ -44,7 +46,6 @@ public class AirAttackControl : MonoBehaviour
         isOnCooldown = true;  
 
         yield return new WaitForSeconds(CD);
-
         AttackArea.SetActive(false);
         isOnCooldown = false;  
     }

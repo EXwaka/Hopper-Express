@@ -5,17 +5,18 @@ using UnityEngine;
 
 public class TalkTrigger : MonoBehaviour
 {
-    public GameObject Ebuttom;
+    public GameObject Ebutton;
     private bool CanTalk;
     private bool Talked;
+    static public bool Talking;
     DialogueAnimation dialogueAnimation;
-
     void Start()
     {
+        Talking = false;
         Talked = false;
         dialogueAnimation = FindObjectOfType<DialogueAnimation>();
-        Ebuttom.SetActive(false);
-        CanTalk = false ;
+        Ebutton.SetActive(false);
+        CanTalk = false;
     }
 
     // Update is called once per frame
@@ -23,13 +24,14 @@ public class TalkTrigger : MonoBehaviour
     {
         if (CanTalk)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if(!Talked)
+                if (!Talked)
                 {
+                    CharacterMove.ableToMove = false;
                     dialogueAnimation.SlideIn();
                     CanTalk = false;
-                    Ebuttom.SetActive(false);
+                    Ebutton.SetActive(false);
                     Talked = true;
                 }
 
@@ -40,20 +42,22 @@ public class TalkTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Character")&&!Talked)
+        if (other.CompareTag("Character") && !Talked)
         {
-            Ebuttom.SetActive(true);
-            CanTalk=true;
-
+            Ebutton.SetActive(true);
+            CanTalk = true;
+            Talking=true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Character"))
         {
-            Ebuttom.SetActive(false);
+            Ebutton.SetActive(false);
 
-            CanTalk=false ;
+            CanTalk = false;
+            Talking = false;
+
         }
     }
 }
