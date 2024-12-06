@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e8d5e751200f34d8c3d8504b5e6cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursorTexture: {fileID: 2800000, guid: 14f114e12e729704dbcfa9fd3fb25f7b, type: 3}
+  defaultCursorTexture: {fileID: 2800000, guid: 732555da0e2ea8f479d446f6879882d7, type: 3}
   cursorAnimations:
   - cursorType: 1
     textureArray:
-    - {fileID: 2800000, guid: 14f114e12e729704dbcfa9fd3fb25f7b, type: 3}
+    - {fileID: 2800000, guid: 732555da0e2ea8f479d446f6879882d7, type: 3}
     offset: {x: 15, y: 15}
   - cursorType: 2
     textureArray:

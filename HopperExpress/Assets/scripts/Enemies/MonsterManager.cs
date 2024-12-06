@@ -40,6 +40,8 @@ public class MonsterManager : MonoBehaviour
     [SerializeField] private Material frozenMaterial;
     private SpriteRenderer spriteRenderer;
 
+    public bool hasAttackAnim;
+
     private Material originalMaterial;
 
     // Start is called before the first frame update
@@ -64,6 +66,7 @@ public class MonsterManager : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMaterial = spriteRenderer.material;
+        animator=GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -173,7 +176,10 @@ public class MonsterManager : MonoBehaviour
         if(!Freeze)
         {
             Collider[] HitAny = Physics.OverlapSphere(MonsAttackPoint.position, AttackRange, enemy);
-
+            if(hasAttackAnim)
+            {
+                animator.SetBool("Attack", true);
+            }
             foreach (Collider enemy in HitAny)
             {
                 Core core = enemy.GetComponent<Core>();

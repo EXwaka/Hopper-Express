@@ -11,7 +11,7 @@ public class HandGun : MonoBehaviour
     public Transform bulletSpawnPoint;
     public int ammo = 10;
     public int bulletLeft = 10;
-    public float reloadTime = 4.5f;
+    public float reloadTime = 3.7f;
     public TextMeshProUGUI ammoText;
     public Animator animator;
     bool reloading =false;
@@ -21,7 +21,7 @@ public class HandGun : MonoBehaviour
 
     void Start()
     {
-        reloadTime = 4.5f;
+        reloadTime = 3.7f;
         reloadAnim.SetActive(false);
         reloading = false;
 

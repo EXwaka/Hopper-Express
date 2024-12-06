@@ -9,6 +9,7 @@ public class Goat : MonoBehaviour
 
     private void Start()
     {
+        JumpForce = 8;
         JumpTime = 0;
     }
 
@@ -37,5 +38,13 @@ public class Goat : MonoBehaviour
 
 
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("MonsterAttackRange"))
+        {
 
+            JumpForce = 0;
+
+        }
+    }
 }

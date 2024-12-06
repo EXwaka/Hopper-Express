@@ -435,12 +435,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   MonsInRange: 0
-  MonsDamage: 6
-  atkCooldown: 2
+  MonsDamage: 3
+  atkCooldown: 1
   Counter: 0
   explosion: {fileID: 7316940976409795911, guid: 1136e8688a78fe84db9cf563cfcd77da, type: 3}
   poisionMaterial: {fileID: 2100000, guid: f189f0f6ea3e3f5489dea7f315b6ff08, type: 2}
   frozenMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
+  hasAttackAnim: 1
 --- !u!114 &3194316257294526790
 MonoBehaviour:
   m_ObjectHideFlags: 0

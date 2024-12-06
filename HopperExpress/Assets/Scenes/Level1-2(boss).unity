@@ -1712,6 +1712,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 1773066400056190116, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e1dc6ac931281f42a5f4b5ecec06724, type: 3}
     - target: {fileID: 2132178899075222248, guid: 7f1b54c1ac80ee14aa0ffb9a24572f04, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6344,6 +6348,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2515475935583381553, guid: dfd67af5be9831d47b659a3e320eb25c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 50300577a2be7d643b977d5ea85878d2, type: 3}
     - target: {fileID: 4620002784851262682, guid: dfd67af5be9831d47b659a3e320eb25c, type: 3}
       propertyPath: boss
       value: 
@@ -6358,7 +6366,7 @@ PrefabInstance:
       objectReference: {fileID: 1473512349}
     - target: {fileID: 4620002784851262682, guid: dfd67af5be9831d47b659a3e320eb25c, type: 3}
       propertyPath: screenEdgeOffset
-      value: 50
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8354152445445757997, guid: dfd67af5be9831d47b659a3e320eb25c, type: 3}
       propertyPath: m_Name

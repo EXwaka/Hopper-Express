@@ -20,6 +20,8 @@ public class GetOnTrain : MonoBehaviour
     {
         if (Ebutton.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
+            FindObjectOfType<AudioManager>().Play("trainHorn");
+
             if (SkillSelectUI.Chapter2Done)
             {
                 TrainMoneAnim.TrainGo = true;
@@ -52,6 +54,7 @@ public class GetOnTrain : MonoBehaviour
             }
 
     }
+
     void TrainNoGo()
     {
         TrainMoneAnim.TrainGo = false;

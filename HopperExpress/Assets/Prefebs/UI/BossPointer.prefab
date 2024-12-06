@@ -271,5 +271,5 @@ MonoBehaviour:
   arrow: {fileID: 4506158709912339807}
   marker: {fileID: 0}
   canvas: {fileID: 7870441489809925483}
-  screenEdgeOffset: 50
+  screenEdgeOffset: 35
   markerEdgeOffset: 110

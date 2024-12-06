@@ -28,18 +28,5 @@ public class Skills : MonoBehaviour
     public static bool skill_corehealing = false;//14*icon
     public static bool skill_coreheat = false;//15*icon
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-
-    }
-    private void Awake()
-    {
-    }
-
-    //public bool CanUseGreekFire()
-    //{
-    //    return skillManager.IsSkillUnlocked(SkillsManager.SkillType.GreekFire);
-    //}
 }

@@ -21,7 +21,6 @@ public class ClimbLadder : MonoBehaviour
             var audioManager = FindObjectOfType<AudioManager>();
             if (audioManager != null)
             {
-                Debug.Log("AudioManager found, trying to play sound...");
                 audioManager.Play("Stair");
             }
 

@@ -23,29 +23,4 @@
 			知道了!
 		</Say>
 	</Dialogue>
-	<Dialogue>
-		<Role1>傑可</Role1>
-		<Say>
-			況且...我也不認為你有時間吃東西
-		</Say>
-	</Dialogue>
-
-	<Dialogue>
-		<Role1>傑可</Role1>
-		<Say>
-			前方出現了未知強大個體反應! 艾莉諾快準備好應戰!
-		</Say>
-	</Dialogue>
-
-	<Dialogue>
-		<Role1>艾莉諾</Role1>
-		<Say>齁，我才剛坐下來欸! 怎麼爛事都要我來做啊，我都清理了這麼多隻，你怎麼不出來幫點忙。</Say>
-	</Dialogue>
-
-	<Dialogue>
-		<Role1>傑可</Role1>
-		<Say>
-			少廢話，目標接近火車了。
-		</Say>
-	</Dialogue>
 </Dialogues>

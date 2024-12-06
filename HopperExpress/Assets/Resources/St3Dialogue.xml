@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dialogues>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>沒想到除了我們之外這裡還有其他人倖存。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>我也沒想到除了我之外還能看到活人在這哈哈。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾和傑可</Role1>
+		<Say>...</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>抱歉，好像沒什麼好笑的，我只是想輕鬆點。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>總之，對，我應該是這附近的最後一個活人了。能讓我跟著你們一起離開這裡嗎?</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>當然，但在那之前我們還是得先完成我們的任務，先共享情報吧。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>這輛列車來自格林特，我們這趟的任務是前往失聯的耶利哥城，我注意到你的服裝上有著耶利哥城的標誌，你知道些什麼嗎?</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>我原本也是耶利哥城的特務之一，接到了調查任務正好離開城鎮，沒想到從回程開始一路上就有各種阻礙。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>好不容易到了城內，城內的人一夕之間，都離奇地消失了。最弔詭的是那群動物，就像是對著任何有動力的機械猛攻。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>所以我將身上的科技裝備都丟下後，悄悄的離開了城內，正準備向格林特的各位求援。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>我一路跋涉到了這個車站內，才終於遇見了你們。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>我發現了一些事情，那群野獸都是來自那座高山，並且消失的人也都散落在在山腰處。那些人雙眼失了神，口中念念有詞，額頭上還出現了一些奇怪的符號...</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>這些就是我知道的全部了。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>收到，明天經過的時候會特別注意的，你有聽到嗎艾莉諾?</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>晚餐...什麼??</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>你這壞毛病到底什麼時候打算改一改。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>總，總之我們只要上山確認完再過去耶利哥就行了對吧哈哈。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>...他總是這樣嗎?</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>我都快習慣了，這段路上你忍忍吧。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>平時的你可真辛苦呢...</Say>
+	</Dialogue>
+</Dialogues>

@@ -201,3 +201,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: trainHorn
+    clip: {fileID: 8300000, guid: ed256412c71526948b9d0a0fa6a393e7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

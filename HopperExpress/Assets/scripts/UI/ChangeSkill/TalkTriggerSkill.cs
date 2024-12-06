@@ -21,7 +21,7 @@ public class TalkTriggerSkill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)&&Ebutton)
+        if (Input.GetKeyDown(KeyCode.E)&&Ebutton.activeSelf)
         {
             CharacterMove.ableToMove = false;
             SlideIn();

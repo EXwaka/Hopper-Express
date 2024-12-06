@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dialogues>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			果然連動物都受影響了嗎?
+		</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>
+			樹上的圖案是一種古老的語言，我們正在嘗試翻譯找出規律，
+			在資料庫裏面有記錄著項目，但是...
+		</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>你別賣關子了，但是甚麼!</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>但是內容什麼都沒有，裡面的資料就像是被刻意消除了一樣。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>我們會找出來的，你只管把這些發狂的動物打飛就好。</Say>
+	</Dialogue>
+
+</Dialogues>

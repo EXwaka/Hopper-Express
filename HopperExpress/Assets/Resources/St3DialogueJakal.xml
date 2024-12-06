@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dialogues>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>關於剛剛那些符號，翻譯恐怕一時半會是沒有結果的了。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>那你們剛剛都在忙些什麼阿...?</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>我感覺我都快要對蟲子有陰影了嗚嗚...</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>我們也沒閒著，我們發現那些符號有著特殊的能量反應。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>就是這些讓森林的怪物們發狂。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>但我怎麼想都覺得很奇怪，能量的反應狀態就像是...</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>就像是?</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>我們所運送的核心能源反應。非常相似，運作模式和輸出的能源屬性卻近乎相反。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>兩者相互作用之後卻甚麼都沒有發生。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>什麼都沒有發生?</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>對，什麼都沒有留下。兩股能量在碰撞後的結果是互相抵銷，就是這點才奇怪。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>什麼跟什麼阿，我頭都暈了...</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>我想也是，總之我有預感我們越來越接近真相了。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>也差不多該休息了，明天清晨繼續上路。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>出任務可容不得你賴床。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>好..好啦...</Say>
+	</Dialogue>
+</Dialogues>

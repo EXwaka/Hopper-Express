@@ -134,6 +134,7 @@ MonoBehaviour:
   explosion: {fileID: 4094739207793770646, guid: 5fb362f2158a76d49bb8b3494f37cc01, type: 3}
   poisionMaterial: {fileID: 2100000, guid: f189f0f6ea3e3f5489dea7f315b6ff08, type: 2}
   frozenMaterial: {fileID: 2100000, guid: f8b99c84db8ad004eb5c586c67bb459b, type: 2}
+  hasAttackAnim: 1
 --- !u!95 &6436072937379012183
 Animator:
   serializedVersion: 5
