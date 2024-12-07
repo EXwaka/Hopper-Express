@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dialogues>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>前方能量的反應越來越劇烈了，請做好應戰準備。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>我感覺我還沒睡醒...一大清早的就要在這吹冷風，這是壓榨這是壓榨!</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>比起抱怨還不如趕緊把這件麻煩事給處理完</Say>
+	</Dialogue>
+</Dialogues>

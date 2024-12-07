@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dialogues>
+
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>差不多要到目標地點了，之前人群聚集的地方就在這附近!</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>越來越冷了......哈啾! 早知道多穿件大衣出門...</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>哈! 等這件事辦完請你吃我們耶利哥特色火鍋! 這天氣吃這個可舒服了</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>先別閒聊了，前方出現了強大的個體反應。抓緊了，車身可能會有激烈碰撞!</Say>
+	</Dialogue>
+</Dialogues>

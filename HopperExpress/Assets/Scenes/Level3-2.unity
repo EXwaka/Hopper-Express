@@ -3274,7 +3274,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: 8e2979c12d53ab040a036d0e81a677b5, type: 3}
     - target: {fileID: 2649236064888791941, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_Text
-      value: "\u6975\u5149\u539F"
+      value: "\u6975\u5149\u9AD8\u539F"
       objectReference: {fileID: 0}
     - target: {fileID: 2649236064888791941, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_FontData.m_Font

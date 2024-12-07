@@ -11635,7 +11635,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2196374395403545712, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_Text
-      value: "\u6975\u5149\u539F\u7AD9"
+      value: "\u970D\u723E\u7279\u8ECA\u7AD9"
       objectReference: {fileID: 0}
     - target: {fileID: 2196374395403545712, guid: a49ac5b49dcbe0242aa0c9202abc3d2f, type: 3}
       propertyPath: m_FontData.m_Font

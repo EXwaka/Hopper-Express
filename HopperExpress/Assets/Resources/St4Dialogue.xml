@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dialogues>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>我從來沒想過這輛列車還能裝下這麼多人!</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>那也沒辦法，總不能把平民都丟在那。他們大多都搞不清楚發生了甚麼。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>哈哈，所幸那隻超大隻的怪鳥消失了之後那股能量就這樣消失了，沒想到事情這麼簡單。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>你說的倒輕鬆! 和牠戰鬥的可是我欸!</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>你不知道我在車頂都快嚇死了，好幾次都差點被牠吹下車了，一邊戰鬥一邊閃躲真的好恐怖。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>總之現在可以好好放鬆啦! 等等安頓好大家之後就一起去吃點東西。</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>我好久沒下廚拉!</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>你要親自下廚?</Say>
+	</Dialogue>
+
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>城內都變成這樣了你覺得店還有開嗎?</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>瑪蒂爾達</Role1>
+		<Say>安心拉，我應該還記得奶奶留給我的食譜...應該吧。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>總覺得放心不了，等等我也來幫忙吧。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>艾莉諾，總之多虧了妳我們才能平安抵達。現在可以先去休息了。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>艾莉諾</Role1>
+		<Say>欸? 這種時候居然沒有打算繼續壓榨我嗎? 你還是傑可嗎? 沒有發燒吧?</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>...我平常有對你這麼糟嗎? 不然你以為後勤是幹嘛的，
+這種時候還要你幫忙，我們面子擺哪去。</Say>
+	</Dialogue>
+	<Dialogue>
+		<Role1>傑可</Role1>
+		<Say>我們在這裡待個一兩天，安頓好居民後也要返程回報了，我先去忙就不繼續閒聊了。</Say>
+	</Dialogue>
+</Dialogues>

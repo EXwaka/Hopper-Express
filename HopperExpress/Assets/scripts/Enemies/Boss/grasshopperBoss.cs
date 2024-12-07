@@ -9,50 +9,59 @@ public class grasshopperBoss : MonoBehaviour
     public GameObject minions;
     public float moveSpeed = 2f;
     public GameObject target;
-    public float spawnRate = 2f;
-    public float setSpawnRate = 2f;
+    private float spawnRate = 12f;
+    private float setSpawnRate = 12f;
+    Animator animator;
+    //private bool StartSummon;
+    public Transform[] spawnPoints;
 
     void Start()
     {
-        Wavespawner.monsCount += 1;
+        //StartSummon = false;
+        animator = GetComponent<Animator>();
+        Wavespawner.monsCount = 1;
         monsterManager = GetComponent<MonsterManager>();
+        Invoke("StartAttack", 5);
     }
 
     // Update is called once per frame
     void Update()
     {
         MoveToTarget();
-        Debug.Log(Wavespawner.monsCount);
+        //Debug.Log(Wavespawner.monsCount);
 
-        SpawnMinions();
-
-        if (monsterManager.m_HP<=151) 
+        spawnRate -= Time.deltaTime;
+        if (spawnRate <= 0)
         {
             SpawnMinions();
-        }
-        if (monsterManager.m_HP<=100)
-        {
-            SpawnMinions();
+            spawnRate = setSpawnRate;
+
 
         }
+ 
     }
-
 
     void SpawnMinions()
     {
-        spawnRate -=Time.deltaTime;
-        if (spawnRate <= 0)
-        {
-            Vector3 bossPosition = transform.position;
-            float randomX = Random.Range(-2f, 2f);
-            float randomY = Random.Range(-3f, 3f);
-            Vector3 spawnPosition = new Vector3(bossPosition.x + randomX, bossPosition.y + randomY, bossPosition.z);
-            Instantiate(minions, spawnPosition, Quaternion.identity);
-            Wavespawner.monsCount++;
+        FindObjectOfType<AudioManager>().Play("summon");
+        animator.SetTrigger("Summon");
 
-            spawnRate = setSpawnRate;
+
+        List<int> selectedIndices = new List<int>();
+        while (selectedIndices.Count < 6)
+        {
+            int randomIndex = Random.Range(0, spawnPoints.Length);
+            if (!selectedIndices.Contains(randomIndex))
+            {
+                selectedIndices.Add(randomIndex);
+            }
         }
 
+        foreach (int index in selectedIndices)
+        {
+            Instantiate(minions, spawnPoints[index].position, Quaternion.identity);
+            Wavespawner.monsCount++;
+        }
 
     }
     void MoveToTarget()
@@ -66,12 +75,18 @@ public class grasshopperBoss : MonoBehaviour
             transform.position = Vector3.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
         }
     }
+
+    //void StartAttack()
+    //{
+    //    StartSummon=true;
+    //}
     private void OnTriggerEnter(Collider other)
     {
 
         if (other.CompareTag("MonsterAttackRange"))
         {
             moveSpeed = 0;
+            monsterManager.moveSpeedMax = 0;
         }
 
 

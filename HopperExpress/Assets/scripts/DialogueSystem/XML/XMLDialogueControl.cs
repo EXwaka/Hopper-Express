@@ -11,6 +11,7 @@ public class DialogueControl : MonoBehaviour
     public Text DialogueText;
     public Image R1Image;
     public Image R2Image;
+    public Image R3Image;
     XmlNodeList nodeList;
     DialogueAnimation dialogueAnimation;
     int n;
@@ -27,6 +28,7 @@ public class DialogueControl : MonoBehaviour
         DialogueText.text = "";
         R1Image.color = new Color(1f, 1f, 1f, 0f);
         R2Image.color = new Color(1f, 1f, 1f, 0f);
+        R3Image.color = new Color(1f, 1f, 1f, 0f);
 
         string data = Resources.Load(dialogueFile).ToString();
         XmlDocument xmlDoc = new XmlDocument();
@@ -128,16 +130,29 @@ public class DialogueControl : MonoBehaviour
         {
             R1Image.color = new Color(1f, 1f, 1f, 1f);
             R2Image.color = new Color(1f, 1f, 1f, 0.2f);
+            R3Image.color = new Color(1f, 1f, 1f, 0f);
+
         }
         else if (role == "¦ã²ú¿Õ")
         {
             R1Image.color = new Color(1f, 1f, 1f, 0.2f);
             R2Image.color = new Color(1f, 1f, 1f, 1f);
+            R3Image.color = new Color(1f, 1f, 1f, 0f);
+
         }
         else if (role == "´£¥Ü")
         {
             R1Image.color = new Color(1f, 1f, 1f, 0.2f);
             R2Image.color = new Color(1f, 1f, 1f, 0.2f);
+            R3Image.color = new Color(1f, 1f, 1f, 0f);
+
+        }
+        else if (role == "º¿¸¦º¸¹F")
+        {
+            R1Image.color = new Color(1f, 1f, 1f, 0);
+            R2Image.color = new Color(1f, 1f, 1f, 0.2f);
+            R3Image.color = new Color(1f, 1f, 1f, 1f);
+
         }
     }
 

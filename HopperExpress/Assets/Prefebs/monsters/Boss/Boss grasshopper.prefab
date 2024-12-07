@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3511199294708101637}
   - component: {fileID: 8747437233692121608}
   - component: {fileID: 8608430321583148973}
+  - component: {fileID: 7705983561741365363}
   m_Layer: 6
   m_Name: Boss grasshopper
   m_TagString: Enemy
@@ -111,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: 15a4aca2f089b6f4e8d7b940f9e36358, type: 3}
+  m_Sprite: {fileID: -1487896818, guid: 6871fbbd1713ded4a8fbbb7119d078b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -183,11 +184,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Freeze: 0
+  Poision: 0
   target: {fileID: 8796351073447157469, guid: ae1e3a1305e05ca4e90def7d976a29dd, type: 3}
   moveSpeed: 3
   moveSpeedMax: 0
   maxHP: 250
   m_HP: 250
+  currentHP: 0
   healthBar: {fileID: 8699770382927058959}
   MonsAttackPoint: {fileID: 7357884737609227582}
   AttackRange: 1
@@ -199,6 +202,9 @@ MonoBehaviour:
   atkCooldown: 1
   Counter: 0
   explosion: {fileID: 7794133439963608324, guid: 3682788d61749f443ac04a312c987cfc, type: 3}
+  poisionMaterial: {fileID: 0}
+  frozenMaterial: {fileID: 0}
+  hasAttackAnim: 0
 --- !u!114 &8747437233692121608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +236,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: c82fa9fdd5d03e54ebf5bd3280dabea3, type: 2}
   duration: 0.05
+--- !u!95 &7705983561741365363
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4290010059460625721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf1420a615f30444f8850fd74ed8d25e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &651384464628969909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,6 +312,14 @@ PrefabInstance:
     - target: {fileID: 6097087307785421583, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097087307785421583, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097087307785421583, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 6097087307785421583, guid: 55b8d66ba7c902c4da7f275024e6c9e7, type: 3}
       propertyPath: m_LocalPosition.x
