@@ -21,7 +21,7 @@ public class grasshopperBoss : MonoBehaviour
         animator = GetComponent<Animator>();
         Wavespawner.monsCount = 1;
         monsterManager = GetComponent<MonsterManager>();
-        Invoke("StartAttack", 5);
+        //Invoke("StartAttack", 5);
     }
 
     // Update is called once per frame

@@ -135,7 +135,10 @@ public class CharacterMove : MonoBehaviour
 
     void Move(Vector3 direction, float speed)
     {
-
+        if(!isGrounded&&Skills.skill_jetpack)
+        {
+            animator.SetBool("Flying", true);
+        }
         animator.SetBool("IsWalking", true);
         transform.Translate(direction * speed * Time.fixedDeltaTime);
     }
@@ -193,6 +196,8 @@ public class CharacterMove : MonoBehaviour
             isGrounded = true;
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
+
+            animator.SetBool("Flying", false);
         }
 
     }

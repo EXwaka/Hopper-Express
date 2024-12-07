@@ -14,6 +14,7 @@ public class AutoMissileControl : MonoBehaviour
     void Start()
     {
         Ready = true;
+        CD = 8;
         UILaunching = false;
         if (!Skills.skill_automissile)
         {

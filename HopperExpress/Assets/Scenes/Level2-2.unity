@@ -3266,6 +3266,10 @@ PrefabInstance:
       value: CameraWall
       objectReference: {fileID: 0}
     - target: {fileID: 4777673863144314134, guid: a85475395ea9c9449a664e0dfcdfaa7a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777673863144314134, guid: a85475395ea9c9449a664e0dfcdfaa7a, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}

@@ -4841,6 +4841,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 387948822826222169, guid: 5f662030a334dc346bc3b96295354f16, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 375
+      objectReference: {fileID: 0}
     - target: {fileID: 1469524606808434518, guid: 5f662030a334dc346bc3b96295354f16, type: 3}
       propertyPath: m_Name
       value: TypeWriterDialogue
@@ -4927,7 +4931,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4630017215527056955, guid: 5f662030a334dc346bc3b96295354f16, type: 3}
       propertyPath: m_Text
-      value: "\u6309\u4E0B\u6578\u5B57\u9375[1]\u4F7F\u7528\u525B\u624D\u9078\u64C7\u7684\u6280\u80FD\r\n\n\u6BCF\u6B21\u4F7F\u7528\u5B8C\u6703\u9032\u5165\u51B7\u537B"
+      value: "\u6309\u4E0B\u6578\u5B57\u9375[1]\u4F7F\u7528\u525B\u624D\u9078\u64C7\u7684\u4E3B\u52D5\u6280\u80FD\r\uFF0C\n\u6BCF\u6B21\u4F7F\u7528\u5B8C\u6703\u9032\u5165\u51B7\u537B\u3002"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630017215527056955, guid: 5f662030a334dc346bc3b96295354f16, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630017215527056955, guid: 5f662030a334dc346bc3b96295354f16, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630017215527056955, guid: 5f662030a334dc346bc3b96295354f16, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

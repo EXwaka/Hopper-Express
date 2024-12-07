@@ -151,7 +151,6 @@ GameObject:
   - component: {fileID: 7489631477999966843}
   - component: {fileID: 2114923193606752313}
   - component: {fileID: 1267829222808907263}
-  - component: {fileID: 3265293434404686087}
   m_Layer: 0
   m_Name: sky wall
   m_TagString: Untagged
@@ -245,19 +244,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3265293434404686087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6093405674920562826, guid: bf30793bfa34a52408901999cb33a46a, type: 3}
-  m_PrefabInstance: {fileID: 7466694542730020450}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6967620933177020592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69fdf0dadd898c04384d25dbaee089a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gate: {fileID: 6967620933177020592}
 --- !u!1 &8827695661158596418
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +256,6 @@ GameObject:
   - component: {fileID: 7589755384179212104}
   - component: {fileID: 6497374666714496315}
   - component: {fileID: 9110060710056753416}
-  - component: {fileID: 6483301236720858238}
   m_Layer: 0
   m_Name: wall
   m_TagString: Untagged
@@ -364,19 +349,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6483301236720858238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6539777050373587899, guid: a6c7dd8d2fa342a4ba02f2e1b13c9eae, type: 3}
-  m_PrefabInstance: {fileID: 6960317697630255158}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8827695661158596418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69fdf0dadd898c04384d25dbaee089a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gate: {fileID: 8827695661158596418}
 --- !u!1001 &5345663828713650898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -486,7 +458,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -543,7 +516,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
